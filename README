@@ -1,0 +1,20 @@
+# XSLT-2.0 Reference (work in progress)
+
+This is a quick reference/cheatsheet for XSLT-2.0 elements and their
+attributes: <https://pjfichet.github.io/XSLT-2.0-Reference>.
+
+It is loosely based on the XSLT-1.0 reference by Greystate:
+<https://github.com/greystate/XSLT-Reference>. But since we build the
+html file from the XSLT-2.0 schema, and not from a custom handwritten
+xml file, not much of that source code remains, except the html structure
+and layout.
+
+Enter `make` to build.
+
+# XSLT-2.0 Standart
+https://www.w3.org/TR/xslt20
+
+# XSLT-2.0 Schema
+https://www.w3.org/2007/schema-for-xslt20.xsd
+
+

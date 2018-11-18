@@ -1,0 +1,73 @@
+html {
+	box-sizing: border-box;
+	list-style: none;
+	font-size: 100%;
+	line-height: 1.5rem;
+	}
+*, *:before, *:after {
+	box-sizing: inherit;
+	}
+
+body {
+	margin: 0 auto;
+	max-width: 680px;
+	font-family: inconsolata, "courier new", monospace;
+}
+h1, h2 {
+	font-size: 1.5rem;
+	margin: .75rem 0 .75rem 0;
+	}
+h3, h4 {
+	font-size: 1.2rem;
+	}
+
+nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	margin-top: 0;
+	padding: .3rem;
+}
+nav a, nav h1 {
+	display: block;
+	height: 1.5rem;
+	text-decoration: none;
+}
+
+.element, .attribute {
+	padding: .3rem;
+	}
+
+.element .desc,
+.element .content,
+.attribute .desc,
+.attribute .content {
+	display: none;
+}
+
+.element:target .desc,
+.element:target .content,
+.attribute:target .desc,
+.attribute:target .content {
+	display: block;
+}
+
+#toc:target #xslt-elements,
+#toc:target #xslt-attributes {
+	width: 45%;
+	float: left;
+}
+a {
+	text-decoration: none;
+}
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 1rem 0 0 0;
+}
+.attr-ref, .elem-ref {
+	margin-left: 1rem;
+}
+.attr-ref:before {
+	content: "@";
+}
