@@ -33,6 +33,7 @@
 			<a href="#toc" title="Show a simplified table of contents">Summary</a>
 			<a href="#xslt-elements">Elements</a>
 			<a href="#xslt-attributes">Attributes</a>
+			<a href="https://github.com/pjfichet/XSLT-2.0-Reference">Github</a>
 		</nav>
 
 		<section id="xslt-elements">
