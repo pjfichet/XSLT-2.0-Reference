@@ -77,7 +77,7 @@
 		<xsl:value-of select="."/>
 		<xsl:value-of select="$suffix"/>
 	</a></h3>
-	<ul class="content"><li><a href="{$standart}#{.}">ref</a></li></ul>
+	<ul class="content"><li><a href="{$standart}#element-{.}">ref</a></li></ul>
 </xsl:template>
 		   	
 
