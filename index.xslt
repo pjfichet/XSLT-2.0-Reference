@@ -32,7 +32,7 @@
 			<h1>XSLT-2.0  Reference</h1>
 			<a href="#toc" title="Show a simplified table of contents">Summary</a>
 			<a href="#xslt-elements">Elements</a>
-			<a href="#xslt-attributes">Attributes</a>
+			<a href="#xslt-attributes">Attributes types</a>
 			<a href="https://github.com/pjfichet/XSLT-2.0-Reference">Github</a>
 		</nav>
 
@@ -44,7 +44,7 @@
 		</section>
 
 		<section id="xslt-attributes">
-			<h2>XSLT attributes</h2>
+			<h2>XSLT attributes types</h2>
 			<xsl:apply-templates select="xs:schema/xs:simpleType">
 				<xsl:sort select="@name" data-type="text" order="ascending"/>
 			</xsl:apply-templates>
