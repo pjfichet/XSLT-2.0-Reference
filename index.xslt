@@ -66,6 +66,7 @@
 		<ul class="content">
 			<xsl:apply-templates select="descendant::xs:element" mode="content"/>
 			<xsl:apply-templates select="descendant::xs:extension" mode="generic-content"/>
+			<xsl:apply-templates select="descendant::xs:group" mode="generic-group"/>
 		</ul>
 	</section>
 </xsl:template>
