@@ -63,11 +63,10 @@
 				<xsl:apply-templates select="descendant::xs:attribute" mode="content" />
 			</ul>
 		</xsl:if>
-		<xsl:if test="descendant::xs:element">
-			<ul class="content">
-				<xsl:apply-templates select="descendant::xs:element" mode="content"/>
-			</ul>
-		</xsl:if>
+		<ul class="content">
+			<xsl:apply-templates select="descendant::xs:element" mode="content"/>
+			<xsl:apply-templates select="descendant::xs:extension" mode="generic-content"/>
+		</ul>
 	</section>
 </xsl:template>
 
@@ -102,6 +101,48 @@
 		<a href="#{substring-after(@ref, ':')}">&lt;<xsl:value-of select="@ref"/>&gt;</a>
 	</li>
 </xsl:template>
+
+<xsl:template match="xs:extension" mode="generic-content">
+	<xsl:variable name="base" select="substring-after(@base, ':')"/>
+	<xsl:apply-templates select="//xs:complexType[@name=$base]" mode="generic-content"/>
+</xsl:template>
+
+<xsl:template match="xs:complexType" mode="generic-content">
+	<xsl:apply-templates select="descendant::xs:extension" mode="generic-content"/>
+	<xsl:apply-templates select="descendant::xs:group" mode="generic-group"/>
+</xsl:template>
+
+<xsl:template match="xs:group" mode="generic-group">
+	<xsl:variable name="groupname" select="substring-after(@ref, ':')"/>
+	<xsl:apply-templates select="//xs:group[@name=$groupname]" mode="generic-content"/>
+</xsl:template>
+
+<xsl:template match="xs:group" mode="generic-content">
+	<xsl:variable name="groupname" select="substring-after(@ref, ':')"/>
+	<xsl:apply-templates select="descendant::xs:element" mode="ref-element"/>
+	<xsl:apply-templates select="descendant::xs:group" mode="generic-group"/>
+</xsl:template>
+
+<xsl:template match="xs:element" mode="ref-element">
+	<xsl:variable name="ref" select="substring-after(@ref, ':')"/>
+	<xsl:apply-templates select="//xs:element[@name=$ref]" mode="named-element"/>
+</xsl:template>
+
+<xsl:template match="xs:element[@type]" mode="named-element">
+	<xsl:variable name="name" select="concat('xsl:', @name)"/>
+	<xsl:apply-templates select="//xs:element[@substitutionGroup=$name]" mode="grouped-element">
+		<xsl:sort select="@name" data-type="text" order="ascending"/>
+	</xsl:apply-templates>
+</xsl:template>
+
+<xsl:template match="xs:element" mode="grouped-element">
+	<li class="elem-ref">
+		<a href="#{@name}">&lt;xsl:<xsl:value-of select="@name"/>&gt;</a>
+	</li>
+</xsl:template>
+
+
+
 
 <xsl:template match="xs:schema/xs:simpleType">
 	<section class="attribute" id="{@name}">
