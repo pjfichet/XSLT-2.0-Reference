@@ -1,0 +1,64 @@
+<doc>
+<!--
+todo: https://www.w3.org/TR/xslt20/#apply-imports
+<elem name="xsl element">
+	<i/> current element
+	<e>xsl element</e>
+	<a>xsl attribute</a>
+	<t>xsl type</a>
+	<l href="">link<l>
+	<p>paragraph</p>
+	<x>example</x>
+	<xpath>xpath expression</xpath>
+</item>
+-->
+
+<elem name="template">
+<p><e>template</e> defines the processing that can be be applied
+to node that <a>match</a> a particular <t>pattern</t>. It contains a
+sequence constructor for creating nodes and/or atomic values. If it has
+a <a>match</a> attribute, it is invoked when an <e>apply-templates</e>
+selects a node that match the pattern specified in the match attribute. If
+it has a <a>name</a>attribute, it is invoked explicitely by name.</p>
+<p>A <e>template</e> must have either a <a>match</a> attribute or a <a>name</a>
+attribute. If it has no <a>match</a> attribute, it must have no <a>mode</a>
+attribute and no <a>priority</a> attribute. If present, the <a>as</a> attribute
+the result of the sequence constructor is converted to the specified type (or raise
+a <l href="https://www.w3.org/TR/xslt20/#dt-type-error">type error</l> if it is not possible.</p> 
+</elem>
+
+<elem name="apply-template">
+<p><e>apply-template</e> takes as input a sequence of nodes, and
+produces as output a sequence of items (often nodes added to a <l
+href="https://www.w3.org/TR/xslt20/#dt-result-tree">result tree</l>).
+Each node in the input sequence is processed by finding a template
+rule whose pattern match that node. If there is more than one, the
+<l href="https://www.w3.org/TR/xslt20/#conflict">best among them is
+choosen</l>, if there is none, a <l
+href="https://www.w3.org/TR/xslt20/#built-in-rule">built-in template
+rule</l> is used. Each template rule evaluated produce a sequence of item,
+and the resulting sequences are concatenated.</p>
+<p>The default value of <a>match</a> is <xpath>child::node()</xpath>,
+and as a result, <e>apply-templates</e> is commonly used to process
+nodes descendant of the context node. But the <a>select</a> attribute
+can select node by an expression, and so, <e>apply-templates</e> can
+be used as a replacement of <e>if</i> or <e>choose</e>.</p>
+Furthermore, if the <a>mode</a> attribute is defined, only the template rules that
+are applicable to the selected mode are considered.
+<l href="https://www.w3.org/TR/xslt20/#modes">modes</l> allow a node
+in the <l href="https://www.w3.org/TR/xslt20/#dt-source-tree">source
+tree</l> to be processed multiple times, each time producing a different
+result. They also allows different set of <e>template</e> rules to be
+active when processing different trees.</p>
+</elem>
+
+<elem name="apply-imports">
+<p>With <e>next-match</e>, <e>apply-imports</e> can be used to invoke an overridden template rule. It only
+considers template rules in imported stylesheet modules.</p>
+</elem>
+
+<elem name="apply-imports">
+<p>With <e>apply-imports</e>, <e>next-match</e> can be used to invoke an overridden template rule. It considers
+template rules of lower import precedence or priority.</p>
+</elem>
+
