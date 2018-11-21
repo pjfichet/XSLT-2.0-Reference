@@ -32,19 +32,19 @@
 			<h1>XSLT-2.0  Reference</h1>
 			<a href="#toc" title="Show a simplified table of contents">Summary</a>
 			<a href="#xslt-elements">Elements</a>
-			<a href="#xslt-attributes">Types</a>
+			<a href="#xslt-types">Types</a>
 			<a href="https://github.com/pjfichet/XSLT-2.0-Reference">Github</a>
 		</nav>
 
 		<section id="xslt-elements">
-			<h2>XSLT elements</h2>
+			<h2>Elements</h2>
 			<xsl:apply-templates select="//docset/elem">
 				<xsl:sort select="@name" data-type="text" order="ascending"/>
 			</xsl:apply-templates>
 		</section>
 
-		<section id="xslt-attributes">
-			<h2>XSLT attributes types</h2>
+		<section id="xslt-types">
+			<h2>Types</h2>
 			<xsl:apply-templates select="//docset/type">
 				<xsl:sort select="@name" data-type="text" order="ascending"/>
 			</xsl:apply-templates>
@@ -65,7 +65,7 @@ List elements
 			<xsl:value-of select="@name"/>
 			<xsl:value-of select="$suffix"/>
 		</a></h3>
-		<p class="content"><a href="{$standart}#element-{.}">ref</a></p>
+		<p class="content"><a href="{$standart}#element-{@name}">ref</a></p>
 		<xsl:if test="attribute">
 			<ul class="content">
 				<xsl:apply-templates select="attribute"/>
@@ -105,7 +105,7 @@ List types.
 -->
 
 <xsl:template match="type">
-	<section class="attribute" id="{@name}">
+	<section class="type" id="{@name}">
 		<h3><a href="#{@name}"><xsl:value-of select="@name"/></a></h3>
 		<p class="content"><a href="{$standart}#glossary">ref</a></p>
 		<xsl:apply-templates select="p"/>

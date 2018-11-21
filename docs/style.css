@@ -81,26 +81,26 @@ nav a, nav h1 {
 	text-decoration: none;
 }
 
-.element, .attribute {
+.element, .type {
 	padding: .3rem;
 	}
 
 .element .desc,
 .element .content,
-.attribute .desc,
-.attribute .content {
+.type .desc,
+.type .content {
 	display: none;
 }
 
 .element:target .desc,
 .element:target .content,
-.attribute:target .desc,
-.attribute:target .content {
+.type:target .desc,
+.type:target .content {
 	display: block;
 }
 
 #toc:target #xslt-elements,
-#toc:target #xslt-attributes {
+#toc:target #xslt-types {
 	width: 45%;
 	float: left;
 }
