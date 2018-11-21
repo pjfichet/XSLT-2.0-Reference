@@ -49,7 +49,6 @@ table {
 	box-sizing: border-box;
 	list-style: none;
 	font-size: 100%;
-	line-height: 1.5rem;
 	}
 *, *:before, *:after {
 	box-sizing: inherit;
@@ -58,6 +57,7 @@ table {
 body {
 	margin: 0 auto;
 	max-width: 680px;
+	line-height: 1.5rem;
 	font-family: inconsolata, "courier new", monospace;
 }
 h1, h2 {
