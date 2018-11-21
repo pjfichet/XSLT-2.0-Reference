@@ -48,7 +48,7 @@ their hierarchy to search for the <xs:element> and
 </xsl:template>
 
 <xsl:template match="xs:element[@ref]" mode="element">
-	<subelem ref="{@ref}"/>
+	<subelem ref="{substring-after(@ref, ':')}"/>
 </xsl:template>
 
 <xsl:template match="xs:attribute" mode="element">

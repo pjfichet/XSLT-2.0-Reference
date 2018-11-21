@@ -98,7 +98,11 @@ List elements
 
 <xsl:template match="subelem">
 	<li class="elem-ref">
-		<a href="#{@ref}">&lt;<xsl:value-of select="@ref"/>&gt;</a>
+		<a href="#{@ref}">
+			<xsl:value-of select="$prefix"/>
+			<xsl:value-of select="@ref"/>
+			<xsl:value-of select="$suffix"/>
+		</a>
 	</li>
 </xsl:template>
 
