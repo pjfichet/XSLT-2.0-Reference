@@ -52,7 +52,13 @@ their hierarchy to search for the <xs:element> and
 </xsl:template>
 
 <xsl:template match="xs:attribute" mode="element">
-	<attribute ref="{@name}" type="{@type}" use="{@use}"/>
+	<attribute ref="{@name}" type="{@type}" use="{@use}">
+		<xsl:if test="substring-before(@type, ':')='xsl'">
+			<xsl:attribute name="type">
+				<xsl:value-of select="substring-after(@type, ':')"/>
+			</xsl:attribute>
+		</xsl:if>
+	</attribute>
 </xsl:template>
 
 <xsl:template match="xs:restriction" mode="element">
