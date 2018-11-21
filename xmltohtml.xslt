@@ -65,7 +65,6 @@ List elements
 			<xsl:value-of select="@name"/>
 			<xsl:value-of select="$suffix"/>
 		</a></h3>
-		<p class="content"><a href="{$standart}#element-{@name}">ref</a></p>
 		<xsl:if test="attribute">
 			<ul class="content">
 				<xsl:apply-templates select="attribute"/>
@@ -76,6 +75,9 @@ List elements
 				<xsl:apply-templates select="subelem"/>
 			</ul>
 		</xsl:if>
+		<div class="desc">
+			<h4><a href="{$standart}#element-{@name}">Reference</a></h4>
+		</div>
 	</section>
 </xsl:template>
 
@@ -107,14 +109,14 @@ List types.
 <xsl:template match="type">
 	<section class="type" id="{@name}">
 		<h3><a href="#{@name}"><xsl:value-of select="@name"/></a></h3>
-		<p class="content"><a href="{$standart}#glossary">ref</a></p>
 		<xsl:apply-templates select="p"/>
 	</section>
 </xsl:template>
 
 <xsl:template match="p">
 	<div class="content">
-		<p class="desc"><xsl:apply-templates select="text()"/></p>
+		<p><xsl:apply-templates select="text()"/></p>
+		<p class="content"><a href="{$standart}#glossary">Reference</a></p>
 	</div>
 </xsl:template>
 
