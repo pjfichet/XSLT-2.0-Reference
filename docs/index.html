@@ -8,1038 +8,1099 @@
 </head>
 <body id="toc" class="language-markup">
 <nav class="toc-link"><h1>XSLT-2.0  Reference</h1>
-<a href="#toc" title="Show a simplified table of contents">Summary</a><a href="#xslt-elements">Elements</a><a href="#xslt-attributes">Attributes types</a><a href="https://github.com/pjfichet/XSLT-2.0-Reference">Github</a></nav><section id="xslt-elements"><h2>XSLT elements</h2>
+<a href="#toc" title="Show a simplified table of contents">Summary</a><a href="#xslt-elements">Elements</a><a href="#xslt-attributes">Types</a><a href="https://github.com/pjfichet/XSLT-2.0-Reference">Github</a></nav><section id="xslt-elements"><h2>XSLT elements</h2>
 <section class="element" id="analyze-string"><h3><a href="#analyze-string">&lt;xsl:analyze-string&gt;</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#element-analyze-string">ref</a></li></ul>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#element-">ref</a></p>
 <ul class="content">
-<li class="attr-ref required">select<span class="general"> <a href="#expression">expression</a></span>
+<li class="attr-ref required">select<span class="general"> <a href="#xsl:expression">xsl:expression</a></span>
 </li>
-<li class="attr-ref required">regex<span class="general"> <a href="#avt">avt</a></span>
+<li class="attr-ref required">regex<span class="general"> <a href="#xsl:avt">xsl:avt</a></span>
 </li>
-<li class="attr-ref">flags<span class="general"> <a href="#avt">avt</a></span>
+<li class="attr-ref">flags<span class="general"> <a href="#xsl:avt">xsl:avt</a></span>
 </li>
 </ul>
 <ul class="content">
-<li class="elem-ref"><a href="#matching-substring">&lt;xsl:matching-substring&gt;</a></li>
-<li class="elem-ref"><a href="#non-matching-substring">&lt;xsl:non-matching-substring&gt;</a></li>
-<li class="elem-ref"><a href="#fallback">&lt;xsl:fallback&gt;</a></li>
-        
-          
-          
-          
-        
-        
-        
-        
-      </ul></section><section class="element" id="apply-imports"><h3><a href="#apply-imports">&lt;xsl:apply-imports&gt;</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#element-apply-imports">ref</a></li></ul>
+<li class="elem-ref"><a href="#xsl:matching-substring">&lt;xsl:matching-substring&gt;</a></li>
+<li class="elem-ref"><a href="#xsl:non-matching-substring">&lt;xsl:non-matching-substring&gt;</a></li>
+<li class="elem-ref"><a href="#xsl:fallback">&lt;xsl:fallback&gt;</a></li>
+</ul></section><section class="element" id="apply-imports"><h3><a href="#apply-imports">&lt;xsl:apply-imports&gt;</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#element-">ref</a></p>
+<ul class="content"><li class="elem-ref"><a href="#xsl:with-param">&lt;xsl:with-param&gt;</a></li></ul></section><section class="element" id="apply-templates"><h3><a href="#apply-templates">&lt;xsl:apply-templates&gt;</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#element-">ref</a></p>
 <ul class="content">
-<li class="elem-ref"><a href="#with-param">&lt;xsl:with-param&gt;</a></li>
-        
-          
-        
-      </ul></section><section class="element" id="apply-templates"><h3><a href="#apply-templates">&lt;xsl:apply-templates&gt;</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#element-apply-templates">ref</a></li></ul>
-<ul class="content">
-<li class="attr-ref">select<span class="general"> <a href="#expression">expression</a></span>
+<li class="attr-ref">select<span class="general"> <a href="#xsl:expression">xsl:expression</a></span>
 </li>
-<li class="attr-ref">mode<span class="general"> <a href="#mode">mode</a></span>
+<li class="attr-ref">mode<span class="general"> <a href="#xsl:mode">xsl:mode</a></span>
 </li>
 </ul>
 <ul class="content">
-<li class="elem-ref"><a href="#sort">&lt;xsl:sort&gt;</a></li>
-<li class="elem-ref"><a href="#with-param">&lt;xsl:with-param&gt;</a></li>
-        
-          
-          
-        
-        
-        
-      </ul></section><section class="element" id="attribute"><h3><a href="#attribute">&lt;xsl:attribute&gt;</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#element-attribute">ref</a></li></ul>
+<li class="elem-ref"><a href="#xsl:sort">&lt;xsl:sort&gt;</a></li>
+<li class="elem-ref"><a href="#xsl:with-param">&lt;xsl:with-param&gt;</a></li>
+</ul></section><section class="element" id="attribute"><h3><a href="#attribute">&lt;xsl:attribute&gt;</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#element-">ref</a></p>
 <ul class="content">
-<li class="attr-ref required">name<span class="general"> <a href="#avt">avt</a></span>
+<li class="attr-ref required">name<span class="general"> <a href="#xsl:avt">xsl:avt</a></span>
 </li>
-<li class="attr-ref">namespace<span class="general"> <a href="#avt">avt</a></span>
+<li class="attr-ref">namespace<span class="general"> <a href="#xsl:avt">xsl:avt</a></span>
 </li>
-<li class="attr-ref">select<span class="general"> <a href="#expression">expression</a></span>
+<li class="attr-ref">select<span class="general"> <a href="#xsl:expression">xsl:expression</a></span>
 </li>
-<li class="attr-ref">separator<span class="general"> <a href="#avt">avt</a></span>
+<li class="attr-ref">separator<span class="general"> <a href="#xsl:avt">xsl:avt</a></span>
 </li>
-<li class="attr-ref">type<span class="general"> <a href="#QName">QName</a></span>
+<li class="attr-ref">type<span class="general"> <a href="#xsl:QName">xsl:QName</a></span>
 </li>
-<li class="attr-ref">validation<span class="general"> <a href="#validation-type">validation-type</a></span>
+<li class="attr-ref">validation<span class="general"> <a href="#xsl:validation-type">xsl:validation-type</a></span>
 </li>
 </ul>
 <ul class="content">
-        
-        
-        
-           
-        
-        
-      </ul></section><section class="element" id="attribute-set"><h3><a href="#attribute-set">&lt;xsl:attribute-set&gt;</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#element-attribute-set">ref</a></li></ul>
+<li class="elem-ref"><a href="#analyze-string">&lt;analyze-string&gt;</a></li>
+<li class="elem-ref"><a href="#apply-imports">&lt;apply-imports&gt;</a></li>
+<li class="elem-ref"><a href="#apply-templates">&lt;apply-templates&gt;</a></li>
+<li class="elem-ref"><a href="#attribute">&lt;attribute&gt;</a></li>
+<li class="elem-ref"><a href="#call-template">&lt;call-template&gt;</a></li>
+<li class="elem-ref"><a href="#choose">&lt;choose&gt;</a></li>
+<li class="elem-ref"><a href="#comment">&lt;comment&gt;</a></li>
+<li class="elem-ref"><a href="#copy">&lt;copy&gt;</a></li>
+<li class="elem-ref"><a href="#copy-of">&lt;copy-of&gt;</a></li>
+<li class="elem-ref"><a href="#document">&lt;document&gt;</a></li>
+<li class="elem-ref"><a href="#element">&lt;element&gt;</a></li>
+<li class="elem-ref"><a href="#fallback">&lt;fallback&gt;</a></li>
+<li class="elem-ref"><a href="#for-each">&lt;for-each&gt;</a></li>
+<li class="elem-ref"><a href="#for-each-group">&lt;for-each-group&gt;</a></li>
+<li class="elem-ref"><a href="#if">&lt;if&gt;</a></li>
+<li class="elem-ref"><a href="#message">&lt;message&gt;</a></li>
+<li class="elem-ref"><a href="#namespace">&lt;namespace&gt;</a></li>
+<li class="elem-ref"><a href="#next-match">&lt;next-match&gt;</a></li>
+<li class="elem-ref"><a href="#number">&lt;number&gt;</a></li>
+<li class="elem-ref"><a href="#perform-sort">&lt;perform-sort&gt;</a></li>
+<li class="elem-ref"><a href="#processing-instruction">&lt;processing-instruction&gt;</a></li>
+<li class="elem-ref"><a href="#result-document">&lt;result-document&gt;</a></li>
+<li class="elem-ref"><a href="#sequence">&lt;sequence&gt;</a></li>
+<li class="elem-ref"><a href="#text">&lt;text&gt;</a></li>
+<li class="elem-ref"><a href="#value-of">&lt;value-of&gt;</a></li>
+</ul></section><section class="element" id="attribute-set"><h3><a href="#attribute-set">&lt;xsl:attribute-set&gt;</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#element-">ref</a></p>
 <ul class="content">
-<li class="attr-ref required">name<span class="general"> <a href="#QName">QName</a></span>
+<li class="attr-ref required">name<span class="general"> <a href="#xsl:QName">xsl:QName</a></span>
 </li>
-<li class="attr-ref">use-attribute-sets<span class="general"> <a href="#QNames">QNames</a></span>
+<li class="attr-ref">use-attribute-sets<span class="general"> <a href="#xsl:QNames">xsl:QNames</a></span>
 </li>
 </ul>
+<ul class="content"><li class="elem-ref"><a href="#xsl:attribute">&lt;xsl:attribute&gt;</a></li></ul></section><section class="element" id="call-template"><h3><a href="#call-template">&lt;xsl:call-template&gt;</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#element-">ref</a></p>
+<ul class="content"><li class="attr-ref required">name<span class="general"> <a href="#xsl:QName">xsl:QName</a></span>
+</li></ul>
+<ul class="content"><li class="elem-ref"><a href="#xsl:with-param">&lt;xsl:with-param&gt;</a></li></ul></section><section class="element" id="character-map"><h3><a href="#character-map">&lt;xsl:character-map&gt;</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#element-">ref</a></p>
 <ul class="content">
-<li class="elem-ref"><a href="#attribute">&lt;xsl:attribute&gt;</a></li>
-        
-          
-        
-        
-        
-      </ul></section><section class="element" id="call-template"><h3><a href="#call-template">&lt;xsl:call-template&gt;</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#element-call-template">ref</a></li></ul>
-<ul class="content"><li class="attr-ref required">name<span class="general"> <a href="#QName">QName</a></span>
+<li class="attr-ref required">name<span class="general"> <a href="#xsl:QName">xsl:QName</a></span>
+</li>
+<li class="attr-ref">use-character-maps<span class="general"> <a href="#xsl:QNames">xsl:QNames</a></span>
+</li>
+</ul>
+<ul class="content"><li class="elem-ref"><a href="#xsl:output-character">&lt;xsl:output-character&gt;</a></li></ul></section><section class="element" id="choose"><h3><a href="#choose">&lt;xsl:choose&gt;</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#element-">ref</a></p>
+<ul class="content">
+<li class="elem-ref"><a href="#xsl:when">&lt;xsl:when&gt;</a></li>
+<li class="elem-ref"><a href="#xsl:otherwise">&lt;xsl:otherwise&gt;</a></li>
+</ul></section><section class="element" id="comment"><h3><a href="#comment">&lt;xsl:comment&gt;</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#element-">ref</a></p>
+<ul class="content"><li class="attr-ref">select<span class="general"> <a href="#xsl:expression">xsl:expression</a></span>
 </li></ul>
 <ul class="content">
-<li class="elem-ref"><a href="#with-param">&lt;xsl:with-param&gt;</a></li>
-        
-          
-        
-        
-      </ul></section><section class="element" id="character-map"><h3><a href="#character-map">&lt;xsl:character-map&gt;</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#element-character-map">ref</a></li></ul>
+<li class="elem-ref"><a href="#analyze-string">&lt;analyze-string&gt;</a></li>
+<li class="elem-ref"><a href="#apply-imports">&lt;apply-imports&gt;</a></li>
+<li class="elem-ref"><a href="#apply-templates">&lt;apply-templates&gt;</a></li>
+<li class="elem-ref"><a href="#attribute">&lt;attribute&gt;</a></li>
+<li class="elem-ref"><a href="#call-template">&lt;call-template&gt;</a></li>
+<li class="elem-ref"><a href="#choose">&lt;choose&gt;</a></li>
+<li class="elem-ref"><a href="#comment">&lt;comment&gt;</a></li>
+<li class="elem-ref"><a href="#copy">&lt;copy&gt;</a></li>
+<li class="elem-ref"><a href="#copy-of">&lt;copy-of&gt;</a></li>
+<li class="elem-ref"><a href="#document">&lt;document&gt;</a></li>
+<li class="elem-ref"><a href="#element">&lt;element&gt;</a></li>
+<li class="elem-ref"><a href="#fallback">&lt;fallback&gt;</a></li>
+<li class="elem-ref"><a href="#for-each">&lt;for-each&gt;</a></li>
+<li class="elem-ref"><a href="#for-each-group">&lt;for-each-group&gt;</a></li>
+<li class="elem-ref"><a href="#if">&lt;if&gt;</a></li>
+<li class="elem-ref"><a href="#message">&lt;message&gt;</a></li>
+<li class="elem-ref"><a href="#namespace">&lt;namespace&gt;</a></li>
+<li class="elem-ref"><a href="#next-match">&lt;next-match&gt;</a></li>
+<li class="elem-ref"><a href="#number">&lt;number&gt;</a></li>
+<li class="elem-ref"><a href="#perform-sort">&lt;perform-sort&gt;</a></li>
+<li class="elem-ref"><a href="#processing-instruction">&lt;processing-instruction&gt;</a></li>
+<li class="elem-ref"><a href="#result-document">&lt;result-document&gt;</a></li>
+<li class="elem-ref"><a href="#sequence">&lt;sequence&gt;</a></li>
+<li class="elem-ref"><a href="#text">&lt;text&gt;</a></li>
+<li class="elem-ref"><a href="#value-of">&lt;value-of&gt;</a></li>
+</ul></section><section class="element" id="copy"><h3><a href="#copy">&lt;xsl:copy&gt;</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#element-">ref</a></p>
 <ul class="content">
-<li class="attr-ref required">name<span class="general"> <a href="#QName">QName</a></span>
+<li class="attr-ref">copy-namespaces<span class="general"> <a href="#xsl:yes-or-no">xsl:yes-or-no</a></span>
 </li>
-<li class="attr-ref">use-character-maps<span class="general"> <a href="#QNames">QNames</a></span>
+<li class="attr-ref">inherit-namespaces<span class="general"> <a href="#xsl:yes-or-no">xsl:yes-or-no</a></span>
+</li>
+<li class="attr-ref">use-attribute-sets<span class="general"> <a href="#xsl:QNames">xsl:QNames</a></span>
+</li>
+<li class="attr-ref">type<span class="general"> <a href="#xsl:QName">xsl:QName</a></span>
+</li>
+<li class="attr-ref">validation<span class="general"> <a href="#xsl:validation-type">xsl:validation-type</a></span>
 </li>
 </ul>
 <ul class="content">
-<li class="elem-ref"><a href="#output-character">&lt;xsl:output-character&gt;</a></li>
-        
-          
-        
-        
-        
-      </ul></section><section class="element" id="choose"><h3><a href="#choose">&lt;xsl:choose&gt;</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#element-choose">ref</a></li></ul>
+<li class="elem-ref"><a href="#analyze-string">&lt;analyze-string&gt;</a></li>
+<li class="elem-ref"><a href="#apply-imports">&lt;apply-imports&gt;</a></li>
+<li class="elem-ref"><a href="#apply-templates">&lt;apply-templates&gt;</a></li>
+<li class="elem-ref"><a href="#attribute">&lt;attribute&gt;</a></li>
+<li class="elem-ref"><a href="#call-template">&lt;call-template&gt;</a></li>
+<li class="elem-ref"><a href="#choose">&lt;choose&gt;</a></li>
+<li class="elem-ref"><a href="#comment">&lt;comment&gt;</a></li>
+<li class="elem-ref"><a href="#copy">&lt;copy&gt;</a></li>
+<li class="elem-ref"><a href="#copy-of">&lt;copy-of&gt;</a></li>
+<li class="elem-ref"><a href="#document">&lt;document&gt;</a></li>
+<li class="elem-ref"><a href="#element">&lt;element&gt;</a></li>
+<li class="elem-ref"><a href="#fallback">&lt;fallback&gt;</a></li>
+<li class="elem-ref"><a href="#for-each">&lt;for-each&gt;</a></li>
+<li class="elem-ref"><a href="#for-each-group">&lt;for-each-group&gt;</a></li>
+<li class="elem-ref"><a href="#if">&lt;if&gt;</a></li>
+<li class="elem-ref"><a href="#message">&lt;message&gt;</a></li>
+<li class="elem-ref"><a href="#namespace">&lt;namespace&gt;</a></li>
+<li class="elem-ref"><a href="#next-match">&lt;next-match&gt;</a></li>
+<li class="elem-ref"><a href="#number">&lt;number&gt;</a></li>
+<li class="elem-ref"><a href="#perform-sort">&lt;perform-sort&gt;</a></li>
+<li class="elem-ref"><a href="#processing-instruction">&lt;processing-instruction&gt;</a></li>
+<li class="elem-ref"><a href="#result-document">&lt;result-document&gt;</a></li>
+<li class="elem-ref"><a href="#sequence">&lt;sequence&gt;</a></li>
+<li class="elem-ref"><a href="#text">&lt;text&gt;</a></li>
+<li class="elem-ref"><a href="#value-of">&lt;value-of&gt;</a></li>
+</ul></section><section class="element" id="copy-of"><h3><a href="#copy-of">&lt;xsl:copy-of&gt;</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#element-">ref</a></p>
 <ul class="content">
-<li class="elem-ref"><a href="#when">&lt;xsl:when&gt;</a></li>
-<li class="elem-ref"><a href="#otherwise">&lt;xsl:otherwise&gt;</a></li>
-        
-          
-          
-        
-      </ul></section><section class="element" id="comment"><h3><a href="#comment">&lt;xsl:comment&gt;</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#element-comment">ref</a></li></ul>
-<ul class="content"><li class="attr-ref">select<span class="general"> <a href="#expression">expression</a></span>
+<li class="attr-ref required">select<span class="general"> <a href="#xsl:expression">xsl:expression</a></span>
+</li>
+<li class="attr-ref">copy-namespaces<span class="general"> <a href="#xsl:yes-or-no">xsl:yes-or-no</a></span>
+</li>
+<li class="attr-ref">type<span class="general"> <a href="#xsl:QName">xsl:QName</a></span>
+</li>
+<li class="attr-ref">validation<span class="general"> <a href="#xsl:validation-type">xsl:validation-type</a></span>
+</li>
+</ul></section><section class="element" id="decimal-format"><h3><a href="#decimal-format">&lt;xsl:decimal-format&gt;</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#element-">ref</a></p>
+<ul class="content">
+<li class="attr-ref">name<span class="general"> <a href="#xsl:QName">xsl:QName</a></span>
+</li>
+<li class="attr-ref">decimal-separator<span class="general"> <a href="#xsl:char">xsl:char</a></span>
+</li>
+<li class="attr-ref">grouping-separator<span class="general"> <a href="#xsl:char">xsl:char</a></span>
+</li>
+<li class="attr-ref">infinity<span class="general"> <a href="#xs:string">xs:string</a></span>
+</li>
+<li class="attr-ref">minus-sign<span class="general"> <a href="#xsl:char">xsl:char</a></span>
+</li>
+<li class="attr-ref">NaN<span class="general"> <a href="#xs:string">xs:string</a></span>
+</li>
+<li class="attr-ref">percent<span class="general"> <a href="#xsl:char">xsl:char</a></span>
+</li>
+<li class="attr-ref">per-mille<span class="general"> <a href="#xsl:char">xsl:char</a></span>
+</li>
+<li class="attr-ref">zero-digit<span class="general"> <a href="#xsl:char">xsl:char</a></span>
+</li>
+<li class="attr-ref">digit<span class="general"> <a href="#xsl:char">xsl:char</a></span>
+</li>
+<li class="attr-ref">pattern-separator<span class="general"> <a href="#xsl:char">xsl:char</a></span>
+</li>
+</ul></section><section class="element" id="document"><h3><a href="#document">&lt;xsl:document&gt;</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#element-">ref</a></p>
+<ul class="content">
+<li class="attr-ref">type<span class="general"> <a href="#xsl:QName">xsl:QName</a></span>
+</li>
+<li class="attr-ref">validation<span class="general"> <a href="#xsl:validation-type">xsl:validation-type</a></span>
+</li>
+</ul>
+<ul class="content">
+<li class="elem-ref"><a href="#analyze-string">&lt;analyze-string&gt;</a></li>
+<li class="elem-ref"><a href="#apply-imports">&lt;apply-imports&gt;</a></li>
+<li class="elem-ref"><a href="#apply-templates">&lt;apply-templates&gt;</a></li>
+<li class="elem-ref"><a href="#attribute">&lt;attribute&gt;</a></li>
+<li class="elem-ref"><a href="#call-template">&lt;call-template&gt;</a></li>
+<li class="elem-ref"><a href="#choose">&lt;choose&gt;</a></li>
+<li class="elem-ref"><a href="#comment">&lt;comment&gt;</a></li>
+<li class="elem-ref"><a href="#copy">&lt;copy&gt;</a></li>
+<li class="elem-ref"><a href="#copy-of">&lt;copy-of&gt;</a></li>
+<li class="elem-ref"><a href="#document">&lt;document&gt;</a></li>
+<li class="elem-ref"><a href="#element">&lt;element&gt;</a></li>
+<li class="elem-ref"><a href="#fallback">&lt;fallback&gt;</a></li>
+<li class="elem-ref"><a href="#for-each">&lt;for-each&gt;</a></li>
+<li class="elem-ref"><a href="#for-each-group">&lt;for-each-group&gt;</a></li>
+<li class="elem-ref"><a href="#if">&lt;if&gt;</a></li>
+<li class="elem-ref"><a href="#message">&lt;message&gt;</a></li>
+<li class="elem-ref"><a href="#namespace">&lt;namespace&gt;</a></li>
+<li class="elem-ref"><a href="#next-match">&lt;next-match&gt;</a></li>
+<li class="elem-ref"><a href="#number">&lt;number&gt;</a></li>
+<li class="elem-ref"><a href="#perform-sort">&lt;perform-sort&gt;</a></li>
+<li class="elem-ref"><a href="#processing-instruction">&lt;processing-instruction&gt;</a></li>
+<li class="elem-ref"><a href="#result-document">&lt;result-document&gt;</a></li>
+<li class="elem-ref"><a href="#sequence">&lt;sequence&gt;</a></li>
+<li class="elem-ref"><a href="#text">&lt;text&gt;</a></li>
+<li class="elem-ref"><a href="#value-of">&lt;value-of&gt;</a></li>
+</ul></section><section class="element" id="element"><h3><a href="#element">&lt;xsl:element&gt;</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#element-">ref</a></p>
+<ul class="content">
+<li class="attr-ref required">name<span class="general"> <a href="#xsl:avt">xsl:avt</a></span>
+</li>
+<li class="attr-ref">namespace<span class="general"> <a href="#xsl:avt">xsl:avt</a></span>
+</li>
+<li class="attr-ref">inherit-namespaces<span class="general"> <a href="#xsl:yes-or-no">xsl:yes-or-no</a></span>
+</li>
+<li class="attr-ref">use-attribute-sets<span class="general"> <a href="#xsl:QNames">xsl:QNames</a></span>
+</li>
+<li class="attr-ref">type<span class="general"> <a href="#xsl:QName">xsl:QName</a></span>
+</li>
+<li class="attr-ref">validation<span class="general"> <a href="#xsl:validation-type">xsl:validation-type</a></span>
+</li>
+</ul>
+<ul class="content">
+<li class="elem-ref"><a href="#analyze-string">&lt;analyze-string&gt;</a></li>
+<li class="elem-ref"><a href="#apply-imports">&lt;apply-imports&gt;</a></li>
+<li class="elem-ref"><a href="#apply-templates">&lt;apply-templates&gt;</a></li>
+<li class="elem-ref"><a href="#attribute">&lt;attribute&gt;</a></li>
+<li class="elem-ref"><a href="#call-template">&lt;call-template&gt;</a></li>
+<li class="elem-ref"><a href="#choose">&lt;choose&gt;</a></li>
+<li class="elem-ref"><a href="#comment">&lt;comment&gt;</a></li>
+<li class="elem-ref"><a href="#copy">&lt;copy&gt;</a></li>
+<li class="elem-ref"><a href="#copy-of">&lt;copy-of&gt;</a></li>
+<li class="elem-ref"><a href="#document">&lt;document&gt;</a></li>
+<li class="elem-ref"><a href="#element">&lt;element&gt;</a></li>
+<li class="elem-ref"><a href="#fallback">&lt;fallback&gt;</a></li>
+<li class="elem-ref"><a href="#for-each">&lt;for-each&gt;</a></li>
+<li class="elem-ref"><a href="#for-each-group">&lt;for-each-group&gt;</a></li>
+<li class="elem-ref"><a href="#if">&lt;if&gt;</a></li>
+<li class="elem-ref"><a href="#message">&lt;message&gt;</a></li>
+<li class="elem-ref"><a href="#namespace">&lt;namespace&gt;</a></li>
+<li class="elem-ref"><a href="#next-match">&lt;next-match&gt;</a></li>
+<li class="elem-ref"><a href="#number">&lt;number&gt;</a></li>
+<li class="elem-ref"><a href="#perform-sort">&lt;perform-sort&gt;</a></li>
+<li class="elem-ref"><a href="#processing-instruction">&lt;processing-instruction&gt;</a></li>
+<li class="elem-ref"><a href="#result-document">&lt;result-document&gt;</a></li>
+<li class="elem-ref"><a href="#sequence">&lt;sequence&gt;</a></li>
+<li class="elem-ref"><a href="#text">&lt;text&gt;</a></li>
+<li class="elem-ref"><a href="#value-of">&lt;value-of&gt;</a></li>
+</ul></section><section class="element" id="fallback"><h3><a href="#fallback">&lt;xsl:fallback&gt;</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#element-">ref</a></p></section><section class="element" id="for-each"><h3><a href="#for-each">&lt;xsl:for-each&gt;</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#element-">ref</a></p>
+<ul class="content"><li class="attr-ref required">select<span class="general"> <a href="#xsl:expression">xsl:expression</a></span>
 </li></ul>
 <ul class="content">
-        
-      </ul></section><section class="element" id="copy"><h3><a href="#copy">&lt;xsl:copy&gt;</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#element-copy">ref</a></li></ul>
+<li class="elem-ref"><a href="#xsl:sort">&lt;xsl:sort&gt;</a></li>
+<li class="elem-ref"><a href="#analyze-string">&lt;analyze-string&gt;</a></li>
+<li class="elem-ref"><a href="#apply-imports">&lt;apply-imports&gt;</a></li>
+<li class="elem-ref"><a href="#apply-templates">&lt;apply-templates&gt;</a></li>
+<li class="elem-ref"><a href="#attribute">&lt;attribute&gt;</a></li>
+<li class="elem-ref"><a href="#call-template">&lt;call-template&gt;</a></li>
+<li class="elem-ref"><a href="#choose">&lt;choose&gt;</a></li>
+<li class="elem-ref"><a href="#comment">&lt;comment&gt;</a></li>
+<li class="elem-ref"><a href="#copy">&lt;copy&gt;</a></li>
+<li class="elem-ref"><a href="#copy-of">&lt;copy-of&gt;</a></li>
+<li class="elem-ref"><a href="#document">&lt;document&gt;</a></li>
+<li class="elem-ref"><a href="#element">&lt;element&gt;</a></li>
+<li class="elem-ref"><a href="#fallback">&lt;fallback&gt;</a></li>
+<li class="elem-ref"><a href="#for-each">&lt;for-each&gt;</a></li>
+<li class="elem-ref"><a href="#for-each-group">&lt;for-each-group&gt;</a></li>
+<li class="elem-ref"><a href="#if">&lt;if&gt;</a></li>
+<li class="elem-ref"><a href="#message">&lt;message&gt;</a></li>
+<li class="elem-ref"><a href="#namespace">&lt;namespace&gt;</a></li>
+<li class="elem-ref"><a href="#next-match">&lt;next-match&gt;</a></li>
+<li class="elem-ref"><a href="#number">&lt;number&gt;</a></li>
+<li class="elem-ref"><a href="#perform-sort">&lt;perform-sort&gt;</a></li>
+<li class="elem-ref"><a href="#processing-instruction">&lt;processing-instruction&gt;</a></li>
+<li class="elem-ref"><a href="#result-document">&lt;result-document&gt;</a></li>
+<li class="elem-ref"><a href="#sequence">&lt;sequence&gt;</a></li>
+<li class="elem-ref"><a href="#text">&lt;text&gt;</a></li>
+<li class="elem-ref"><a href="#value-of">&lt;value-of&gt;</a></li>
+</ul></section><section class="element" id="for-each-group"><h3><a href="#for-each-group">&lt;xsl:for-each-group&gt;</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#element-">ref</a></p>
 <ul class="content">
-<li class="attr-ref">copy-namespaces<span class="general"> <a href="#yes-or-no">yes-or-no</a></span>
+<li class="attr-ref required">select<span class="general"> <a href="#xsl:expression">xsl:expression</a></span>
 </li>
-<li class="attr-ref">inherit-namespaces<span class="general"> <a href="#yes-or-no">yes-or-no</a></span>
+<li class="attr-ref">group-by<span class="general"> <a href="#xsl:expression">xsl:expression</a></span>
 </li>
-<li class="attr-ref">use-attribute-sets<span class="general"> <a href="#QNames">QNames</a></span>
+<li class="attr-ref">group-adjacent<span class="general"> <a href="#xsl:expression">xsl:expression</a></span>
 </li>
-<li class="attr-ref">type<span class="general"> <a href="#QName">QName</a></span>
+<li class="attr-ref">group-starting-with<span class="general"> <a href="#xsl:pattern">xsl:pattern</a></span>
 </li>
-<li class="attr-ref">validation<span class="general"> <a href="#validation-type">validation-type</a></span>
+<li class="attr-ref">group-ending-with<span class="general"> <a href="#xsl:pattern">xsl:pattern</a></span>
+</li>
+<li class="attr-ref">collation<span class="general"> <a href="#xs:anyURI">xs:anyURI</a></span>
 </li>
 </ul>
 <ul class="content">
-        
-        
-        
-        
-        
-      </ul></section><section class="element" id="copy-of"><h3><a href="#copy-of">&lt;xsl:copy-of&gt;</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#element-copy-of">ref</a></li></ul>
+<li class="elem-ref"><a href="#xsl:sort">&lt;xsl:sort&gt;</a></li>
+<li class="elem-ref"><a href="#analyze-string">&lt;analyze-string&gt;</a></li>
+<li class="elem-ref"><a href="#apply-imports">&lt;apply-imports&gt;</a></li>
+<li class="elem-ref"><a href="#apply-templates">&lt;apply-templates&gt;</a></li>
+<li class="elem-ref"><a href="#attribute">&lt;attribute&gt;</a></li>
+<li class="elem-ref"><a href="#call-template">&lt;call-template&gt;</a></li>
+<li class="elem-ref"><a href="#choose">&lt;choose&gt;</a></li>
+<li class="elem-ref"><a href="#comment">&lt;comment&gt;</a></li>
+<li class="elem-ref"><a href="#copy">&lt;copy&gt;</a></li>
+<li class="elem-ref"><a href="#copy-of">&lt;copy-of&gt;</a></li>
+<li class="elem-ref"><a href="#document">&lt;document&gt;</a></li>
+<li class="elem-ref"><a href="#element">&lt;element&gt;</a></li>
+<li class="elem-ref"><a href="#fallback">&lt;fallback&gt;</a></li>
+<li class="elem-ref"><a href="#for-each">&lt;for-each&gt;</a></li>
+<li class="elem-ref"><a href="#for-each-group">&lt;for-each-group&gt;</a></li>
+<li class="elem-ref"><a href="#if">&lt;if&gt;</a></li>
+<li class="elem-ref"><a href="#message">&lt;message&gt;</a></li>
+<li class="elem-ref"><a href="#namespace">&lt;namespace&gt;</a></li>
+<li class="elem-ref"><a href="#next-match">&lt;next-match&gt;</a></li>
+<li class="elem-ref"><a href="#number">&lt;number&gt;</a></li>
+<li class="elem-ref"><a href="#perform-sort">&lt;perform-sort&gt;</a></li>
+<li class="elem-ref"><a href="#processing-instruction">&lt;processing-instruction&gt;</a></li>
+<li class="elem-ref"><a href="#result-document">&lt;result-document&gt;</a></li>
+<li class="elem-ref"><a href="#sequence">&lt;sequence&gt;</a></li>
+<li class="elem-ref"><a href="#text">&lt;text&gt;</a></li>
+<li class="elem-ref"><a href="#value-of">&lt;value-of&gt;</a></li>
+</ul></section><section class="element" id="function"><h3><a href="#function">&lt;xsl:function&gt;</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#element-">ref</a></p>
 <ul class="content">
-<li class="attr-ref required">select<span class="general"> <a href="#expression">expression</a></span>
+<li class="attr-ref required">name<span class="general"> <a href="#xsl:QName">xsl:QName</a></span>
 </li>
-<li class="attr-ref">copy-namespaces<span class="general"> <a href="#yes-or-no">yes-or-no</a></span>
+<li class="attr-ref">override<span class="general"> <a href="#xsl:yes-or-no">xsl:yes-or-no</a></span>
 </li>
-<li class="attr-ref">type<span class="general"> <a href="#QName">QName</a></span>
-</li>
-<li class="attr-ref">validation<span class="general"> <a href="#validation-type">validation-type</a></span>
+<li class="attr-ref">as<span class="general"> <a href="#xsl:sequence-type">xsl:sequence-type</a></span>
 </li>
 </ul>
 <ul class="content">
-        
-        
-        
-        
-      </ul></section><section class="element" id="decimal-format"><h3><a href="#decimal-format">&lt;xsl:decimal-format&gt;</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#element-decimal-format">ref</a></li></ul>
-<ul class="content">
-<li class="attr-ref">name<span class="general"> <a href="#QName">QName</a></span>
-</li>
-<li class="attr-ref">decimal-separator<span class="general"> <a href="#char">char</a></span>
-</li>
-<li class="attr-ref">grouping-separator<span class="general"> <a href="#char">char</a></span>
-</li>
-<li class="attr-ref">infinity<span class="general"> <a href="#string">string</a></span>
-</li>
-<li class="attr-ref">minus-sign<span class="general"> <a href="#char">char</a></span>
-</li>
-<li class="attr-ref">NaN<span class="general"> <a href="#string">string</a></span>
-</li>
-<li class="attr-ref">percent<span class="general"> <a href="#char">char</a></span>
-</li>
-<li class="attr-ref">per-mille<span class="general"> <a href="#char">char</a></span>
-</li>
-<li class="attr-ref">zero-digit<span class="general"> <a href="#char">char</a></span>
-</li>
-<li class="attr-ref">digit<span class="general"> <a href="#char">char</a></span>
-</li>
-<li class="attr-ref">pattern-separator<span class="general"> <a href="#char">char</a></span>
-</li>
-</ul>
-<ul class="content">
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-      </ul></section><section class="element" id="document"><h3><a href="#document">&lt;xsl:document&gt;</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#element-document">ref</a></li></ul>
-<ul class="content">
-<li class="attr-ref">type<span class="general"> <a href="#QName">QName</a></span>
-</li>
-<li class="attr-ref">validation<span class="general"> <a href="#validation-type">validation-type</a></span>
-</li>
-</ul>
-<ul class="content">
-        
-        
-      </ul></section><section class="element" id="element"><h3><a href="#element">&lt;xsl:element&gt;</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#element-element">ref</a></li></ul>
-<ul class="content">
-<li class="attr-ref required">name<span class="general"> <a href="#avt">avt</a></span>
-</li>
-<li class="attr-ref">namespace<span class="general"> <a href="#avt">avt</a></span>
-</li>
-<li class="attr-ref">inherit-namespaces<span class="general"> <a href="#yes-or-no">yes-or-no</a></span>
-</li>
-<li class="attr-ref">use-attribute-sets<span class="general"> <a href="#QNames">QNames</a></span>
-</li>
-<li class="attr-ref">type<span class="general"> <a href="#QName">QName</a></span>
-</li>
-<li class="attr-ref">validation<span class="general"> <a href="#validation-type">validation-type</a></span>
-</li>
-</ul>
-<ul class="content">
-        
-        
-        
-        
-        
-        
-      </ul></section><section class="element" id="fallback"><h3><a href="#fallback">&lt;xsl:fallback&gt;</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#element-fallback">ref</a></li></ul>
-<ul class="content"></ul></section><section class="element" id="for-each"><h3><a href="#for-each">&lt;xsl:for-each&gt;</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#element-for-each">ref</a></li></ul>
-<ul class="content"><li class="attr-ref required">select<span class="general"> <a href="#expression">expression</a></span>
+<li class="elem-ref"><a href="#xsl:param">&lt;xsl:param&gt;</a></li>
+<li class="elem-ref"><a href="#analyze-string">&lt;analyze-string&gt;</a></li>
+<li class="elem-ref"><a href="#apply-imports">&lt;apply-imports&gt;</a></li>
+<li class="elem-ref"><a href="#apply-templates">&lt;apply-templates&gt;</a></li>
+<li class="elem-ref"><a href="#attribute">&lt;attribute&gt;</a></li>
+<li class="elem-ref"><a href="#call-template">&lt;call-template&gt;</a></li>
+<li class="elem-ref"><a href="#choose">&lt;choose&gt;</a></li>
+<li class="elem-ref"><a href="#comment">&lt;comment&gt;</a></li>
+<li class="elem-ref"><a href="#copy">&lt;copy&gt;</a></li>
+<li class="elem-ref"><a href="#copy-of">&lt;copy-of&gt;</a></li>
+<li class="elem-ref"><a href="#document">&lt;document&gt;</a></li>
+<li class="elem-ref"><a href="#element">&lt;element&gt;</a></li>
+<li class="elem-ref"><a href="#fallback">&lt;fallback&gt;</a></li>
+<li class="elem-ref"><a href="#for-each">&lt;for-each&gt;</a></li>
+<li class="elem-ref"><a href="#for-each-group">&lt;for-each-group&gt;</a></li>
+<li class="elem-ref"><a href="#if">&lt;if&gt;</a></li>
+<li class="elem-ref"><a href="#message">&lt;message&gt;</a></li>
+<li class="elem-ref"><a href="#namespace">&lt;namespace&gt;</a></li>
+<li class="elem-ref"><a href="#next-match">&lt;next-match&gt;</a></li>
+<li class="elem-ref"><a href="#number">&lt;number&gt;</a></li>
+<li class="elem-ref"><a href="#perform-sort">&lt;perform-sort&gt;</a></li>
+<li class="elem-ref"><a href="#processing-instruction">&lt;processing-instruction&gt;</a></li>
+<li class="elem-ref"><a href="#result-document">&lt;result-document&gt;</a></li>
+<li class="elem-ref"><a href="#sequence">&lt;sequence&gt;</a></li>
+<li class="elem-ref"><a href="#text">&lt;text&gt;</a></li>
+<li class="elem-ref"><a href="#value-of">&lt;value-of&gt;</a></li>
+</ul></section><section class="element" id="if"><h3><a href="#if">&lt;xsl:if&gt;</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#element-">ref</a></p>
+<ul class="content"><li class="attr-ref required">test<span class="general"> <a href="#xsl:expression">xsl:expression</a></span>
 </li></ul>
 <ul class="content">
-<li class="elem-ref"><a href="#sort">&lt;xsl:sort&gt;</a></li>
-        
-          
-          
-  
-    
-      
-        
-        
-        
-      
-    
-  
-<li class="elem-ref"><a href="#analyze-string">&lt;xsl:analyze-string&gt;</a></li>
-<li class="elem-ref"><a href="#apply-imports">&lt;xsl:apply-imports&gt;</a></li>
-<li class="elem-ref"><a href="#apply-templates">&lt;xsl:apply-templates&gt;</a></li>
-<li class="elem-ref"><a href="#attribute">&lt;xsl:attribute&gt;</a></li>
-<li class="elem-ref"><a href="#call-template">&lt;xsl:call-template&gt;</a></li>
-<li class="elem-ref"><a href="#choose">&lt;xsl:choose&gt;</a></li>
-<li class="elem-ref"><a href="#comment">&lt;xsl:comment&gt;</a></li>
-<li class="elem-ref"><a href="#copy">&lt;xsl:copy&gt;</a></li>
-<li class="elem-ref"><a href="#copy-of">&lt;xsl:copy-of&gt;</a></li>
-<li class="elem-ref"><a href="#document">&lt;xsl:document&gt;</a></li>
-<li class="elem-ref"><a href="#element">&lt;xsl:element&gt;</a></li>
-<li class="elem-ref"><a href="#fallback">&lt;xsl:fallback&gt;</a></li>
-<li class="elem-ref"><a href="#for-each">&lt;xsl:for-each&gt;</a></li>
-<li class="elem-ref"><a href="#for-each-group">&lt;xsl:for-each-group&gt;</a></li>
-<li class="elem-ref"><a href="#if">&lt;xsl:if&gt;</a></li>
-<li class="elem-ref"><a href="#message">&lt;xsl:message&gt;</a></li>
-<li class="elem-ref"><a href="#namespace">&lt;xsl:namespace&gt;</a></li>
-<li class="elem-ref"><a href="#next-match">&lt;xsl:next-match&gt;</a></li>
-<li class="elem-ref"><a href="#number">&lt;xsl:number&gt;</a></li>
-<li class="elem-ref"><a href="#perform-sort">&lt;xsl:perform-sort&gt;</a></li>
-<li class="elem-ref"><a href="#processing-instruction">&lt;xsl:processing-instruction&gt;</a></li>
-<li class="elem-ref"><a href="#result-document">&lt;xsl:result-document&gt;</a></li>
-<li class="elem-ref"><a href="#sequence">&lt;xsl:sequence&gt;</a></li>
-<li class="elem-ref"><a href="#text">&lt;xsl:text&gt;</a></li>
-<li class="elem-ref"><a href="#value-of">&lt;xsl:value-of&gt;</a></li>
-        
-        
-      </ul></section><section class="element" id="for-each-group"><h3><a href="#for-each-group">&lt;xsl:for-each-group&gt;</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#element-for-each-group">ref</a></li></ul>
+<li class="elem-ref"><a href="#analyze-string">&lt;analyze-string&gt;</a></li>
+<li class="elem-ref"><a href="#apply-imports">&lt;apply-imports&gt;</a></li>
+<li class="elem-ref"><a href="#apply-templates">&lt;apply-templates&gt;</a></li>
+<li class="elem-ref"><a href="#attribute">&lt;attribute&gt;</a></li>
+<li class="elem-ref"><a href="#call-template">&lt;call-template&gt;</a></li>
+<li class="elem-ref"><a href="#choose">&lt;choose&gt;</a></li>
+<li class="elem-ref"><a href="#comment">&lt;comment&gt;</a></li>
+<li class="elem-ref"><a href="#copy">&lt;copy&gt;</a></li>
+<li class="elem-ref"><a href="#copy-of">&lt;copy-of&gt;</a></li>
+<li class="elem-ref"><a href="#document">&lt;document&gt;</a></li>
+<li class="elem-ref"><a href="#element">&lt;element&gt;</a></li>
+<li class="elem-ref"><a href="#fallback">&lt;fallback&gt;</a></li>
+<li class="elem-ref"><a href="#for-each">&lt;for-each&gt;</a></li>
+<li class="elem-ref"><a href="#for-each-group">&lt;for-each-group&gt;</a></li>
+<li class="elem-ref"><a href="#if">&lt;if&gt;</a></li>
+<li class="elem-ref"><a href="#message">&lt;message&gt;</a></li>
+<li class="elem-ref"><a href="#namespace">&lt;namespace&gt;</a></li>
+<li class="elem-ref"><a href="#next-match">&lt;next-match&gt;</a></li>
+<li class="elem-ref"><a href="#number">&lt;number&gt;</a></li>
+<li class="elem-ref"><a href="#perform-sort">&lt;perform-sort&gt;</a></li>
+<li class="elem-ref"><a href="#processing-instruction">&lt;processing-instruction&gt;</a></li>
+<li class="elem-ref"><a href="#result-document">&lt;result-document&gt;</a></li>
+<li class="elem-ref"><a href="#sequence">&lt;sequence&gt;</a></li>
+<li class="elem-ref"><a href="#text">&lt;text&gt;</a></li>
+<li class="elem-ref"><a href="#value-of">&lt;value-of&gt;</a></li>
+</ul></section><section class="element" id="import"><h3><a href="#import">&lt;xsl:import&gt;</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#element-">ref</a></p>
+<ul class="content"><li class="attr-ref required">href<span class="general"> <a href="#xs:anyURI">xs:anyURI</a></span>
+</li></ul></section><section class="element" id="import-schema"><h3><a href="#import-schema">&lt;xsl:import-schema&gt;</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#element-">ref</a></p>
 <ul class="content">
-<li class="attr-ref required">select<span class="general"> <a href="#expression">expression</a></span>
+<li class="attr-ref">namespace<span class="general"> <a href="#xs:anyURI">xs:anyURI</a></span>
 </li>
-<li class="attr-ref">group-by<span class="general"> <a href="#expression">expression</a></span>
+<li class="attr-ref">schema-location<span class="general"> <a href="#xs:anyURI">xs:anyURI</a></span>
 </li>
-<li class="attr-ref">group-adjacent<span class="general"> <a href="#expression">expression</a></span>
+</ul>
+<ul class="content"><li class="elem-ref"><a href="#xs:schema">&lt;xs:schema&gt;</a></li></ul></section><section class="element" id="include"><h3><a href="#include">&lt;xsl:include&gt;</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#element-">ref</a></p>
+<ul class="content"><li class="attr-ref required">href<span class="general"> <a href="#xs:anyURI">xs:anyURI</a></span>
+</li></ul></section><section class="element" id="key"><h3><a href="#key">&lt;xsl:key&gt;</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#element-">ref</a></p>
+<ul class="content">
+<li class="attr-ref required">name<span class="general"> <a href="#xsl:QName">xsl:QName</a></span>
 </li>
-<li class="attr-ref">group-starting-with<span class="general"> <a href="#pattern">pattern</a></span>
+<li class="attr-ref required">match<span class="general"> <a href="#xsl:pattern">xsl:pattern</a></span>
 </li>
-<li class="attr-ref">group-ending-with<span class="general"> <a href="#pattern">pattern</a></span>
+<li class="attr-ref">use<span class="general"> <a href="#xsl:expression">xsl:expression</a></span>
 </li>
-<li class="attr-ref">collation<span class="general"> <a href="#anyURI">anyURI</a></span>
+<li class="attr-ref">collation<span class="general"> <a href="#xs:anyURI">xs:anyURI</a></span>
 </li>
 </ul>
 <ul class="content">
-<li class="elem-ref"><a href="#sort">&lt;xsl:sort&gt;</a></li>
-        
-          
-          
-  
-    
-      
-        
-        
-        
-      
-    
-  
-<li class="elem-ref"><a href="#analyze-string">&lt;xsl:analyze-string&gt;</a></li>
-<li class="elem-ref"><a href="#apply-imports">&lt;xsl:apply-imports&gt;</a></li>
-<li class="elem-ref"><a href="#apply-templates">&lt;xsl:apply-templates&gt;</a></li>
-<li class="elem-ref"><a href="#attribute">&lt;xsl:attribute&gt;</a></li>
-<li class="elem-ref"><a href="#call-template">&lt;xsl:call-template&gt;</a></li>
-<li class="elem-ref"><a href="#choose">&lt;xsl:choose&gt;</a></li>
-<li class="elem-ref"><a href="#comment">&lt;xsl:comment&gt;</a></li>
-<li class="elem-ref"><a href="#copy">&lt;xsl:copy&gt;</a></li>
-<li class="elem-ref"><a href="#copy-of">&lt;xsl:copy-of&gt;</a></li>
-<li class="elem-ref"><a href="#document">&lt;xsl:document&gt;</a></li>
-<li class="elem-ref"><a href="#element">&lt;xsl:element&gt;</a></li>
-<li class="elem-ref"><a href="#fallback">&lt;xsl:fallback&gt;</a></li>
-<li class="elem-ref"><a href="#for-each">&lt;xsl:for-each&gt;</a></li>
-<li class="elem-ref"><a href="#for-each-group">&lt;xsl:for-each-group&gt;</a></li>
-<li class="elem-ref"><a href="#if">&lt;xsl:if&gt;</a></li>
-<li class="elem-ref"><a href="#message">&lt;xsl:message&gt;</a></li>
-<li class="elem-ref"><a href="#namespace">&lt;xsl:namespace&gt;</a></li>
-<li class="elem-ref"><a href="#next-match">&lt;xsl:next-match&gt;</a></li>
-<li class="elem-ref"><a href="#number">&lt;xsl:number&gt;</a></li>
-<li class="elem-ref"><a href="#perform-sort">&lt;xsl:perform-sort&gt;</a></li>
-<li class="elem-ref"><a href="#processing-instruction">&lt;xsl:processing-instruction&gt;</a></li>
-<li class="elem-ref"><a href="#result-document">&lt;xsl:result-document&gt;</a></li>
-<li class="elem-ref"><a href="#sequence">&lt;xsl:sequence&gt;</a></li>
-<li class="elem-ref"><a href="#text">&lt;xsl:text&gt;</a></li>
-<li class="elem-ref"><a href="#value-of">&lt;xsl:value-of&gt;</a></li>
-        
-        
-        
-                    
-                    
-                    
-                    
-      </ul></section><section class="element" id="function"><h3><a href="#function">&lt;xsl:function&gt;</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#element-function">ref</a></li></ul>
+<li class="elem-ref"><a href="#analyze-string">&lt;analyze-string&gt;</a></li>
+<li class="elem-ref"><a href="#apply-imports">&lt;apply-imports&gt;</a></li>
+<li class="elem-ref"><a href="#apply-templates">&lt;apply-templates&gt;</a></li>
+<li class="elem-ref"><a href="#attribute">&lt;attribute&gt;</a></li>
+<li class="elem-ref"><a href="#call-template">&lt;call-template&gt;</a></li>
+<li class="elem-ref"><a href="#choose">&lt;choose&gt;</a></li>
+<li class="elem-ref"><a href="#comment">&lt;comment&gt;</a></li>
+<li class="elem-ref"><a href="#copy">&lt;copy&gt;</a></li>
+<li class="elem-ref"><a href="#copy-of">&lt;copy-of&gt;</a></li>
+<li class="elem-ref"><a href="#document">&lt;document&gt;</a></li>
+<li class="elem-ref"><a href="#element">&lt;element&gt;</a></li>
+<li class="elem-ref"><a href="#fallback">&lt;fallback&gt;</a></li>
+<li class="elem-ref"><a href="#for-each">&lt;for-each&gt;</a></li>
+<li class="elem-ref"><a href="#for-each-group">&lt;for-each-group&gt;</a></li>
+<li class="elem-ref"><a href="#if">&lt;if&gt;</a></li>
+<li class="elem-ref"><a href="#message">&lt;message&gt;</a></li>
+<li class="elem-ref"><a href="#namespace">&lt;namespace&gt;</a></li>
+<li class="elem-ref"><a href="#next-match">&lt;next-match&gt;</a></li>
+<li class="elem-ref"><a href="#number">&lt;number&gt;</a></li>
+<li class="elem-ref"><a href="#perform-sort">&lt;perform-sort&gt;</a></li>
+<li class="elem-ref"><a href="#processing-instruction">&lt;processing-instruction&gt;</a></li>
+<li class="elem-ref"><a href="#result-document">&lt;result-document&gt;</a></li>
+<li class="elem-ref"><a href="#sequence">&lt;sequence&gt;</a></li>
+<li class="elem-ref"><a href="#text">&lt;text&gt;</a></li>
+<li class="elem-ref"><a href="#value-of">&lt;value-of&gt;</a></li>
+</ul></section><section class="element" id="matching-substring"><h3><a href="#matching-substring">&lt;xsl:matching-substring&gt;</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#element-">ref</a></p></section><section class="element" id="message"><h3><a href="#message">&lt;xsl:message&gt;</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#element-">ref</a></p>
 <ul class="content">
-<li class="attr-ref required">name<span class="general"> <a href="#QName">QName</a></span>
+<li class="attr-ref">select<span class="general"> <a href="#xsl:expression">xsl:expression</a></span>
 </li>
-<li class="attr-ref">override<span class="general"> <a href="#yes-or-no">yes-or-no</a></span>
-</li>
-<li class="attr-ref">as<span class="general"> <a href="#sequence-type">sequence-type</a></span>
+<li class="attr-ref">terminate<span class="general"> <a href="#xsl:avt">xsl:avt</a></span>
 </li>
 </ul>
 <ul class="content">
-<li class="elem-ref"><a href="#param">&lt;xsl:param&gt;</a></li>
-        
-          
-          
-  
-    
-      
-        
-        
-        
-      
-    
-  
-<li class="elem-ref"><a href="#analyze-string">&lt;xsl:analyze-string&gt;</a></li>
-<li class="elem-ref"><a href="#apply-imports">&lt;xsl:apply-imports&gt;</a></li>
-<li class="elem-ref"><a href="#apply-templates">&lt;xsl:apply-templates&gt;</a></li>
-<li class="elem-ref"><a href="#attribute">&lt;xsl:attribute&gt;</a></li>
-<li class="elem-ref"><a href="#call-template">&lt;xsl:call-template&gt;</a></li>
-<li class="elem-ref"><a href="#choose">&lt;xsl:choose&gt;</a></li>
-<li class="elem-ref"><a href="#comment">&lt;xsl:comment&gt;</a></li>
-<li class="elem-ref"><a href="#copy">&lt;xsl:copy&gt;</a></li>
-<li class="elem-ref"><a href="#copy-of">&lt;xsl:copy-of&gt;</a></li>
-<li class="elem-ref"><a href="#document">&lt;xsl:document&gt;</a></li>
-<li class="elem-ref"><a href="#element">&lt;xsl:element&gt;</a></li>
-<li class="elem-ref"><a href="#fallback">&lt;xsl:fallback&gt;</a></li>
-<li class="elem-ref"><a href="#for-each">&lt;xsl:for-each&gt;</a></li>
-<li class="elem-ref"><a href="#for-each-group">&lt;xsl:for-each-group&gt;</a></li>
-<li class="elem-ref"><a href="#if">&lt;xsl:if&gt;</a></li>
-<li class="elem-ref"><a href="#message">&lt;xsl:message&gt;</a></li>
-<li class="elem-ref"><a href="#namespace">&lt;xsl:namespace&gt;</a></li>
-<li class="elem-ref"><a href="#next-match">&lt;xsl:next-match&gt;</a></li>
-<li class="elem-ref"><a href="#number">&lt;xsl:number&gt;</a></li>
-<li class="elem-ref"><a href="#perform-sort">&lt;xsl:perform-sort&gt;</a></li>
-<li class="elem-ref"><a href="#processing-instruction">&lt;xsl:processing-instruction&gt;</a></li>
-<li class="elem-ref"><a href="#result-document">&lt;xsl:result-document&gt;</a></li>
-<li class="elem-ref"><a href="#sequence">&lt;xsl:sequence&gt;</a></li>
-<li class="elem-ref"><a href="#text">&lt;xsl:text&gt;</a></li>
-<li class="elem-ref"><a href="#value-of">&lt;xsl:value-of&gt;</a></li>
-        
-        
-        
-        
-      </ul></section><section class="element" id="if"><h3><a href="#if">&lt;xsl:if&gt;</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#element-if">ref</a></li></ul>
-<ul class="content"><li class="attr-ref required">test<span class="general"> <a href="#expression">expression</a></span>
+<li class="elem-ref"><a href="#analyze-string">&lt;analyze-string&gt;</a></li>
+<li class="elem-ref"><a href="#apply-imports">&lt;apply-imports&gt;</a></li>
+<li class="elem-ref"><a href="#apply-templates">&lt;apply-templates&gt;</a></li>
+<li class="elem-ref"><a href="#attribute">&lt;attribute&gt;</a></li>
+<li class="elem-ref"><a href="#call-template">&lt;call-template&gt;</a></li>
+<li class="elem-ref"><a href="#choose">&lt;choose&gt;</a></li>
+<li class="elem-ref"><a href="#comment">&lt;comment&gt;</a></li>
+<li class="elem-ref"><a href="#copy">&lt;copy&gt;</a></li>
+<li class="elem-ref"><a href="#copy-of">&lt;copy-of&gt;</a></li>
+<li class="elem-ref"><a href="#document">&lt;document&gt;</a></li>
+<li class="elem-ref"><a href="#element">&lt;element&gt;</a></li>
+<li class="elem-ref"><a href="#fallback">&lt;fallback&gt;</a></li>
+<li class="elem-ref"><a href="#for-each">&lt;for-each&gt;</a></li>
+<li class="elem-ref"><a href="#for-each-group">&lt;for-each-group&gt;</a></li>
+<li class="elem-ref"><a href="#if">&lt;if&gt;</a></li>
+<li class="elem-ref"><a href="#message">&lt;message&gt;</a></li>
+<li class="elem-ref"><a href="#namespace">&lt;namespace&gt;</a></li>
+<li class="elem-ref"><a href="#next-match">&lt;next-match&gt;</a></li>
+<li class="elem-ref"><a href="#number">&lt;number&gt;</a></li>
+<li class="elem-ref"><a href="#perform-sort">&lt;perform-sort&gt;</a></li>
+<li class="elem-ref"><a href="#processing-instruction">&lt;processing-instruction&gt;</a></li>
+<li class="elem-ref"><a href="#result-document">&lt;result-document&gt;</a></li>
+<li class="elem-ref"><a href="#sequence">&lt;sequence&gt;</a></li>
+<li class="elem-ref"><a href="#text">&lt;text&gt;</a></li>
+<li class="elem-ref"><a href="#value-of">&lt;value-of&gt;</a></li>
+</ul></section><section class="element" id="namespace"><h3><a href="#namespace">&lt;xsl:namespace&gt;</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#element-">ref</a></p>
+<ul class="content">
+<li class="attr-ref required">name<span class="general"> <a href="#xsl:avt">xsl:avt</a></span>
+</li>
+<li class="attr-ref">select<span class="general"> <a href="#xsl:expression">xsl:expression</a></span>
+</li>
+</ul>
+<ul class="content">
+<li class="elem-ref"><a href="#analyze-string">&lt;analyze-string&gt;</a></li>
+<li class="elem-ref"><a href="#apply-imports">&lt;apply-imports&gt;</a></li>
+<li class="elem-ref"><a href="#apply-templates">&lt;apply-templates&gt;</a></li>
+<li class="elem-ref"><a href="#attribute">&lt;attribute&gt;</a></li>
+<li class="elem-ref"><a href="#call-template">&lt;call-template&gt;</a></li>
+<li class="elem-ref"><a href="#choose">&lt;choose&gt;</a></li>
+<li class="elem-ref"><a href="#comment">&lt;comment&gt;</a></li>
+<li class="elem-ref"><a href="#copy">&lt;copy&gt;</a></li>
+<li class="elem-ref"><a href="#copy-of">&lt;copy-of&gt;</a></li>
+<li class="elem-ref"><a href="#document">&lt;document&gt;</a></li>
+<li class="elem-ref"><a href="#element">&lt;element&gt;</a></li>
+<li class="elem-ref"><a href="#fallback">&lt;fallback&gt;</a></li>
+<li class="elem-ref"><a href="#for-each">&lt;for-each&gt;</a></li>
+<li class="elem-ref"><a href="#for-each-group">&lt;for-each-group&gt;</a></li>
+<li class="elem-ref"><a href="#if">&lt;if&gt;</a></li>
+<li class="elem-ref"><a href="#message">&lt;message&gt;</a></li>
+<li class="elem-ref"><a href="#namespace">&lt;namespace&gt;</a></li>
+<li class="elem-ref"><a href="#next-match">&lt;next-match&gt;</a></li>
+<li class="elem-ref"><a href="#number">&lt;number&gt;</a></li>
+<li class="elem-ref"><a href="#perform-sort">&lt;perform-sort&gt;</a></li>
+<li class="elem-ref"><a href="#processing-instruction">&lt;processing-instruction&gt;</a></li>
+<li class="elem-ref"><a href="#result-document">&lt;result-document&gt;</a></li>
+<li class="elem-ref"><a href="#sequence">&lt;sequence&gt;</a></li>
+<li class="elem-ref"><a href="#text">&lt;text&gt;</a></li>
+<li class="elem-ref"><a href="#value-of">&lt;value-of&gt;</a></li>
+</ul></section><section class="element" id="namespace-alias"><h3><a href="#namespace-alias">&lt;xsl:namespace-alias&gt;</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#element-">ref</a></p>
+<ul class="content">
+<li class="attr-ref required">stylesheet-prefix<span class="general"> <a href="#xsl:prefix-or-default">xsl:prefix-or-default</a></span>
+</li>
+<li class="attr-ref required">result-prefix<span class="general"> <a href="#xsl:prefix-or-default">xsl:prefix-or-default</a></span>
+</li>
+</ul></section><section class="element" id="next-match"><h3><a href="#next-match">&lt;xsl:next-match&gt;</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#element-">ref</a></p>
+<ul class="content">
+<li class="elem-ref"><a href="#xsl:with-param">&lt;xsl:with-param&gt;</a></li>
+<li class="elem-ref"><a href="#xsl:fallback">&lt;xsl:fallback&gt;</a></li>
+</ul></section><section class="element" id="non-matching-substring"><h3><a href="#non-matching-substring">&lt;xsl:non-matching-substring&gt;</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#element-">ref</a></p></section><section class="element" id="number"><h3><a href="#number">&lt;xsl:number&gt;</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#element-">ref</a></p>
+<ul class="content">
+<li class="attr-ref">value<span class="general"> <a href="#xsl:expression">xsl:expression</a></span>
+</li>
+<li class="attr-ref">select<span class="general"> <a href="#xsl:expression">xsl:expression</a></span>
+</li>
+<li class="attr-ref">level<span class="general"> <a href="#xsl:level">xsl:level</a></span>
+</li>
+<li class="attr-ref">count<span class="general"> <a href="#xsl:pattern">xsl:pattern</a></span>
+</li>
+<li class="attr-ref">from<span class="general"> <a href="#xsl:pattern">xsl:pattern</a></span>
+</li>
+<li class="attr-ref">format<span class="general"> <a href="#xsl:avt">xsl:avt</a></span>
+</li>
+<li class="attr-ref">lang<span class="general"> <a href="#xsl:avt">xsl:avt</a></span>
+</li>
+<li class="attr-ref">letter-value<span class="general"> <a href="#xsl:avt">xsl:avt</a></span>
+</li>
+<li class="attr-ref">ordinal<span class="general"> <a href="#xsl:avt">xsl:avt</a></span>
+</li>
+<li class="attr-ref">grouping-separator<span class="general"> <a href="#xsl:avt">xsl:avt</a></span>
+</li>
+<li class="attr-ref">grouping-size<span class="general"> <a href="#xsl:avt">xsl:avt</a></span>
+</li>
+</ul></section><section class="element" id="otherwise"><h3><a href="#otherwise">&lt;xsl:otherwise&gt;</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#element-">ref</a></p></section><section class="element" id="output"><h3><a href="#output">&lt;xsl:output&gt;</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#element-">ref</a></p>
+<ul class="content">
+<li class="attr-ref">name<span class="general"> <a href="#xsl:QName">xsl:QName</a></span>
+</li>
+<li class="attr-ref">method<span class="general"> <a href="#xsl:method">xsl:method</a></span>
+</li>
+<li class="attr-ref">byte-order-mark<span class="general"> <a href="#xsl:yes-or-no">xsl:yes-or-no</a></span>
+</li>
+<li class="attr-ref">cdata-section-elements<span class="general"> <a href="#xsl:QNames">xsl:QNames</a></span>
+</li>
+<li class="attr-ref">doctype-public<span class="general"> <a href="#xs:string">xs:string</a></span>
+</li>
+<li class="attr-ref">doctype-system<span class="general"> <a href="#xs:string">xs:string</a></span>
+</li>
+<li class="attr-ref">encoding<span class="general"> <a href="#xs:string">xs:string</a></span>
+</li>
+<li class="attr-ref">escape-uri-attributes<span class="general"> <a href="#xsl:yes-or-no">xsl:yes-or-no</a></span>
+</li>
+<li class="attr-ref">include-content-type<span class="general"> <a href="#xsl:yes-or-no">xsl:yes-or-no</a></span>
+</li>
+<li class="attr-ref">indent<span class="general"> <a href="#xsl:yes-or-no">xsl:yes-or-no</a></span>
+</li>
+<li class="attr-ref">media-type<span class="general"> <a href="#xs:string">xs:string</a></span>
+</li>
+<li class="attr-ref">normalization-form<span class="general"> <a href="#xs:NMTOKEN">xs:NMTOKEN</a></span>
+</li>
+<li class="attr-ref">omit-xml-declaration<span class="general"> <a href="#xsl:yes-or-no">xsl:yes-or-no</a></span>
+</li>
+<li class="attr-ref">standalone<span class="general"> <a href="#xsl:yes-or-no-or-omit">xsl:yes-or-no-or-omit</a></span>
+</li>
+<li class="attr-ref">undeclare-prefixes<span class="general"> <a href="#xsl:yes-or-no">xsl:yes-or-no</a></span>
+</li>
+<li class="attr-ref">use-character-maps<span class="general"> <a href="#xsl:QNames">xsl:QNames</a></span>
+</li>
+<li class="attr-ref">version<span class="general"> <a href="#xs:NMTOKEN">xs:NMTOKEN</a></span>
+</li>
+</ul></section><section class="element" id="output-character"><h3><a href="#output-character">&lt;xsl:output-character&gt;</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#element-">ref</a></p>
+<ul class="content">
+<li class="attr-ref required">character<span class="general"> <a href="#xsl:char">xsl:char</a></span>
+</li>
+<li class="attr-ref required">string<span class="general"> <a href="#xs:string">xs:string</a></span>
+</li>
+</ul></section><section class="element" id="param"><h3><a href="#param">&lt;xsl:param&gt;</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#element-">ref</a></p>
+<ul class="content">
+<li class="attr-ref required">name<span class="general"> <a href="#xsl:QName">xsl:QName</a></span>
+</li>
+<li class="attr-ref">select<span class="general"> <a href="#xsl:expression">xsl:expression</a></span>
+</li>
+<li class="attr-ref">as<span class="general"> <a href="#xsl:sequence-type">xsl:sequence-type</a></span>
+</li>
+<li class="attr-ref">required<span class="general"> <a href="#xsl:yes-or-no">xsl:yes-or-no</a></span>
+</li>
+<li class="attr-ref">tunnel<span class="general"> <a href="#xsl:yes-or-no">xsl:yes-or-no</a></span>
+</li>
+</ul>
+<ul class="content">
+<li class="elem-ref"><a href="#analyze-string">&lt;analyze-string&gt;</a></li>
+<li class="elem-ref"><a href="#apply-imports">&lt;apply-imports&gt;</a></li>
+<li class="elem-ref"><a href="#apply-templates">&lt;apply-templates&gt;</a></li>
+<li class="elem-ref"><a href="#attribute">&lt;attribute&gt;</a></li>
+<li class="elem-ref"><a href="#call-template">&lt;call-template&gt;</a></li>
+<li class="elem-ref"><a href="#choose">&lt;choose&gt;</a></li>
+<li class="elem-ref"><a href="#comment">&lt;comment&gt;</a></li>
+<li class="elem-ref"><a href="#copy">&lt;copy&gt;</a></li>
+<li class="elem-ref"><a href="#copy-of">&lt;copy-of&gt;</a></li>
+<li class="elem-ref"><a href="#document">&lt;document&gt;</a></li>
+<li class="elem-ref"><a href="#element">&lt;element&gt;</a></li>
+<li class="elem-ref"><a href="#fallback">&lt;fallback&gt;</a></li>
+<li class="elem-ref"><a href="#for-each">&lt;for-each&gt;</a></li>
+<li class="elem-ref"><a href="#for-each-group">&lt;for-each-group&gt;</a></li>
+<li class="elem-ref"><a href="#if">&lt;if&gt;</a></li>
+<li class="elem-ref"><a href="#message">&lt;message&gt;</a></li>
+<li class="elem-ref"><a href="#namespace">&lt;namespace&gt;</a></li>
+<li class="elem-ref"><a href="#next-match">&lt;next-match&gt;</a></li>
+<li class="elem-ref"><a href="#number">&lt;number&gt;</a></li>
+<li class="elem-ref"><a href="#perform-sort">&lt;perform-sort&gt;</a></li>
+<li class="elem-ref"><a href="#processing-instruction">&lt;processing-instruction&gt;</a></li>
+<li class="elem-ref"><a href="#result-document">&lt;result-document&gt;</a></li>
+<li class="elem-ref"><a href="#sequence">&lt;sequence&gt;</a></li>
+<li class="elem-ref"><a href="#text">&lt;text&gt;</a></li>
+<li class="elem-ref"><a href="#value-of">&lt;value-of&gt;</a></li>
+</ul></section><section class="element" id="perform-sort"><h3><a href="#perform-sort">&lt;xsl:perform-sort&gt;</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#element-">ref</a></p>
+<ul class="content"><li class="attr-ref">select<span class="general"> <a href="#xsl:expression">xsl:expression</a></span>
 </li></ul>
 <ul class="content">
-        
-      </ul></section><section class="element" id="import"><h3><a href="#import">&lt;xsl:import&gt;</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#element-import">ref</a></li></ul>
-<ul class="content"><li class="attr-ref required">href<span class="general"> <a href="#anyURI">anyURI</a></span>
+<li class="elem-ref"><a href="#xsl:sort">&lt;xsl:sort&gt;</a></li>
+<li class="elem-ref"><a href="#analyze-string">&lt;analyze-string&gt;</a></li>
+<li class="elem-ref"><a href="#apply-imports">&lt;apply-imports&gt;</a></li>
+<li class="elem-ref"><a href="#apply-templates">&lt;apply-templates&gt;</a></li>
+<li class="elem-ref"><a href="#attribute">&lt;attribute&gt;</a></li>
+<li class="elem-ref"><a href="#call-template">&lt;call-template&gt;</a></li>
+<li class="elem-ref"><a href="#choose">&lt;choose&gt;</a></li>
+<li class="elem-ref"><a href="#comment">&lt;comment&gt;</a></li>
+<li class="elem-ref"><a href="#copy">&lt;copy&gt;</a></li>
+<li class="elem-ref"><a href="#copy-of">&lt;copy-of&gt;</a></li>
+<li class="elem-ref"><a href="#document">&lt;document&gt;</a></li>
+<li class="elem-ref"><a href="#element">&lt;element&gt;</a></li>
+<li class="elem-ref"><a href="#fallback">&lt;fallback&gt;</a></li>
+<li class="elem-ref"><a href="#for-each">&lt;for-each&gt;</a></li>
+<li class="elem-ref"><a href="#for-each-group">&lt;for-each-group&gt;</a></li>
+<li class="elem-ref"><a href="#if">&lt;if&gt;</a></li>
+<li class="elem-ref"><a href="#message">&lt;message&gt;</a></li>
+<li class="elem-ref"><a href="#namespace">&lt;namespace&gt;</a></li>
+<li class="elem-ref"><a href="#next-match">&lt;next-match&gt;</a></li>
+<li class="elem-ref"><a href="#number">&lt;number&gt;</a></li>
+<li class="elem-ref"><a href="#perform-sort">&lt;perform-sort&gt;</a></li>
+<li class="elem-ref"><a href="#processing-instruction">&lt;processing-instruction&gt;</a></li>
+<li class="elem-ref"><a href="#result-document">&lt;result-document&gt;</a></li>
+<li class="elem-ref"><a href="#sequence">&lt;sequence&gt;</a></li>
+<li class="elem-ref"><a href="#text">&lt;text&gt;</a></li>
+<li class="elem-ref"><a href="#value-of">&lt;value-of&gt;</a></li>
+</ul></section><section class="element" id="preserve-space"><h3><a href="#preserve-space">&lt;xsl:preserve-space&gt;</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#element-">ref</a></p>
+<ul class="content"><li class="attr-ref required">elements<span class="general"> <a href="#xsl:nametests">xsl:nametests</a></span>
+</li></ul></section><section class="element" id="processing-instruction"><h3><a href="#processing-instruction">&lt;xsl:processing-instruction&gt;</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#element-">ref</a></p>
+<ul class="content">
+<li class="attr-ref required">name<span class="general"> <a href="#xsl:avt">xsl:avt</a></span>
+</li>
+<li class="attr-ref">select<span class="general"> <a href="#xsl:expression">xsl:expression</a></span>
+</li>
+</ul>
+<ul class="content">
+<li class="elem-ref"><a href="#analyze-string">&lt;analyze-string&gt;</a></li>
+<li class="elem-ref"><a href="#apply-imports">&lt;apply-imports&gt;</a></li>
+<li class="elem-ref"><a href="#apply-templates">&lt;apply-templates&gt;</a></li>
+<li class="elem-ref"><a href="#attribute">&lt;attribute&gt;</a></li>
+<li class="elem-ref"><a href="#call-template">&lt;call-template&gt;</a></li>
+<li class="elem-ref"><a href="#choose">&lt;choose&gt;</a></li>
+<li class="elem-ref"><a href="#comment">&lt;comment&gt;</a></li>
+<li class="elem-ref"><a href="#copy">&lt;copy&gt;</a></li>
+<li class="elem-ref"><a href="#copy-of">&lt;copy-of&gt;</a></li>
+<li class="elem-ref"><a href="#document">&lt;document&gt;</a></li>
+<li class="elem-ref"><a href="#element">&lt;element&gt;</a></li>
+<li class="elem-ref"><a href="#fallback">&lt;fallback&gt;</a></li>
+<li class="elem-ref"><a href="#for-each">&lt;for-each&gt;</a></li>
+<li class="elem-ref"><a href="#for-each-group">&lt;for-each-group&gt;</a></li>
+<li class="elem-ref"><a href="#if">&lt;if&gt;</a></li>
+<li class="elem-ref"><a href="#message">&lt;message&gt;</a></li>
+<li class="elem-ref"><a href="#namespace">&lt;namespace&gt;</a></li>
+<li class="elem-ref"><a href="#next-match">&lt;next-match&gt;</a></li>
+<li class="elem-ref"><a href="#number">&lt;number&gt;</a></li>
+<li class="elem-ref"><a href="#perform-sort">&lt;perform-sort&gt;</a></li>
+<li class="elem-ref"><a href="#processing-instruction">&lt;processing-instruction&gt;</a></li>
+<li class="elem-ref"><a href="#result-document">&lt;result-document&gt;</a></li>
+<li class="elem-ref"><a href="#sequence">&lt;sequence&gt;</a></li>
+<li class="elem-ref"><a href="#text">&lt;text&gt;</a></li>
+<li class="elem-ref"><a href="#value-of">&lt;value-of&gt;</a></li>
+</ul></section><section class="element" id="result-document"><h3><a href="#result-document">&lt;xsl:result-document&gt;</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#element-">ref</a></p>
+<ul class="content">
+<li class="attr-ref">format<span class="general"> <a href="#xsl:avt">xsl:avt</a></span>
+</li>
+<li class="attr-ref">href<span class="general"> <a href="#xsl:avt">xsl:avt</a></span>
+</li>
+<li class="attr-ref">type<span class="general"> <a href="#xsl:QName">xsl:QName</a></span>
+</li>
+<li class="attr-ref">validation<span class="general"> <a href="#xsl:validation-type">xsl:validation-type</a></span>
+</li>
+<li class="attr-ref">method<span class="general"> <a href="#xsl:avt">xsl:avt</a></span>
+</li>
+<li class="attr-ref">byte-order-mark<span class="general"> <a href="#xsl:avt">xsl:avt</a></span>
+</li>
+<li class="attr-ref">cdata-section-elements<span class="general"> <a href="#xsl:avt">xsl:avt</a></span>
+</li>
+<li class="attr-ref">doctype-public<span class="general"> <a href="#xsl:avt">xsl:avt</a></span>
+</li>
+<li class="attr-ref">doctype-system<span class="general"> <a href="#xsl:avt">xsl:avt</a></span>
+</li>
+<li class="attr-ref">encoding<span class="general"> <a href="#xsl:avt">xsl:avt</a></span>
+</li>
+<li class="attr-ref">escape-uri-attributes<span class="general"> <a href="#xsl:avt">xsl:avt</a></span>
+</li>
+<li class="attr-ref">include-content-type<span class="general"> <a href="#xsl:avt">xsl:avt</a></span>
+</li>
+<li class="attr-ref">indent<span class="general"> <a href="#xsl:avt">xsl:avt</a></span>
+</li>
+<li class="attr-ref">media-type<span class="general"> <a href="#xsl:avt">xsl:avt</a></span>
+</li>
+<li class="attr-ref">normalization-form<span class="general"> <a href="#xsl:avt">xsl:avt</a></span>
+</li>
+<li class="attr-ref">omit-xml-declaration<span class="general"> <a href="#xsl:avt">xsl:avt</a></span>
+</li>
+<li class="attr-ref">standalone<span class="general"> <a href="#xsl:avt">xsl:avt</a></span>
+</li>
+<li class="attr-ref">undeclare-prefixes<span class="general"> <a href="#xsl:avt">xsl:avt</a></span>
+</li>
+<li class="attr-ref">use-character-maps<span class="general"> <a href="#xsl:QNames">xsl:QNames</a></span>
+</li>
+<li class="attr-ref">output-version<span class="general"> <a href="#xsl:avt">xsl:avt</a></span>
+</li>
+</ul>
+<ul class="content">
+<li class="elem-ref"><a href="#analyze-string">&lt;analyze-string&gt;</a></li>
+<li class="elem-ref"><a href="#apply-imports">&lt;apply-imports&gt;</a></li>
+<li class="elem-ref"><a href="#apply-templates">&lt;apply-templates&gt;</a></li>
+<li class="elem-ref"><a href="#attribute">&lt;attribute&gt;</a></li>
+<li class="elem-ref"><a href="#call-template">&lt;call-template&gt;</a></li>
+<li class="elem-ref"><a href="#choose">&lt;choose&gt;</a></li>
+<li class="elem-ref"><a href="#comment">&lt;comment&gt;</a></li>
+<li class="elem-ref"><a href="#copy">&lt;copy&gt;</a></li>
+<li class="elem-ref"><a href="#copy-of">&lt;copy-of&gt;</a></li>
+<li class="elem-ref"><a href="#document">&lt;document&gt;</a></li>
+<li class="elem-ref"><a href="#element">&lt;element&gt;</a></li>
+<li class="elem-ref"><a href="#fallback">&lt;fallback&gt;</a></li>
+<li class="elem-ref"><a href="#for-each">&lt;for-each&gt;</a></li>
+<li class="elem-ref"><a href="#for-each-group">&lt;for-each-group&gt;</a></li>
+<li class="elem-ref"><a href="#if">&lt;if&gt;</a></li>
+<li class="elem-ref"><a href="#message">&lt;message&gt;</a></li>
+<li class="elem-ref"><a href="#namespace">&lt;namespace&gt;</a></li>
+<li class="elem-ref"><a href="#next-match">&lt;next-match&gt;</a></li>
+<li class="elem-ref"><a href="#number">&lt;number&gt;</a></li>
+<li class="elem-ref"><a href="#perform-sort">&lt;perform-sort&gt;</a></li>
+<li class="elem-ref"><a href="#processing-instruction">&lt;processing-instruction&gt;</a></li>
+<li class="elem-ref"><a href="#result-document">&lt;result-document&gt;</a></li>
+<li class="elem-ref"><a href="#sequence">&lt;sequence&gt;</a></li>
+<li class="elem-ref"><a href="#text">&lt;text&gt;</a></li>
+<li class="elem-ref"><a href="#value-of">&lt;value-of&gt;</a></li>
+</ul></section><section class="element" id="sequence"><h3><a href="#sequence">&lt;xsl:sequence&gt;</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#element-">ref</a></p>
+<ul class="content"><li class="attr-ref">select<span class="general"> <a href="#xsl:expression">xsl:expression</a></span>
+</li></ul>
+<ul class="content"><li class="elem-ref"><a href="#xsl:fallback">&lt;xsl:fallback&gt;</a></li></ul></section><section class="element" id="sort"><h3><a href="#sort">&lt;xsl:sort&gt;</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#element-">ref</a></p>
+<ul class="content">
+<li class="attr-ref">select<span class="general"> <a href="#xsl:expression">xsl:expression</a></span>
+</li>
+<li class="attr-ref">lang<span class="general"> <a href="#xsl:avt">xsl:avt</a></span>
+</li>
+<li class="attr-ref">data-type<span class="general"> <a href="#xsl:avt">xsl:avt</a></span>
+</li>
+<li class="attr-ref">order<span class="general"> <a href="#xsl:avt">xsl:avt</a></span>
+</li>
+<li class="attr-ref">case-order<span class="general"> <a href="#xsl:avt">xsl:avt</a></span>
+</li>
+<li class="attr-ref">collation<span class="general"> <a href="#xsl:avt">xsl:avt</a></span>
+</li>
+<li class="attr-ref">stable<span class="general"> <a href="#xsl:yes-or-no">xsl:yes-or-no</a></span>
+</li>
+</ul>
+<ul class="content">
+<li class="elem-ref"><a href="#analyze-string">&lt;analyze-string&gt;</a></li>
+<li class="elem-ref"><a href="#apply-imports">&lt;apply-imports&gt;</a></li>
+<li class="elem-ref"><a href="#apply-templates">&lt;apply-templates&gt;</a></li>
+<li class="elem-ref"><a href="#attribute">&lt;attribute&gt;</a></li>
+<li class="elem-ref"><a href="#call-template">&lt;call-template&gt;</a></li>
+<li class="elem-ref"><a href="#choose">&lt;choose&gt;</a></li>
+<li class="elem-ref"><a href="#comment">&lt;comment&gt;</a></li>
+<li class="elem-ref"><a href="#copy">&lt;copy&gt;</a></li>
+<li class="elem-ref"><a href="#copy-of">&lt;copy-of&gt;</a></li>
+<li class="elem-ref"><a href="#document">&lt;document&gt;</a></li>
+<li class="elem-ref"><a href="#element">&lt;element&gt;</a></li>
+<li class="elem-ref"><a href="#fallback">&lt;fallback&gt;</a></li>
+<li class="elem-ref"><a href="#for-each">&lt;for-each&gt;</a></li>
+<li class="elem-ref"><a href="#for-each-group">&lt;for-each-group&gt;</a></li>
+<li class="elem-ref"><a href="#if">&lt;if&gt;</a></li>
+<li class="elem-ref"><a href="#message">&lt;message&gt;</a></li>
+<li class="elem-ref"><a href="#namespace">&lt;namespace&gt;</a></li>
+<li class="elem-ref"><a href="#next-match">&lt;next-match&gt;</a></li>
+<li class="elem-ref"><a href="#number">&lt;number&gt;</a></li>
+<li class="elem-ref"><a href="#perform-sort">&lt;perform-sort&gt;</a></li>
+<li class="elem-ref"><a href="#processing-instruction">&lt;processing-instruction&gt;</a></li>
+<li class="elem-ref"><a href="#result-document">&lt;result-document&gt;</a></li>
+<li class="elem-ref"><a href="#sequence">&lt;sequence&gt;</a></li>
+<li class="elem-ref"><a href="#text">&lt;text&gt;</a></li>
+<li class="elem-ref"><a href="#value-of">&lt;value-of&gt;</a></li>
+</ul></section><section class="element" id="strip-space"><h3><a href="#strip-space">&lt;xsl:strip-space&gt;</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#element-">ref</a></p>
+<ul class="content"><li class="attr-ref required">elements<span class="general"> <a href="#xsl:nametests">xsl:nametests</a></span>
+</li></ul></section><section class="element" id="stylesheet"><h3><a href="#stylesheet">&lt;xsl:stylesheet&gt;</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#element-">ref</a></p></section><section class="element" id="template"><h3><a href="#template">&lt;xsl:template&gt;</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#element-">ref</a></p>
+<ul class="content">
+<li class="attr-ref">match<span class="general"> <a href="#xsl:pattern">xsl:pattern</a></span>
+</li>
+<li class="attr-ref">priority<span class="general"> <a href="#xs:decimal">xs:decimal</a></span>
+</li>
+<li class="attr-ref">mode<span class="general"> <a href="#xsl:modes">xsl:modes</a></span>
+</li>
+<li class="attr-ref">name<span class="general"> <a href="#xsl:QName">xsl:QName</a></span>
+</li>
+<li class="attr-ref">as<span class="general"> <a href="#xsl:sequence-type">xsl:sequence-type</a></span>
+</li>
+</ul>
+<ul class="content">
+<li class="elem-ref"><a href="#xsl:param">&lt;xsl:param&gt;</a></li>
+<li class="elem-ref"><a href="#analyze-string">&lt;analyze-string&gt;</a></li>
+<li class="elem-ref"><a href="#apply-imports">&lt;apply-imports&gt;</a></li>
+<li class="elem-ref"><a href="#apply-templates">&lt;apply-templates&gt;</a></li>
+<li class="elem-ref"><a href="#attribute">&lt;attribute&gt;</a></li>
+<li class="elem-ref"><a href="#call-template">&lt;call-template&gt;</a></li>
+<li class="elem-ref"><a href="#choose">&lt;choose&gt;</a></li>
+<li class="elem-ref"><a href="#comment">&lt;comment&gt;</a></li>
+<li class="elem-ref"><a href="#copy">&lt;copy&gt;</a></li>
+<li class="elem-ref"><a href="#copy-of">&lt;copy-of&gt;</a></li>
+<li class="elem-ref"><a href="#document">&lt;document&gt;</a></li>
+<li class="elem-ref"><a href="#element">&lt;element&gt;</a></li>
+<li class="elem-ref"><a href="#fallback">&lt;fallback&gt;</a></li>
+<li class="elem-ref"><a href="#for-each">&lt;for-each&gt;</a></li>
+<li class="elem-ref"><a href="#for-each-group">&lt;for-each-group&gt;</a></li>
+<li class="elem-ref"><a href="#if">&lt;if&gt;</a></li>
+<li class="elem-ref"><a href="#message">&lt;message&gt;</a></li>
+<li class="elem-ref"><a href="#namespace">&lt;namespace&gt;</a></li>
+<li class="elem-ref"><a href="#next-match">&lt;next-match&gt;</a></li>
+<li class="elem-ref"><a href="#number">&lt;number&gt;</a></li>
+<li class="elem-ref"><a href="#perform-sort">&lt;perform-sort&gt;</a></li>
+<li class="elem-ref"><a href="#processing-instruction">&lt;processing-instruction&gt;</a></li>
+<li class="elem-ref"><a href="#result-document">&lt;result-document&gt;</a></li>
+<li class="elem-ref"><a href="#sequence">&lt;sequence&gt;</a></li>
+<li class="elem-ref"><a href="#text">&lt;text&gt;</a></li>
+<li class="elem-ref"><a href="#value-of">&lt;value-of&gt;</a></li>
+</ul></section><section class="element" id="text"><h3><a href="#text">&lt;xsl:text&gt;</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#element-">ref</a></p>
+<ul class="content"><li class="attr-ref">disable-output-escaping<span class="general"> <a href="#xsl:yes-or-no">xsl:yes-or-no</a></span>
+</li></ul></section><section class="element" id="transform"><h3><a href="#transform">&lt;xsl:transform&gt;</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#element-">ref</a></p>
+<ul class="content">
+<li class="attr-ref">id<span class="general"> <a href="#xs:ID">xs:ID</a></span>
+</li>
+<li class="attr-ref">default-validation<span class="general"> <a href="#xsl:validation-strip-or-preserve">xsl:validation-strip-or-preserve</a></span>
+</li>
+<li class="attr-ref">input-type-annotations<span class="general"> <a href="#xsl:input-type-annotations-type">xsl:input-type-annotations-type</a></span>
+</li>
+</ul>
+<ul class="content">
+<li class="elem-ref"><a href="#xsl:import">&lt;xsl:import&gt;</a></li>
+<li class="elem-ref"><a href="#xsl:declaration">&lt;xsl:declaration&gt;</a></li>
+<li class="elem-ref"><a href="#xsl:variable">&lt;xsl:variable&gt;</a></li>
+<li class="elem-ref"><a href="#xsl:param">&lt;xsl:param&gt;</a></li>
+</ul></section><section class="element" id="value-of"><h3><a href="#value-of">&lt;xsl:value-of&gt;</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#element-">ref</a></p>
+<ul class="content">
+<li class="attr-ref">select<span class="general"> <a href="#xsl:expression">xsl:expression</a></span>
+</li>
+<li class="attr-ref">separator<span class="general"> <a href="#xsl:avt">xsl:avt</a></span>
+</li>
+<li class="attr-ref">disable-output-escaping<span class="general"> <a href="#xsl:yes-or-no">xsl:yes-or-no</a></span>
+</li>
+</ul>
+<ul class="content">
+<li class="elem-ref"><a href="#analyze-string">&lt;analyze-string&gt;</a></li>
+<li class="elem-ref"><a href="#apply-imports">&lt;apply-imports&gt;</a></li>
+<li class="elem-ref"><a href="#apply-templates">&lt;apply-templates&gt;</a></li>
+<li class="elem-ref"><a href="#attribute">&lt;attribute&gt;</a></li>
+<li class="elem-ref"><a href="#call-template">&lt;call-template&gt;</a></li>
+<li class="elem-ref"><a href="#choose">&lt;choose&gt;</a></li>
+<li class="elem-ref"><a href="#comment">&lt;comment&gt;</a></li>
+<li class="elem-ref"><a href="#copy">&lt;copy&gt;</a></li>
+<li class="elem-ref"><a href="#copy-of">&lt;copy-of&gt;</a></li>
+<li class="elem-ref"><a href="#document">&lt;document&gt;</a></li>
+<li class="elem-ref"><a href="#element">&lt;element&gt;</a></li>
+<li class="elem-ref"><a href="#fallback">&lt;fallback&gt;</a></li>
+<li class="elem-ref"><a href="#for-each">&lt;for-each&gt;</a></li>
+<li class="elem-ref"><a href="#for-each-group">&lt;for-each-group&gt;</a></li>
+<li class="elem-ref"><a href="#if">&lt;if&gt;</a></li>
+<li class="elem-ref"><a href="#message">&lt;message&gt;</a></li>
+<li class="elem-ref"><a href="#namespace">&lt;namespace&gt;</a></li>
+<li class="elem-ref"><a href="#next-match">&lt;next-match&gt;</a></li>
+<li class="elem-ref"><a href="#number">&lt;number&gt;</a></li>
+<li class="elem-ref"><a href="#perform-sort">&lt;perform-sort&gt;</a></li>
+<li class="elem-ref"><a href="#processing-instruction">&lt;processing-instruction&gt;</a></li>
+<li class="elem-ref"><a href="#result-document">&lt;result-document&gt;</a></li>
+<li class="elem-ref"><a href="#sequence">&lt;sequence&gt;</a></li>
+<li class="elem-ref"><a href="#text">&lt;text&gt;</a></li>
+<li class="elem-ref"><a href="#value-of">&lt;value-of&gt;</a></li>
+</ul></section><section class="element" id="variable"><h3><a href="#variable">&lt;xsl:variable&gt;</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#element-">ref</a></p>
+<ul class="content">
+<li class="attr-ref required">name<span class="general"> <a href="#xsl:QName">xsl:QName</a></span>
+</li>
+<li class="attr-ref">select<span class="general"> <a href="#xsl:expression">xsl:expression</a></span>
+</li>
+<li class="attr-ref">as<span class="general"> <a href="#xsl:sequence-type">xsl:sequence-type</a></span>
+</li>
+</ul>
+<ul class="content">
+<li class="elem-ref"><a href="#analyze-string">&lt;analyze-string&gt;</a></li>
+<li class="elem-ref"><a href="#apply-imports">&lt;apply-imports&gt;</a></li>
+<li class="elem-ref"><a href="#apply-templates">&lt;apply-templates&gt;</a></li>
+<li class="elem-ref"><a href="#attribute">&lt;attribute&gt;</a></li>
+<li class="elem-ref"><a href="#call-template">&lt;call-template&gt;</a></li>
+<li class="elem-ref"><a href="#choose">&lt;choose&gt;</a></li>
+<li class="elem-ref"><a href="#comment">&lt;comment&gt;</a></li>
+<li class="elem-ref"><a href="#copy">&lt;copy&gt;</a></li>
+<li class="elem-ref"><a href="#copy-of">&lt;copy-of&gt;</a></li>
+<li class="elem-ref"><a href="#document">&lt;document&gt;</a></li>
+<li class="elem-ref"><a href="#element">&lt;element&gt;</a></li>
+<li class="elem-ref"><a href="#fallback">&lt;fallback&gt;</a></li>
+<li class="elem-ref"><a href="#for-each">&lt;for-each&gt;</a></li>
+<li class="elem-ref"><a href="#for-each-group">&lt;for-each-group&gt;</a></li>
+<li class="elem-ref"><a href="#if">&lt;if&gt;</a></li>
+<li class="elem-ref"><a href="#message">&lt;message&gt;</a></li>
+<li class="elem-ref"><a href="#namespace">&lt;namespace&gt;</a></li>
+<li class="elem-ref"><a href="#next-match">&lt;next-match&gt;</a></li>
+<li class="elem-ref"><a href="#number">&lt;number&gt;</a></li>
+<li class="elem-ref"><a href="#perform-sort">&lt;perform-sort&gt;</a></li>
+<li class="elem-ref"><a href="#processing-instruction">&lt;processing-instruction&gt;</a></li>
+<li class="elem-ref"><a href="#result-document">&lt;result-document&gt;</a></li>
+<li class="elem-ref"><a href="#sequence">&lt;sequence&gt;</a></li>
+<li class="elem-ref"><a href="#text">&lt;text&gt;</a></li>
+<li class="elem-ref"><a href="#value-of">&lt;value-of&gt;</a></li>
+</ul></section><section class="element" id="when"><h3><a href="#when">&lt;xsl:when&gt;</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#element-">ref</a></p>
+<ul class="content"><li class="attr-ref required">test<span class="general"> <a href="#xsl:expression">xsl:expression</a></span>
 </li></ul>
 <ul class="content">
-        
-      </ul></section><section class="element" id="import-schema"><h3><a href="#import-schema">&lt;xsl:import-schema&gt;</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#element-import-schema">ref</a></li></ul>
+<li class="elem-ref"><a href="#analyze-string">&lt;analyze-string&gt;</a></li>
+<li class="elem-ref"><a href="#apply-imports">&lt;apply-imports&gt;</a></li>
+<li class="elem-ref"><a href="#apply-templates">&lt;apply-templates&gt;</a></li>
+<li class="elem-ref"><a href="#attribute">&lt;attribute&gt;</a></li>
+<li class="elem-ref"><a href="#call-template">&lt;call-template&gt;</a></li>
+<li class="elem-ref"><a href="#choose">&lt;choose&gt;</a></li>
+<li class="elem-ref"><a href="#comment">&lt;comment&gt;</a></li>
+<li class="elem-ref"><a href="#copy">&lt;copy&gt;</a></li>
+<li class="elem-ref"><a href="#copy-of">&lt;copy-of&gt;</a></li>
+<li class="elem-ref"><a href="#document">&lt;document&gt;</a></li>
+<li class="elem-ref"><a href="#element">&lt;element&gt;</a></li>
+<li class="elem-ref"><a href="#fallback">&lt;fallback&gt;</a></li>
+<li class="elem-ref"><a href="#for-each">&lt;for-each&gt;</a></li>
+<li class="elem-ref"><a href="#for-each-group">&lt;for-each-group&gt;</a></li>
+<li class="elem-ref"><a href="#if">&lt;if&gt;</a></li>
+<li class="elem-ref"><a href="#message">&lt;message&gt;</a></li>
+<li class="elem-ref"><a href="#namespace">&lt;namespace&gt;</a></li>
+<li class="elem-ref"><a href="#next-match">&lt;next-match&gt;</a></li>
+<li class="elem-ref"><a href="#number">&lt;number&gt;</a></li>
+<li class="elem-ref"><a href="#perform-sort">&lt;perform-sort&gt;</a></li>
+<li class="elem-ref"><a href="#processing-instruction">&lt;processing-instruction&gt;</a></li>
+<li class="elem-ref"><a href="#result-document">&lt;result-document&gt;</a></li>
+<li class="elem-ref"><a href="#sequence">&lt;sequence&gt;</a></li>
+<li class="elem-ref"><a href="#text">&lt;text&gt;</a></li>
+<li class="elem-ref"><a href="#value-of">&lt;value-of&gt;</a></li>
+</ul></section><section class="element" id="with-param"><h3><a href="#with-param">&lt;xsl:with-param&gt;</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#element-">ref</a></p>
 <ul class="content">
-<li class="attr-ref">namespace<span class="general"> <a href="#anyURI">anyURI</a></span>
+<li class="attr-ref required">name<span class="general"> <a href="#xsl:QName">xsl:QName</a></span>
 </li>
-<li class="attr-ref">schema-location<span class="general"> <a href="#anyURI">anyURI</a></span>
+<li class="attr-ref">select<span class="general"> <a href="#xsl:expression">xsl:expression</a></span>
+</li>
+<li class="attr-ref">as<span class="general"> <a href="#xsl:sequence-type">xsl:sequence-type</a></span>
+</li>
+<li class="attr-ref">tunnel<span class="general"> <a href="#xsl:yes-or-no">xsl:yes-or-no</a></span>
 </li>
 </ul>
 <ul class="content">
-<li class="elem-ref"><a href="#schema">&lt;xs:schema&gt;</a></li>
-        
-          
-        
-        
-                          
-      </ul></section><section class="element" id="include"><h3><a href="#include">&lt;xsl:include&gt;</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#element-include">ref</a></li></ul>
-<ul class="content"><li class="attr-ref required">href<span class="general"> <a href="#anyURI">anyURI</a></span>
-</li></ul>
-<ul class="content">
-          
-        </ul></section><section class="element" id="key"><h3><a href="#key">&lt;xsl:key&gt;</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#element-key">ref</a></li></ul>
-<ul class="content">
-<li class="attr-ref required">name<span class="general"> <a href="#QName">QName</a></span>
-</li>
-<li class="attr-ref required">match<span class="general"> <a href="#pattern">pattern</a></span>
-</li>
-<li class="attr-ref">use<span class="general"> <a href="#expression">expression</a></span>
-</li>
-<li class="attr-ref">collation<span class="general"> <a href="#anyURI">anyURI</a></span>
-</li>
-</ul>
-<ul class="content">
-        
-        
-        
-                       
-      </ul></section><section class="element" id="matching-substring"><h3><a href="#matching-substring">&lt;xsl:matching-substring&gt;</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#element-matching-substring">ref</a></li></ul>
-<ul class="content"></ul></section><section class="element" id="message"><h3><a href="#message">&lt;xsl:message&gt;</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#element-message">ref</a></li></ul>
-<ul class="content">
-<li class="attr-ref">select<span class="general"> <a href="#expression">expression</a></span>
-</li>
-<li class="attr-ref">terminate<span class="general"> <a href="#avt">avt</a></span>
-</li>
-</ul>
-<ul class="content">
-        
-        
-      </ul></section><section class="element" id="namespace"><h3><a href="#namespace">&lt;xsl:namespace&gt;</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#element-namespace">ref</a></li></ul>
-<ul class="content">
-<li class="attr-ref required">name<span class="general"> <a href="#avt">avt</a></span>
-</li>
-<li class="attr-ref">select<span class="general"> <a href="#expression">expression</a></span>
-</li>
-</ul>
-<ul class="content">
-        
-        
-      </ul></section><section class="element" id="namespace-alias"><h3><a href="#namespace-alias">&lt;xsl:namespace-alias&gt;</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#element-namespace-alias">ref</a></li></ul>
-<ul class="content">
-<li class="attr-ref required">stylesheet-prefix<span class="general"> <a href="#prefix-or-default">prefix-or-default</a></span>
-</li>
-<li class="attr-ref required">result-prefix<span class="general"> <a href="#prefix-or-default">prefix-or-default</a></span>
-</li>
-</ul>
-<ul class="content">
-        
-        
-      </ul></section><section class="element" id="next-match"><h3><a href="#next-match">&lt;xsl:next-match&gt;</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#element-next-match">ref</a></li></ul>
-<ul class="content">
-<li class="elem-ref"><a href="#with-param">&lt;xsl:with-param&gt;</a></li>
-<li class="elem-ref"><a href="#fallback">&lt;xsl:fallback&gt;</a></li>
-        
-          
-          
-        
-      </ul></section><section class="element" id="non-matching-substring"><h3><a href="#non-matching-substring">&lt;xsl:non-matching-substring&gt;</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#element-non-matching-substring">ref</a></li></ul>
-<ul class="content"></ul></section><section class="element" id="number"><h3><a href="#number">&lt;xsl:number&gt;</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#element-number">ref</a></li></ul>
-<ul class="content">
-<li class="attr-ref">value<span class="general"> <a href="#expression">expression</a></span>
-</li>
-<li class="attr-ref">select<span class="general"> <a href="#expression">expression</a></span>
-</li>
-<li class="attr-ref">level<span class="general"> <a href="#level">level</a></span>
-</li>
-<li class="attr-ref">count<span class="general"> <a href="#pattern">pattern</a></span>
-</li>
-<li class="attr-ref">from<span class="general"> <a href="#pattern">pattern</a></span>
-</li>
-<li class="attr-ref">format<span class="general"> <a href="#avt">avt</a></span>
-</li>
-<li class="attr-ref">lang<span class="general"> <a href="#avt">avt</a></span>
-</li>
-<li class="attr-ref">letter-value<span class="general"> <a href="#avt">avt</a></span>
-</li>
-<li class="attr-ref">ordinal<span class="general"> <a href="#avt">avt</a></span>
-</li>
-<li class="attr-ref">grouping-separator<span class="general"> <a href="#avt">avt</a></span>
-</li>
-<li class="attr-ref">grouping-size<span class="general"> <a href="#avt">avt</a></span>
-</li>
-</ul>
-<ul class="content">
-        
-        
-        
-        
-        
-        
-        
-        
-                
-        
-        
-      </ul></section><section class="element" id="otherwise"><h3><a href="#otherwise">&lt;xsl:otherwise&gt;</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#element-otherwise">ref</a></li></ul>
-<ul class="content"></ul></section><section class="element" id="output"><h3><a href="#output">&lt;xsl:output&gt;</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#element-output">ref</a></li></ul>
-<ul class="content">
-<li class="attr-ref">name<span class="general"> <a href="#QName">QName</a></span>
-</li>
-<li class="attr-ref">method<span class="general"> <a href="#method">method</a></span>
-</li>
-<li class="attr-ref">byte-order-mark<span class="general"> <a href="#yes-or-no">yes-or-no</a></span>
-</li>
-<li class="attr-ref">cdata-section-elements<span class="general"> <a href="#QNames">QNames</a></span>
-</li>
-<li class="attr-ref">doctype-public<span class="general"> <a href="#string">string</a></span>
-</li>
-<li class="attr-ref">doctype-system<span class="general"> <a href="#string">string</a></span>
-</li>
-<li class="attr-ref">encoding<span class="general"> <a href="#string">string</a></span>
-</li>
-<li class="attr-ref">escape-uri-attributes<span class="general"> <a href="#yes-or-no">yes-or-no</a></span>
-</li>
-<li class="attr-ref">include-content-type<span class="general"> <a href="#yes-or-no">yes-or-no</a></span>
-</li>
-<li class="attr-ref">indent<span class="general"> <a href="#yes-or-no">yes-or-no</a></span>
-</li>
-<li class="attr-ref">media-type<span class="general"> <a href="#string">string</a></span>
-</li>
-<li class="attr-ref">normalization-form<span class="general"> <a href="#NMTOKEN">NMTOKEN</a></span>
-</li>
-<li class="attr-ref">omit-xml-declaration<span class="general"> <a href="#yes-or-no">yes-or-no</a></span>
-</li>
-<li class="attr-ref">standalone<span class="general"> <a href="#yes-or-no-or-omit">yes-or-no-or-omit</a></span>
-</li>
-<li class="attr-ref">undeclare-prefixes<span class="general"> <a href="#yes-or-no">yes-or-no</a></span>
-</li>
-<li class="attr-ref">use-character-maps<span class="general"> <a href="#QNames">QNames</a></span>
-</li>
-<li class="attr-ref">version<span class="general"> <a href="#NMTOKEN">NMTOKEN</a></span>
-</li>
-</ul>
-<ul class="content">
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-      </ul></section><section class="element" id="output-character"><h3><a href="#output-character">&lt;xsl:output-character&gt;</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#element-output-character">ref</a></li></ul>
-<ul class="content">
-<li class="attr-ref required">character<span class="general"> <a href="#char">char</a></span>
-</li>
-<li class="attr-ref required">string<span class="general"> <a href="#string">string</a></span>
-</li>
-</ul>
-<ul class="content">
-        
-        
-      </ul></section><section class="element" id="param"><h3><a href="#param">&lt;xsl:param&gt;</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#element-param">ref</a></li></ul>
-<ul class="content">
-<li class="attr-ref required">name<span class="general"> <a href="#QName">QName</a></span>
-</li>
-<li class="attr-ref">select<span class="general"> <a href="#expression">expression</a></span>
-</li>
-<li class="attr-ref">as<span class="general"> <a href="#sequence-type">sequence-type</a></span>
-</li>
-<li class="attr-ref">required<span class="general"> <a href="#yes-or-no">yes-or-no</a></span>
-</li>
-<li class="attr-ref">tunnel<span class="general"> <a href="#yes-or-no">yes-or-no</a></span>
-</li>
-</ul>
-<ul class="content">
-        
-        
-        
-        
-                
-      </ul></section><section class="element" id="perform-sort"><h3><a href="#perform-sort">&lt;xsl:perform-sort&gt;</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#element-perform-sort">ref</a></li></ul>
-<ul class="content"><li class="attr-ref">select<span class="general"> <a href="#expression">expression</a></span>
-</li></ul>
-<ul class="content">
-<li class="elem-ref"><a href="#sort">&lt;xsl:sort&gt;</a></li>
-        
-          
-          
-  
-    
-      
-        
-        
-        
-      
-    
-  
-<li class="elem-ref"><a href="#analyze-string">&lt;xsl:analyze-string&gt;</a></li>
-<li class="elem-ref"><a href="#apply-imports">&lt;xsl:apply-imports&gt;</a></li>
-<li class="elem-ref"><a href="#apply-templates">&lt;xsl:apply-templates&gt;</a></li>
-<li class="elem-ref"><a href="#attribute">&lt;xsl:attribute&gt;</a></li>
-<li class="elem-ref"><a href="#call-template">&lt;xsl:call-template&gt;</a></li>
-<li class="elem-ref"><a href="#choose">&lt;xsl:choose&gt;</a></li>
-<li class="elem-ref"><a href="#comment">&lt;xsl:comment&gt;</a></li>
-<li class="elem-ref"><a href="#copy">&lt;xsl:copy&gt;</a></li>
-<li class="elem-ref"><a href="#copy-of">&lt;xsl:copy-of&gt;</a></li>
-<li class="elem-ref"><a href="#document">&lt;xsl:document&gt;</a></li>
-<li class="elem-ref"><a href="#element">&lt;xsl:element&gt;</a></li>
-<li class="elem-ref"><a href="#fallback">&lt;xsl:fallback&gt;</a></li>
-<li class="elem-ref"><a href="#for-each">&lt;xsl:for-each&gt;</a></li>
-<li class="elem-ref"><a href="#for-each-group">&lt;xsl:for-each-group&gt;</a></li>
-<li class="elem-ref"><a href="#if">&lt;xsl:if&gt;</a></li>
-<li class="elem-ref"><a href="#message">&lt;xsl:message&gt;</a></li>
-<li class="elem-ref"><a href="#namespace">&lt;xsl:namespace&gt;</a></li>
-<li class="elem-ref"><a href="#next-match">&lt;xsl:next-match&gt;</a></li>
-<li class="elem-ref"><a href="#number">&lt;xsl:number&gt;</a></li>
-<li class="elem-ref"><a href="#perform-sort">&lt;xsl:perform-sort&gt;</a></li>
-<li class="elem-ref"><a href="#processing-instruction">&lt;xsl:processing-instruction&gt;</a></li>
-<li class="elem-ref"><a href="#result-document">&lt;xsl:result-document&gt;</a></li>
-<li class="elem-ref"><a href="#sequence">&lt;xsl:sequence&gt;</a></li>
-<li class="elem-ref"><a href="#text">&lt;xsl:text&gt;</a></li>
-<li class="elem-ref"><a href="#value-of">&lt;xsl:value-of&gt;</a></li>
-        
-        
-      </ul></section><section class="element" id="preserve-space"><h3><a href="#preserve-space">&lt;xsl:preserve-space&gt;</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#element-preserve-space">ref</a></li></ul>
-<ul class="content"><li class="attr-ref required">elements<span class="general"> <a href="#nametests">nametests</a></span>
-</li></ul>
-<ul class="content">
-        
-      </ul></section><section class="element" id="processing-instruction"><h3><a href="#processing-instruction">&lt;xsl:processing-instruction&gt;</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#element-processing-instruction">ref</a></li></ul>
-<ul class="content">
-<li class="attr-ref required">name<span class="general"> <a href="#avt">avt</a></span>
-</li>
-<li class="attr-ref">select<span class="general"> <a href="#expression">expression</a></span>
-</li>
-</ul>
-<ul class="content">
-        
-        
-      </ul></section><section class="element" id="result-document"><h3><a href="#result-document">&lt;xsl:result-document&gt;</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#element-result-document">ref</a></li></ul>
-<ul class="content">
-<li class="attr-ref">format<span class="general"> <a href="#avt">avt</a></span>
-</li>
-<li class="attr-ref">href<span class="general"> <a href="#avt">avt</a></span>
-</li>
-<li class="attr-ref">type<span class="general"> <a href="#QName">QName</a></span>
-</li>
-<li class="attr-ref">validation<span class="general"> <a href="#validation-type">validation-type</a></span>
-</li>
-<li class="attr-ref">method<span class="general"> <a href="#avt">avt</a></span>
-</li>
-<li class="attr-ref">byte-order-mark<span class="general"> <a href="#avt">avt</a></span>
-</li>
-<li class="attr-ref">cdata-section-elements<span class="general"> <a href="#avt">avt</a></span>
-</li>
-<li class="attr-ref">doctype-public<span class="general"> <a href="#avt">avt</a></span>
-</li>
-<li class="attr-ref">doctype-system<span class="general"> <a href="#avt">avt</a></span>
-</li>
-<li class="attr-ref">encoding<span class="general"> <a href="#avt">avt</a></span>
-</li>
-<li class="attr-ref">escape-uri-attributes<span class="general"> <a href="#avt">avt</a></span>
-</li>
-<li class="attr-ref">include-content-type<span class="general"> <a href="#avt">avt</a></span>
-</li>
-<li class="attr-ref">indent<span class="general"> <a href="#avt">avt</a></span>
-</li>
-<li class="attr-ref">media-type<span class="general"> <a href="#avt">avt</a></span>
-</li>
-<li class="attr-ref">normalization-form<span class="general"> <a href="#avt">avt</a></span>
-</li>
-<li class="attr-ref">omit-xml-declaration<span class="general"> <a href="#avt">avt</a></span>
-</li>
-<li class="attr-ref">standalone<span class="general"> <a href="#avt">avt</a></span>
-</li>
-<li class="attr-ref">undeclare-prefixes<span class="general"> <a href="#avt">avt</a></span>
-</li>
-<li class="attr-ref">use-character-maps<span class="general"> <a href="#QNames">QNames</a></span>
-</li>
-<li class="attr-ref">output-version<span class="general"> <a href="#avt">avt</a></span>
-</li>
-</ul>
-<ul class="content">
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-      </ul></section><section class="element" id="sequence"><h3><a href="#sequence">&lt;xsl:sequence&gt;</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#element-sequence">ref</a></li></ul>
-<ul class="content"><li class="attr-ref">select<span class="general"> <a href="#expression">expression</a></span>
-</li></ul>
-<ul class="content">
-<li class="elem-ref"><a href="#fallback">&lt;xsl:fallback&gt;</a></li>
-        
-          
-        
-        
-      </ul></section><section class="element" id="sort"><h3><a href="#sort">&lt;xsl:sort&gt;</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#element-sort">ref</a></li></ul>
-<ul class="content">
-<li class="attr-ref">select<span class="general"> <a href="#expression">expression</a></span>
-</li>
-<li class="attr-ref">lang<span class="general"> <a href="#avt">avt</a></span>
-</li>
-<li class="attr-ref">data-type<span class="general"> <a href="#avt">avt</a></span>
-</li>
-<li class="attr-ref">order<span class="general"> <a href="#avt">avt</a></span>
-</li>
-<li class="attr-ref">case-order<span class="general"> <a href="#avt">avt</a></span>
-</li>
-<li class="attr-ref">collation<span class="general"> <a href="#avt">avt</a></span>
-</li>
-<li class="attr-ref">stable<span class="general"> <a href="#yes-or-no">yes-or-no</a></span>
-</li>
-</ul>
-<ul class="content">
-          
-                
-                
-                
-        
-        
-        
-      </ul></section><section class="element" id="strip-space"><h3><a href="#strip-space">&lt;xsl:strip-space&gt;</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#element-strip-space">ref</a></li></ul>
-<ul class="content"><li class="attr-ref required">elements<span class="general"> <a href="#nametests">nametests</a></span>
-</li></ul>
-<ul class="content">
-        
-      </ul></section><section class="element" id="stylesheet"><h3><a href="#stylesheet">&lt;xsl:stylesheet&gt;</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#element-stylesheet">ref</a></li></ul>
-<ul class="content"></ul></section><section class="element" id="template"><h3><a href="#template">&lt;xsl:template&gt;</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#element-template">ref</a></li></ul>
-<ul class="content">
-<li class="attr-ref">match<span class="general"> <a href="#pattern">pattern</a></span>
-</li>
-<li class="attr-ref">priority<span class="general"> <a href="#decimal">decimal</a></span>
-</li>
-<li class="attr-ref">mode<span class="general"> <a href="#modes">modes</a></span>
-</li>
-<li class="attr-ref">name<span class="general"> <a href="#QName">QName</a></span>
-</li>
-<li class="attr-ref">as<span class="general"> <a href="#sequence-type">sequence-type</a></span>
-</li>
-</ul>
-<ul class="content">
-<li class="elem-ref"><a href="#param">&lt;xsl:param&gt;</a></li>
-        
-          
-          
-  
-    
-      
-        
-        
-        
-      
-    
-  
-<li class="elem-ref"><a href="#analyze-string">&lt;xsl:analyze-string&gt;</a></li>
-<li class="elem-ref"><a href="#apply-imports">&lt;xsl:apply-imports&gt;</a></li>
-<li class="elem-ref"><a href="#apply-templates">&lt;xsl:apply-templates&gt;</a></li>
-<li class="elem-ref"><a href="#attribute">&lt;xsl:attribute&gt;</a></li>
-<li class="elem-ref"><a href="#call-template">&lt;xsl:call-template&gt;</a></li>
-<li class="elem-ref"><a href="#choose">&lt;xsl:choose&gt;</a></li>
-<li class="elem-ref"><a href="#comment">&lt;xsl:comment&gt;</a></li>
-<li class="elem-ref"><a href="#copy">&lt;xsl:copy&gt;</a></li>
-<li class="elem-ref"><a href="#copy-of">&lt;xsl:copy-of&gt;</a></li>
-<li class="elem-ref"><a href="#document">&lt;xsl:document&gt;</a></li>
-<li class="elem-ref"><a href="#element">&lt;xsl:element&gt;</a></li>
-<li class="elem-ref"><a href="#fallback">&lt;xsl:fallback&gt;</a></li>
-<li class="elem-ref"><a href="#for-each">&lt;xsl:for-each&gt;</a></li>
-<li class="elem-ref"><a href="#for-each-group">&lt;xsl:for-each-group&gt;</a></li>
-<li class="elem-ref"><a href="#if">&lt;xsl:if&gt;</a></li>
-<li class="elem-ref"><a href="#message">&lt;xsl:message&gt;</a></li>
-<li class="elem-ref"><a href="#namespace">&lt;xsl:namespace&gt;</a></li>
-<li class="elem-ref"><a href="#next-match">&lt;xsl:next-match&gt;</a></li>
-<li class="elem-ref"><a href="#number">&lt;xsl:number&gt;</a></li>
-<li class="elem-ref"><a href="#perform-sort">&lt;xsl:perform-sort&gt;</a></li>
-<li class="elem-ref"><a href="#processing-instruction">&lt;xsl:processing-instruction&gt;</a></li>
-<li class="elem-ref"><a href="#result-document">&lt;xsl:result-document&gt;</a></li>
-<li class="elem-ref"><a href="#sequence">&lt;xsl:sequence&gt;</a></li>
-<li class="elem-ref"><a href="#text">&lt;xsl:text&gt;</a></li>
-<li class="elem-ref"><a href="#value-of">&lt;xsl:value-of&gt;</a></li>
-        
-        
-        
-        
-        
-        
-      </ul></section><section class="element" id="text"><h3><a href="#text">&lt;xsl:text&gt;</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#element-text">ref</a></li></ul>
-<ul class="content"><li class="attr-ref">disable-output-escaping<span class="general"> <a href="#yes-or-no">yes-or-no</a></span>
-</li></ul>
-<ul class="content">
-        
-      </ul></section><section class="element" id="transform"><h3><a href="#transform">&lt;xsl:transform&gt;</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#element-transform">ref</a></li></ul>
-<ul class="content">
-<li class="attr-ref">id<span class="general"> <a href="#ID">ID</a></span>
-</li>
-<li class="attr-ref">default-validation<span class="general"> <a href="#validation-strip-or-preserve">validation-strip-or-preserve</a></span>
-</li>
-<li class="attr-ref">input-type-annotations<span class="general"> <a href="#input-type-annotations-type">input-type-annotations-type</a></span>
-</li>
-</ul>
-<ul class="content">
-<li class="elem-ref"><a href="#import">&lt;xsl:import&gt;</a></li>
-<li class="elem-ref"><a href="#declaration">&lt;xsl:declaration&gt;</a></li>
-<li class="elem-ref"><a href="#variable">&lt;xsl:variable&gt;</a></li>
-<li class="elem-ref"><a href="#param">&lt;xsl:param&gt;</a></li>
-        
-          
-          
-            
-            
-                          
-             
-          
-        
-        
-        
-        
-      </ul></section><section class="element" id="value-of"><h3><a href="#value-of">&lt;xsl:value-of&gt;</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#element-value-of">ref</a></li></ul>
-<ul class="content">
-<li class="attr-ref">select<span class="general"> <a href="#expression">expression</a></span>
-</li>
-<li class="attr-ref">separator<span class="general"> <a href="#avt">avt</a></span>
-</li>
-<li class="attr-ref">disable-output-escaping<span class="general"> <a href="#yes-or-no">yes-or-no</a></span>
-</li>
-</ul>
-<ul class="content">
-        
-                    
-        
-      </ul></section><section class="element" id="variable"><h3><a href="#variable">&lt;xsl:variable&gt;</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#element-variable">ref</a></li></ul>
-<ul class="content">
-<li class="attr-ref required">name<span class="general"> <a href="#QName">QName</a></span>
-</li>
-<li class="attr-ref">select<span class="general"> <a href="#expression">expression</a></span>
-</li>
-<li class="attr-ref">as<span class="general"> <a href="#sequence-type">sequence-type</a></span>
-</li>
-</ul>
-<ul class="content">
-        
-        
-        
-      </ul></section><section class="element" id="when"><h3><a href="#when">&lt;xsl:when&gt;</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#element-when">ref</a></li></ul>
-<ul class="content"><li class="attr-ref required">test<span class="general"> <a href="#expression">expression</a></span>
-</li></ul>
-<ul class="content">
-        
-      </ul></section><section class="element" id="with-param"><h3><a href="#with-param">&lt;xsl:with-param&gt;</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#element-with-param">ref</a></li></ul>
-<ul class="content">
-<li class="attr-ref required">name<span class="general"> <a href="#QName">QName</a></span>
-</li>
-<li class="attr-ref">select<span class="general"> <a href="#expression">expression</a></span>
-</li>
-<li class="attr-ref">as<span class="general"> <a href="#sequence-type">sequence-type</a></span>
-</li>
-<li class="attr-ref">tunnel<span class="general"> <a href="#yes-or-no">yes-or-no</a></span>
-</li>
-</ul>
-<ul class="content">
-        
-        
-        
-           
-      </ul></section></section><section id="xslt-attributes"><h2>XSLT attributes types</h2>
+<li class="elem-ref"><a href="#analyze-string">&lt;analyze-string&gt;</a></li>
+<li class="elem-ref"><a href="#apply-imports">&lt;apply-imports&gt;</a></li>
+<li class="elem-ref"><a href="#apply-templates">&lt;apply-templates&gt;</a></li>
+<li class="elem-ref"><a href="#attribute">&lt;attribute&gt;</a></li>
+<li class="elem-ref"><a href="#call-template">&lt;call-template&gt;</a></li>
+<li class="elem-ref"><a href="#choose">&lt;choose&gt;</a></li>
+<li class="elem-ref"><a href="#comment">&lt;comment&gt;</a></li>
+<li class="elem-ref"><a href="#copy">&lt;copy&gt;</a></li>
+<li class="elem-ref"><a href="#copy-of">&lt;copy-of&gt;</a></li>
+<li class="elem-ref"><a href="#document">&lt;document&gt;</a></li>
+<li class="elem-ref"><a href="#element">&lt;element&gt;</a></li>
+<li class="elem-ref"><a href="#fallback">&lt;fallback&gt;</a></li>
+<li class="elem-ref"><a href="#for-each">&lt;for-each&gt;</a></li>
+<li class="elem-ref"><a href="#for-each-group">&lt;for-each-group&gt;</a></li>
+<li class="elem-ref"><a href="#if">&lt;if&gt;</a></li>
+<li class="elem-ref"><a href="#message">&lt;message&gt;</a></li>
+<li class="elem-ref"><a href="#namespace">&lt;namespace&gt;</a></li>
+<li class="elem-ref"><a href="#next-match">&lt;next-match&gt;</a></li>
+<li class="elem-ref"><a href="#number">&lt;number&gt;</a></li>
+<li class="elem-ref"><a href="#perform-sort">&lt;perform-sort&gt;</a></li>
+<li class="elem-ref"><a href="#processing-instruction">&lt;processing-instruction&gt;</a></li>
+<li class="elem-ref"><a href="#result-document">&lt;result-document&gt;</a></li>
+<li class="elem-ref"><a href="#sequence">&lt;sequence&gt;</a></li>
+<li class="elem-ref"><a href="#text">&lt;text&gt;</a></li>
+<li class="elem-ref"><a href="#value-of">&lt;value-of&gt;</a></li>
+</ul></section></section><section id="xslt-attributes"><h2>XSLT attributes types</h2>
 <section class="attribute" id="QName"><h3><a href="#QName">QName</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#glossary">ref</a></li></ul>
-<div class="content"><p class="desc">
-      A QName.
-      This schema does not use the built-in type xs:QName, but rather defines its own
-      QName type. Although xs:QName would define the correct validation on these attributes,
-      a schema processor would expand unprefixed QNames incorrectly when constructing the PSVI,
-      because (as defined in XML Schema errata) an unprefixed xs:QName is assumed to be in
-      the default namespace, which is not the correct assumption for XSLT.
-      The data type is defined as a restriction of the built-in type Name, restricted
-      so that it can only contain one colon which must not be the first or last character.
-    </p></div></section><section class="attribute" id="QNames"><h3><a href="#QNames">QNames</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#glossary">ref</a></li></ul>
-<div class="content"><p class="desc">
-      A list of QNames.
-      Used in the [xsl:]use-attribute-sets attribute of various elements,
-      and in the cdata-section-elements attribute of xsl:output
-    </p></div></section><section class="attribute" id="avt"><h3><a href="#avt">avt</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#glossary">ref</a></li></ul>
-<div class="content"><p class="desc">
-      This type is used for all attributes that allow an attribute value template.
-      The general rules for the syntax of attribute value templates, and the specific
-      rules for each such attribute, are described in the XSLT 2.0 Recommendation.
-    </p></div></section><section class="attribute" id="char"><h3><a href="#char">char</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#glossary">ref</a></li></ul>
-<div class="content"><p class="desc">
-      A string containing exactly one character.
-    </p></div></section><section class="attribute" id="expression"><h3><a href="#expression">expression</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#glossary">ref</a></li></ul>
-<div class="content"><p class="desc">
-      An XPath 2.0 expression.
-    </p></div></section><section class="attribute" id="input-type-annotations-type"><h3><a href="#input-type-annotations-type">input-type-annotations-type</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#glossary">ref</a></li></ul>
-<div class="content"><p class="desc">
-      Describes how type annotations in source documents are handled.
-    </p></div></section><section class="attribute" id="level"><h3><a href="#level">level</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#glossary">ref</a></li></ul>
-<div class="content"><p class="desc">
-      The level attribute of xsl:number: 
-      one of single, multiple, or any.
-    </p></div></section><section class="attribute" id="method"><h3><a href="#method">method</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#glossary">ref</a></li></ul>
-<div class="content"><p class="desc">
-      The method attribute of xsl:output:
-      Either one of the recognized names "xml", "xhtml", "html", "text",
-      or a QName that must include a prefix.
-    </p></div></section><section class="attribute" id="mode"><h3><a href="#mode">mode</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#glossary">ref</a></li></ul>
-<div class="content"><p class="desc">
-      The mode attribute of xsl:apply-templates: 
-      either a QName, or #current, or #default.
-    </p></div></section><section class="attribute" id="modes"><h3><a href="#modes">modes</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#glossary">ref</a></li></ul>
-<div class="content"><p class="desc">
-      The mode attribute of xsl:template: 
-      either a list, each member being either a QName or #default;
-      or the value #all
-    </p></div></section><section class="attribute" id="nametests"><h3><a href="#nametests">nametests</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#glossary">ref</a></li></ul>
-<div class="content"><p class="desc">
-      A list of NameTests, as defined in the XPath 2.0 Recommendation.
-      Each NameTest is either a QName, or "*", or "prefix:*", or "*:localname"
-    </p></div></section><section class="attribute" id="pattern"><h3><a href="#pattern">pattern</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#glossary">ref</a></li></ul>
-<div class="content"><p class="desc">
-      A match pattern as defined in the XSLT 2.0 Recommendation.
-      The syntax for patterns is a restricted form of the syntax for
-      XPath 2.0 expressions.
-    </p></div></section><section class="attribute" id="prefix-list"><h3><a href="#prefix-list">prefix-list</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#glossary">ref</a></li></ul></section><section class="attribute" id="prefix-list-or-all"><h3><a href="#prefix-list-or-all">prefix-list-or-all</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#glossary">ref</a></li></ul></section><section class="attribute" id="prefix-or-default"><h3><a href="#prefix-or-default">prefix-or-default</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#glossary">ref</a></li></ul>
-<div class="content"><p class="desc">
-      Either a namespace prefix, or #default.
-      Used in the xsl:namespace-alias element.
-    </p></div></section><section class="attribute" id="prefixes"><h3><a href="#prefixes">prefixes</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#glossary">ref</a></li></ul></section><section class="attribute" id="sequence-type"><h3><a href="#sequence-type">sequence-type</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#glossary">ref</a></li></ul>
-<div class="content"><p class="desc">
-      The description of a data type, conforming to the
-      SequenceType production defined in the XPath 2.0 Recommendation
-    </p></div></section><section class="attribute" id="uri-list"><h3><a href="#uri-list">uri-list</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#glossary">ref</a></li></ul></section><section class="attribute" id="validation-strip-or-preserve"><h3><a href="#validation-strip-or-preserve">validation-strip-or-preserve</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#glossary">ref</a></li></ul>
-<div class="content"><p class="desc">
-      Describes different ways of type-annotating an element or attribute.
-    </p></div></section><section class="attribute" id="validation-type"><h3><a href="#validation-type">validation-type</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#glossary">ref</a></li></ul>
-<div class="content"><p class="desc">
-      Describes different ways of type-annotating an element or attribute.
-    </p></div></section><section class="attribute" id="yes-or-no"><h3><a href="#yes-or-no">yes-or-no</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#glossary">ref</a></li></ul>
-<div class="content"><p class="desc">
-      One of the values "yes" or "no".
-    </p></div></section><section class="attribute" id="yes-or-no-or-omit"><h3><a href="#yes-or-no-or-omit">yes-or-no-or-omit</a></h3>
-<ul class="content"><li><a href="https://www.w3.org/TR/xslt20#glossary">ref</a></li></ul>
-<div class="content"><p class="desc">
-      One of the values "yes" or "no" or "omit".
-    </p></div></section></section>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#glossary">ref</a></p>
+<div class="content"><p class="desc">A QName. This schema does not use the built-in type xs:QName, but rather defines its own QName type. Although xs:QName would define the correct validation on these attributes, a schema processor would expand unprefixed QNames incorrectly when constructing the PSVI, because (as defined in XML Schema errata) an unprefixed xs:QName is assumed to be in the default namespace, which is not the correct assumption for XSLT. The data type is defined as a restriction of the built-in type Name, restricted so that it can only contain one colon which must not be the first or last character.</p></div></section><section class="attribute" id="QNames"><h3><a href="#QNames">QNames</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#glossary">ref</a></p>
+<div class="content"><p class="desc">A list of QNames. Used in the [xsl:]use-attribute-sets attribute of various elements, and in the cdata-section-elements attribute of xsl:output</p></div></section><section class="attribute" id="avt"><h3><a href="#avt">avt</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#glossary">ref</a></p>
+<div class="content"><p class="desc">This type is used for all attributes that allow an attribute value template. The general rules for the syntax of attribute value templates, and the specific rules for each such attribute, are described in the XSLT 2.0 Recommendation.</p></div></section><section class="attribute" id="char"><h3><a href="#char">char</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#glossary">ref</a></p>
+<div class="content"><p class="desc">A string containing exactly one character.</p></div></section><section class="attribute" id="expression"><h3><a href="#expression">expression</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#glossary">ref</a></p>
+<div class="content"><p class="desc">An XPath 2.0 expression.</p></div></section><section class="attribute" id="input-type-annotations-type"><h3><a href="#input-type-annotations-type">input-type-annotations-type</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#glossary">ref</a></p>
+<div class="content"><p class="desc">Describes how type annotations in source documents are handled.</p></div></section><section class="attribute" id="level"><h3><a href="#level">level</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#glossary">ref</a></p>
+<div class="content"><p class="desc">The level attribute of xsl:number: one of single, multiple, or any.</p></div></section><section class="attribute" id="method"><h3><a href="#method">method</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#glossary">ref</a></p>
+<div class="content"><p class="desc">The method attribute of xsl:output: Either one of the recognized names "xml", "xhtml", "html", "text", or a QName that must include a prefix.</p></div></section><section class="attribute" id="mode"><h3><a href="#mode">mode</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#glossary">ref</a></p>
+<div class="content"><p class="desc">The mode attribute of xsl:apply-templates: either a QName, or #current, or #default.</p></div></section><section class="attribute" id="modes"><h3><a href="#modes">modes</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#glossary">ref</a></p>
+<div class="content"><p class="desc">The mode attribute of xsl:template: either a list, each member being either a QName or #default; or the value #all</p></div></section><section class="attribute" id="nametests"><h3><a href="#nametests">nametests</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#glossary">ref</a></p>
+<div class="content"><p class="desc">A list of NameTests, as defined in the XPath 2.0 Recommendation. Each NameTest is either a QName, or "*", or "prefix:*", or "*:localname"</p></div></section><section class="attribute" id="pattern"><h3><a href="#pattern">pattern</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#glossary">ref</a></p>
+<div class="content"><p class="desc">A match pattern as defined in the XSLT 2.0 Recommendation. The syntax for patterns is a restricted form of the syntax for XPath 2.0 expressions.</p></div></section><section class="attribute" id="prefix-list"><h3><a href="#prefix-list">prefix-list</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#glossary">ref</a></p></section><section class="attribute" id="prefix-list-or-all"><h3><a href="#prefix-list-or-all">prefix-list-or-all</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#glossary">ref</a></p></section><section class="attribute" id="prefix-or-default"><h3><a href="#prefix-or-default">prefix-or-default</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#glossary">ref</a></p>
+<div class="content"><p class="desc">Either a namespace prefix, or #default. Used in the xsl:namespace-alias element.</p></div></section><section class="attribute" id="prefixes"><h3><a href="#prefixes">prefixes</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#glossary">ref</a></p></section><section class="attribute" id="sequence-type"><h3><a href="#sequence-type">sequence-type</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#glossary">ref</a></p>
+<div class="content"><p class="desc">The description of a data type, conforming to the SequenceType production defined in the XPath 2.0 Recommendation</p></div></section><section class="attribute" id="uri-list"><h3><a href="#uri-list">uri-list</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#glossary">ref</a></p></section><section class="attribute" id="validation-strip-or-preserve"><h3><a href="#validation-strip-or-preserve">validation-strip-or-preserve</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#glossary">ref</a></p>
+<div class="content"><p class="desc">Describes different ways of type-annotating an element or attribute.</p></div></section><section class="attribute" id="validation-type"><h3><a href="#validation-type">validation-type</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#glossary">ref</a></p>
+<div class="content"><p class="desc">Describes different ways of type-annotating an element or attribute.</p></div></section><section class="attribute" id="yes-or-no"><h3><a href="#yes-or-no">yes-or-no</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#glossary">ref</a></p>
+<div class="content"><p class="desc">One of the values "yes" or "no".</p></div></section><section class="attribute" id="yes-or-no-or-omit"><h3><a href="#yes-or-no-or-omit">yes-or-no-or-omit</a></h3>
+<p class="content"><a href="https://www.w3.org/TR/xslt20#glossary">ref</a></p>
+<div class="content"><p class="desc">One of the values "yes" or "no" or "omit".</p></div></section></section>
 </body>
 </html>
