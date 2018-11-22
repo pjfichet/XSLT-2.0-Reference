@@ -17,4 +17,11 @@ https://www.w3.org/TR/xslt20
 # XSLT-2.0 Schema
 https://www.w3.org/2007/schema-for-xslt20.xsd
 
+# TODO
+
+- Document each element.
+- Proofread the handwritten documentation.
+- Adapt the css layout to small (mobile) devices.
+- Correctly handle <xs:restriction>, and in a more general manner, be
+more subtle when converting the xsd file.
 
