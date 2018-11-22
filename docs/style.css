@@ -101,6 +101,10 @@ nav a, nav h1 {
 	display: block;
 }
 
+.element:target h3 {
+	margin-bottom: 1.5rem;
+}
+
 #toc:target #xslt-elements,
 #toc:target #xslt-types {
 	width: 45%;
@@ -123,11 +127,12 @@ ul {
 	padding: 0;
 	margin: 0 0 0 1.5rem;
 }
-.attr-ref, .elem-ref {
-	margin-left: 1rem;
-}
 .attr-ref:before {
 	content: "@";
+}
+p {
+	margin-bottom: 1.5rem;
+	text-align: justify;
 }
 /* colors */
 body {

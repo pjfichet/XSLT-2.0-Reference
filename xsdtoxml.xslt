@@ -10,12 +10,20 @@
 	<elem name="">
 		<attribute name="" use="" type=""/>
 		<subelem ref=""/>
+		<p>...</p>
 	</elem>
 	<type name="">
 		<p>...</p>
 	</type>
 <docset>
 -->
+
+<!--
+Load the hand written documentation. The file name is
+a parameter, to define it from the command line.
+-->
+<xsl:param name="docfile" select="'docxslt-2.0.xml'"/>
+<xsl:variable name="doc" select="document($docfile)"/>
 
 <!--
 Here, we are selecting each elements, and we walk through
@@ -31,8 +39,10 @@ their hierarchy to search for the <xs:element> and
 </xsl:template>
 
 <xsl:template match="xs:element[@name]" mode="element">
+	<xsl:variable name="name" select="@name"/>
 	<elem name="{@name}">
 		<xsl:apply-templates mode="element"/>
+		<xsl:apply-templates select="$doc/doc/elem[@name=$name]/p" mode="doc"/>
 	</elem>
 </xsl:template>
 
@@ -69,6 +79,21 @@ their hierarchy to search for the <xs:element> and
 
 <xsl:template match="*" mode="element">
 	<xsl:apply-templates mode="element"/>
+</xsl:template>
+
+<!--
+Here we copy the handwritten documentation
+-->
+<xsl:template match="p" mode="doc">
+	<xsl:copy>
+		<xsl:apply-templates mode="doc"/>
+	</xsl:copy>
+</xsl:template>
+
+<xsl:template match="*" mode="doc">
+	<xsl:copy>
+		<xsl:apply-templates mode="doc"/>
+	</xsl:copy>
 </xsl:template>
 
 

@@ -2,14 +2,14 @@
 <!--
 todo: https://www.w3.org/TR/xslt20/#apply-imports
 <elem name="xsl element">
-	<i/> current element
-	<e>xsl element</e>
-	<a>xsl attribute</a>
-	<t>xsl type</a>
-	<l href="">link<l>
-	<p>paragraph</p>
-	<x>example</x>
-	<xpath>xpath expression</xpath>
+	<p>
+		<e>xsl element</e>
+		<a>xsl attribute</a>
+		<t>xsl type</a>
+		<l href="">link<l>
+		<x>example</x>
+		<xpath>xpath expression</xpath>
+	</p>
 </item>
 -->
 
@@ -20,11 +20,13 @@ sequence constructor for creating nodes and/or atomic values. If it has
 a <a>match</a> attribute, it is invoked when an <e>apply-templates</e>
 selects a node that match the pattern specified in the match attribute. If
 it has a <a>name</a>attribute, it is invoked explicitely by name.</p>
-<p>A <e>template</e> must have either a <a>match</a> attribute or a <a>name</a>
-attribute. If it has no <a>match</a> attribute, it must have no <a>mode</a>
-attribute and no <a>priority</a> attribute. If present, the <a>as</a> attribute
-the result of the sequence constructor is converted to the specified type (or raise
-a <l href="https://www.w3.org/TR/xslt20/#dt-type-error">type error</l> if it is not possible.</p> 
+<p>A <e>template</e> must have either a <a>match</a> attribute
+or a <a>name</a> attribute. If it has no <a>match</a> attribute,
+it must have no <a>mode</a> attribute and no <a>priority</a>
+attribute. If present, the <a>as</a> attribute the result of the
+sequence constructor is converted to the specified type (or raise a
+<l href="https://www.w3.org/TR/xslt20/#dt-type-error">type error</l>
+if it is not possible.</p>
 </elem>
 
 <elem name="apply-template">
@@ -32,19 +34,19 @@ a <l href="https://www.w3.org/TR/xslt20/#dt-type-error">type error</l> if it is 
 produces as output a sequence of items (often nodes added to a <l
 href="https://www.w3.org/TR/xslt20/#dt-result-tree">result tree</l>).
 Each node in the input sequence is processed by finding a template
-rule whose pattern match that node. If there is more than one, the
-<l href="https://www.w3.org/TR/xslt20/#conflict">best among them is
-choosen</l>, if there is none, a <l
+rule whose pattern match that node. If there is more than one,
+the <l href="https://www.w3.org/TR/xslt20/#conflict">best
+among them is choosen</l>, if there is none, a <l
 href="https://www.w3.org/TR/xslt20/#built-in-rule">built-in template
-rule</l> is used. Each template rule evaluated produce a sequence of item,
-and the resulting sequences are concatenated.</p>
-<p>The default value of <a>match</a> is <xpath>child::node()</xpath>,
-and as a result, <e>apply-templates</e> is commonly used to process
-nodes descendant of the context node. But the <a>select</a> attribute
-can select node by an expression, and so, <e>apply-templates</e> can
-be used as a replacement of <e>if</i> or <e>choose</e>.</p>
-Furthermore, if the <a>mode</a> attribute is defined, only the template rules that
-are applicable to the selected mode are considered.
+rule</l> is used. Each template rule evaluated produce a sequence
+of item, and the resulting sequences are concatenated.</p> <p>The
+default value of <a>match</a> is <xpath>child::node()</xpath>, and as
+a result, <e>apply-templates</e> is commonly used to process nodes
+descendant of the context node. But the <a>select</a> attribute
+can select node by an expression, and so, <e>apply-templates</e>
+can be used as a replacement of <e>if</e> or <e>choose</e>.</p>
+<p>Furthermore, if the <a>mode</a> attribute is defined, only the
+template rules that are applicable to the selected mode are considered.
 <l href="https://www.w3.org/TR/xslt20/#modes">modes</l> allow a node
 in the <l href="https://www.w3.org/TR/xslt20/#dt-source-tree">source
 tree</l> to be processed multiple times, each time producing a different
@@ -53,12 +55,101 @@ active when processing different trees.</p>
 </elem>
 
 <elem name="apply-imports">
-<p>With <e>next-match</e>, <e>apply-imports</e> can be used to invoke an overridden template rule. It only
-considers template rules in imported stylesheet modules.</p>
+<p>As well as <e>next-match</e>, <e>apply-imports</e> can be used to invoke an
+overridden template rule. It only considers template rules in imported
+stylesheet modules.</p>
 </elem>
 
-<elem name="apply-imports">
-<p>With <e>apply-imports</e>, <e>next-match</e> can be used to invoke an overridden template rule. It considers
-template rules of lower import precedence or priority.</p>
+<elem name="next-match">
+<p>As well as <e>apply-imports</e>, <e>next-match</e> can be used to invoke
+an overridden template rule. It considers template rules of lower import
+precedence or priority.</p>
+<p>An <e>fallback</e> instruction appearing as a child of <e>next-match</e>
+is ignored by an XSLT-2.0 processor, but can be used to define fallback
+behavior when the stylesheet is processed by an XSLT-1.0 processor in
+forwards-compatible mode.</p>
 </elem>
 
+<elem name="for-each">
+<p><e>for-each</e> instruction processes each item in a sequence of item,
+evaluating the sequence constructor for each item.</p>
+<p>the <a>select</a> attribute is required, and the expression must evaluate
+to a sequence. If there is an <e>sort</e> element present, the input sequence
+is sorted.</p>
+</elem>
+
+<elem name="if">
+<p>There are two instructions in XSLT that support conditional processing:
+<e>if</e> and <e>choose</e>. <e>if</e> provides simple if-then conditionality.
+It has a mandatory <a>test</a> attribute which specifies an expression.</p>
+</elem>
+
+<elem name="choose">
+<p>There are two instructions in XSLT that support conditional processing:
+<e>if</e> and <e>choose</e>. <e>choose</e> provides selection of one choice
+when there are several possibilities. It consists of a sequence of one or
+more <e>when</e> elements, followed by an optional <e>otherwise</e> element.
+Each <e>when</e> element has a single attribute, <a>test</a> which specifies
+an expression. When <e>choose</e> is processed, each of the <e>when</e> element
+is tested in turn until one of them is satisfied. Only the content of the first
+<e>when</e> that is satisfied is evaluated. If none is satisfied, the
+<e>otherwise</e> is considered.</p>
+</elem>
+
+<elem name="when">
+<p>Specifies, with the <a>test</a> attribute, an expression to be tested as part
+of an <e>choose</e> instruction.</p>
+</elem>
+
+<elem name="otherwise">
+<p>In a <e>choose</e> instruction, when none of the <e>when</e> element is satisfied,
+the optional <e>otherwise</e> is considered, and processed.</p>
+</elem>
+
+<elem name="variable">
+<p>The <e>variable</e> element declares a variable which may be global
+or local.  It has a required <a>name</a> attribute which specifies the
+name of the variable.  The value of the variable is defined either
+by the expression of the <a>select</a> attribute or the sequence
+constructor. If the <e>variable</e> has a <a>select</a> attribute, the
+sequence constructor must be empty. The optional <a>as</a> attribute
+defines the required type of variable. If specified, the value of the
+variable is converted to the required type using the
+<l href="https://www.w3.org/TR/xslt20/#dt-function-conversion-rules">function
+conversion rules</l>.</p>
+<p>The value of the variable named "name" can be accessed with the
+"$name" expression.</p>
+<p><e>variable</e> and <e>parameter</e> can be used to create <l
+href="https://www.w3.org/TR/xslt20/#temporary-trees">temporary
+trees</l> and two-phase transformations.</p>
+</elem>
+
+<elem name="param">
+<p>The <e>param</e> element may be used as a child of <e>stylesheet</e>,
+<e>template</e>, or <e>function</e> to define a parameter to the
+transformation. Such a paramater can be set by the caller: by
+the xslt processor, when the <e>stylesheet</e> is invoked, by the
+<e>call-template</e>, <e>apply-templates</e>, <e>apply-imports</e>,
+<e>next-match</e>, when a <e>template</e> is invoked, or as a child of
+<e>function</e> to define a parameter to a stylesheet function, which
+may be supplied when the function is called from an XPath expression.</p>
+
+<p>The name of the  is defined by the <a>name</a> attribute,
+and its default value is supplied by the caller. If no value was
+supplied by the caller, then it is define by the expression of
+the <a>select</a> attribute.  The optional <a>as</a> attribute
+defines the required type of variable. If specified, the value
+of the variable is converted to the required type using the <l
+href="https://www.w3.org/TR/xslt20/#dt-function-conversion-rules">function
+conversion rules</l>. For <e>stylesheet</e> and <e>template</e>
+parameters, the optional <a>required</a> attribute may be used to
+indicate that the parameter is mandatory. It must not be specified for
+<e>function</e> parameter which are alwasy mandatory.</p>
+<p>The value of the parameter named "name" can be accessed with the "$name" expression.</p>
+<p><e>variable</e> and <e>parameter</e> can be used to create <l
+href="https://www.w3.org/TR/xslt20/#temporary-trees">temporary
+trees</l> and two-phase transformations.</p>
+</elem>
+
+<!-- todo: https://www.w3.org/TR/xslt20/#global-variables -->
+</doc>

@@ -7,7 +7,7 @@ docs/style.css: css
 docs/index.html: xslt-2.0.xml xmltohtml.xslt
 	xsltproc -o $@ xmltohtml.xslt $<
 
-xslt-2.0.xml: xslt-2.0.xsd xsdtoxml.xslt
+xslt-2.0.xml: xslt-2.0.xsd docxslt-2.0.xml xsdtoxml.xslt
 	xsltproc -o $@ xsdtoxml.xslt $<
 
 xslt-2.0.xsd:

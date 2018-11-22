@@ -10,6 +10,7 @@
 <nav class="toc-link"><h1>XSLT-2.0  Reference</h1>
 <a href="#toc" title="Show a simplified table of contents">Summary</a><a href="#xslt-elements">Elements</a><a href="#xslt-types">Types</a><a href="https://github.com/pjfichet/XSLT-2.0-Reference">Github</a></nav><section id="xslt-elements"><h2>Elements</h2>
 <section class="element" id="analyze-string"><h3><a href="#analyze-string">&lt;xsl:analyze-string&gt;</a></h3>
+<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-analyze-string">Reference</a></h4></div>
 <ul class="content">
 <li class="attr-ref required">select<span class="general"> <a href="#expression">expression</a></span>
 </li>
@@ -22,10 +23,15 @@
 <li class="elem-ref"><a href="#matching-substring">&lt;xsl:matching-substring&gt;</a></li>
 <li class="elem-ref"><a href="#non-matching-substring">&lt;xsl:non-matching-substring&gt;</a></li>
 <li class="elem-ref"><a href="#fallback">&lt;xsl:fallback&gt;</a></li>
-</ul>
-<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-analyze-string">Reference</a></h4></div></section><section class="element" id="apply-imports"><h3><a href="#apply-imports">&lt;xsl:apply-imports&gt;</a></h3>
-<ul class="content"><li class="elem-ref"><a href="#with-param">&lt;xsl:with-param&gt;</a></li></ul>
-<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-apply-imports">Reference</a></h4></div></section><section class="element" id="apply-templates"><h3><a href="#apply-templates">&lt;xsl:apply-templates&gt;</a></h3>
+</ul></section><section class="element" id="apply-imports"><h3><a href="#apply-imports">&lt;xsl:apply-imports&gt;</a></h3>
+<div class="desc">
+<p>As well as <span class="elem-ref"><a href="#next-match">&lt;xsl:next-match&gt;</a></span>, <span class="elem-ref"><a href="#apply-imports">&lt;xsl:apply-imports&gt;</a></span> can be used to invoke an
+overridden template rule. It only considers template rules in imported
+stylesheet modules.</p>
+<h4><a href="https://www.w3.org/TR/xslt20#element-apply-imports">Reference</a></h4>
+</div>
+<ul class="content"><li class="elem-ref"><a href="#with-param">&lt;xsl:with-param&gt;</a></li></ul></section><section class="element" id="apply-templates"><h3><a href="#apply-templates">&lt;xsl:apply-templates&gt;</a></h3>
+<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-apply-templates">Reference</a></h4></div>
 <ul class="content">
 <li class="attr-ref">select<span class="general"> <a href="#expression">expression</a></span>
 </li>
@@ -35,8 +41,8 @@
 <ul class="content">
 <li class="elem-ref"><a href="#sort">&lt;xsl:sort&gt;</a></li>
 <li class="elem-ref"><a href="#with-param">&lt;xsl:with-param&gt;</a></li>
-</ul>
-<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-apply-templates">Reference</a></h4></div></section><section class="element" id="attribute"><h3><a href="#attribute">&lt;xsl:attribute&gt;</a></h3>
+</ul></section><section class="element" id="attribute"><h3><a href="#attribute">&lt;xsl:attribute&gt;</a></h3>
+<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-attribute">Reference</a></h4></div>
 <ul class="content">
 <li class="attr-ref required">name<span class="general"> <a href="#avt">avt</a></span>
 </li>
@@ -77,33 +83,44 @@
 <li class="elem-ref"><a href="#sequence">&lt;xsl:sequence&gt;</a></li>
 <li class="elem-ref"><a href="#text">&lt;xsl:text&gt;</a></li>
 <li class="elem-ref"><a href="#value-of">&lt;xsl:value-of&gt;</a></li>
-</ul>
-<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-attribute">Reference</a></h4></div></section><section class="element" id="attribute-set"><h3><a href="#attribute-set">&lt;xsl:attribute-set&gt;</a></h3>
+</ul></section><section class="element" id="attribute-set"><h3><a href="#attribute-set">&lt;xsl:attribute-set&gt;</a></h3>
+<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-attribute-set">Reference</a></h4></div>
 <ul class="content">
 <li class="attr-ref required">name<span class="general"> <a href="#QName">QName</a></span>
 </li>
 <li class="attr-ref">use-attribute-sets<span class="general"> <a href="#QNames">QNames</a></span>
 </li>
 </ul>
-<ul class="content"><li class="elem-ref"><a href="#attribute">&lt;xsl:attribute&gt;</a></li></ul>
-<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-attribute-set">Reference</a></h4></div></section><section class="element" id="call-template"><h3><a href="#call-template">&lt;xsl:call-template&gt;</a></h3>
+<ul class="content"><li class="elem-ref"><a href="#attribute">&lt;xsl:attribute&gt;</a></li></ul></section><section class="element" id="call-template"><h3><a href="#call-template">&lt;xsl:call-template&gt;</a></h3>
+<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-call-template">Reference</a></h4></div>
 <ul class="content"><li class="attr-ref required">name<span class="general"> <a href="#QName">QName</a></span>
 </li></ul>
-<ul class="content"><li class="elem-ref"><a href="#with-param">&lt;xsl:with-param&gt;</a></li></ul>
-<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-call-template">Reference</a></h4></div></section><section class="element" id="character-map"><h3><a href="#character-map">&lt;xsl:character-map&gt;</a></h3>
+<ul class="content"><li class="elem-ref"><a href="#with-param">&lt;xsl:with-param&gt;</a></li></ul></section><section class="element" id="character-map"><h3><a href="#character-map">&lt;xsl:character-map&gt;</a></h3>
+<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-character-map">Reference</a></h4></div>
 <ul class="content">
 <li class="attr-ref required">name<span class="general"> <a href="#QName">QName</a></span>
 </li>
 <li class="attr-ref">use-character-maps<span class="general"> <a href="#QNames">QNames</a></span>
 </li>
 </ul>
-<ul class="content"><li class="elem-ref"><a href="#output-character">&lt;xsl:output-character&gt;</a></li></ul>
-<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-character-map">Reference</a></h4></div></section><section class="element" id="choose"><h3><a href="#choose">&lt;xsl:choose&gt;</a></h3>
+<ul class="content"><li class="elem-ref"><a href="#output-character">&lt;xsl:output-character&gt;</a></li></ul></section><section class="element" id="choose"><h3><a href="#choose">&lt;xsl:choose&gt;</a></h3>
+<div class="desc">
+<p>There are two instructions in XSLT that support conditional processing:
+<span class="elem-ref"><a href="#if">&lt;xsl:if&gt;</a></span> and <span class="elem-ref"><a href="#choose">&lt;xsl:choose&gt;</a></span>. <span class="elem-ref"><a href="#choose">&lt;xsl:choose&gt;</a></span> provides selection of one choice
+when there are several possibilities. It consists of a sequence of one or
+more <span class="elem-ref"><a href="#when">&lt;xsl:when&gt;</a></span> elements, followed by an optional <span class="elem-ref"><a href="#otherwise">&lt;xsl:otherwise&gt;</a></span> element.
+Each <span class="elem-ref"><a href="#when">&lt;xsl:when&gt;</a></span> element has a single attribute, <span class="attr-ref">test</span> which specifies
+an expression. When <span class="elem-ref"><a href="#choose">&lt;xsl:choose&gt;</a></span> is processed, each of the <span class="elem-ref"><a href="#when">&lt;xsl:when&gt;</a></span> element
+is tested in turn until one of them is satisfied. Only the content of the first
+<span class="elem-ref"><a href="#when">&lt;xsl:when&gt;</a></span> that is satisfied is evaluated. If none is satisfied, the
+<span class="elem-ref"><a href="#otherwise">&lt;xsl:otherwise&gt;</a></span> is considered.</p>
+<h4><a href="https://www.w3.org/TR/xslt20#element-choose">Reference</a></h4>
+</div>
 <ul class="content">
 <li class="elem-ref"><a href="#when">&lt;xsl:when&gt;</a></li>
 <li class="elem-ref"><a href="#otherwise">&lt;xsl:otherwise&gt;</a></li>
-</ul>
-<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-choose">Reference</a></h4></div></section><section class="element" id="comment"><h3><a href="#comment">&lt;xsl:comment&gt;</a></h3>
+</ul></section><section class="element" id="comment"><h3><a href="#comment">&lt;xsl:comment&gt;</a></h3>
+<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-comment">Reference</a></h4></div>
 <ul class="content"><li class="attr-ref">select<span class="general"> <a href="#expression">expression</a></span>
 </li></ul>
 <ul class="content">
@@ -132,8 +149,8 @@
 <li class="elem-ref"><a href="#sequence">&lt;xsl:sequence&gt;</a></li>
 <li class="elem-ref"><a href="#text">&lt;xsl:text&gt;</a></li>
 <li class="elem-ref"><a href="#value-of">&lt;xsl:value-of&gt;</a></li>
-</ul>
-<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-comment">Reference</a></h4></div></section><section class="element" id="copy"><h3><a href="#copy">&lt;xsl:copy&gt;</a></h3>
+</ul></section><section class="element" id="copy"><h3><a href="#copy">&lt;xsl:copy&gt;</a></h3>
+<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-copy">Reference</a></h4></div>
 <ul class="content">
 <li class="attr-ref">copy-namespaces<span class="general"> <a href="#yes-or-no">yes-or-no</a></span>
 </li>
@@ -172,8 +189,8 @@
 <li class="elem-ref"><a href="#sequence">&lt;xsl:sequence&gt;</a></li>
 <li class="elem-ref"><a href="#text">&lt;xsl:text&gt;</a></li>
 <li class="elem-ref"><a href="#value-of">&lt;xsl:value-of&gt;</a></li>
-</ul>
-<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-copy">Reference</a></h4></div></section><section class="element" id="copy-of"><h3><a href="#copy-of">&lt;xsl:copy-of&gt;</a></h3>
+</ul></section><section class="element" id="copy-of"><h3><a href="#copy-of">&lt;xsl:copy-of&gt;</a></h3>
+<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-copy-of">Reference</a></h4></div>
 <ul class="content">
 <li class="attr-ref required">select<span class="general"> <a href="#expression">expression</a></span>
 </li>
@@ -183,8 +200,8 @@
 </li>
 <li class="attr-ref">validation<span class="general"> <a href="#validation-type">validation-type</a></span>
 </li>
-</ul>
-<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-copy-of">Reference</a></h4></div></section><section class="element" id="decimal-format"><h3><a href="#decimal-format">&lt;xsl:decimal-format&gt;</a></h3>
+</ul></section><section class="element" id="decimal-format"><h3><a href="#decimal-format">&lt;xsl:decimal-format&gt;</a></h3>
+<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-decimal-format">Reference</a></h4></div>
 <ul class="content">
 <li class="attr-ref">name<span class="general"> <a href="#QName">QName</a></span>
 </li>
@@ -208,8 +225,8 @@
 </li>
 <li class="attr-ref">pattern-separator<span class="general"> <a href="#char">char</a></span>
 </li>
-</ul>
-<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-decimal-format">Reference</a></h4></div></section><section class="element" id="document"><h3><a href="#document">&lt;xsl:document&gt;</a></h3>
+</ul></section><section class="element" id="document"><h3><a href="#document">&lt;xsl:document&gt;</a></h3>
+<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-document">Reference</a></h4></div>
 <ul class="content">
 <li class="attr-ref">type<span class="general"> <a href="#QName">QName</a></span>
 </li>
@@ -242,8 +259,8 @@
 <li class="elem-ref"><a href="#sequence">&lt;xsl:sequence&gt;</a></li>
 <li class="elem-ref"><a href="#text">&lt;xsl:text&gt;</a></li>
 <li class="elem-ref"><a href="#value-of">&lt;xsl:value-of&gt;</a></li>
-</ul>
-<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-document">Reference</a></h4></div></section><section class="element" id="element"><h3><a href="#element">&lt;xsl:element&gt;</a></h3>
+</ul></section><section class="element" id="element"><h3><a href="#element">&lt;xsl:element&gt;</a></h3>
+<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-element">Reference</a></h4></div>
 <ul class="content">
 <li class="attr-ref required">name<span class="general"> <a href="#avt">avt</a></span>
 </li>
@@ -284,9 +301,16 @@
 <li class="elem-ref"><a href="#sequence">&lt;xsl:sequence&gt;</a></li>
 <li class="elem-ref"><a href="#text">&lt;xsl:text&gt;</a></li>
 <li class="elem-ref"><a href="#value-of">&lt;xsl:value-of&gt;</a></li>
-</ul>
-<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-element">Reference</a></h4></div></section><section class="element" id="fallback"><h3><a href="#fallback">&lt;xsl:fallback&gt;</a></h3>
+</ul></section><section class="element" id="fallback"><h3><a href="#fallback">&lt;xsl:fallback&gt;</a></h3>
 <div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-fallback">Reference</a></h4></div></section><section class="element" id="for-each"><h3><a href="#for-each">&lt;xsl:for-each&gt;</a></h3>
+<div class="desc">
+<p><span class="elem-ref"><a href="#for-each">&lt;xsl:for-each&gt;</a></span> instruction processes each item in a sequence of item,
+evaluating the sequence constructor for each item.</p>
+<p>the <span class="attr-ref">select</span> attribute is required, and the expression must evaluate
+to a sequence. If there is an <span class="elem-ref"><a href="#sort">&lt;xsl:sort&gt;</a></span> element present, the input sequence
+is sorted.</p>
+<h4><a href="https://www.w3.org/TR/xslt20#element-for-each">Reference</a></h4>
+</div>
 <ul class="content"><li class="attr-ref required">select<span class="general"> <a href="#expression">expression</a></span>
 </li></ul>
 <ul class="content">
@@ -316,8 +340,8 @@
 <li class="elem-ref"><a href="#sequence">&lt;xsl:sequence&gt;</a></li>
 <li class="elem-ref"><a href="#text">&lt;xsl:text&gt;</a></li>
 <li class="elem-ref"><a href="#value-of">&lt;xsl:value-of&gt;</a></li>
-</ul>
-<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-for-each">Reference</a></h4></div></section><section class="element" id="for-each-group"><h3><a href="#for-each-group">&lt;xsl:for-each-group&gt;</a></h3>
+</ul></section><section class="element" id="for-each-group"><h3><a href="#for-each-group">&lt;xsl:for-each-group&gt;</a></h3>
+<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-for-each-group">Reference</a></h4></div>
 <ul class="content">
 <li class="attr-ref required">select<span class="general"> <a href="#expression">expression</a></span>
 </li>
@@ -359,8 +383,8 @@
 <li class="elem-ref"><a href="#sequence">&lt;xsl:sequence&gt;</a></li>
 <li class="elem-ref"><a href="#text">&lt;xsl:text&gt;</a></li>
 <li class="elem-ref"><a href="#value-of">&lt;xsl:value-of&gt;</a></li>
-</ul>
-<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-for-each-group">Reference</a></h4></div></section><section class="element" id="function"><h3><a href="#function">&lt;xsl:function&gt;</a></h3>
+</ul></section><section class="element" id="function"><h3><a href="#function">&lt;xsl:function&gt;</a></h3>
+<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-function">Reference</a></h4></div>
 <ul class="content">
 <li class="attr-ref required">name<span class="general"> <a href="#QName">QName</a></span>
 </li>
@@ -396,8 +420,13 @@
 <li class="elem-ref"><a href="#sequence">&lt;xsl:sequence&gt;</a></li>
 <li class="elem-ref"><a href="#text">&lt;xsl:text&gt;</a></li>
 <li class="elem-ref"><a href="#value-of">&lt;xsl:value-of&gt;</a></li>
-</ul>
-<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-function">Reference</a></h4></div></section><section class="element" id="if"><h3><a href="#if">&lt;xsl:if&gt;</a></h3>
+</ul></section><section class="element" id="if"><h3><a href="#if">&lt;xsl:if&gt;</a></h3>
+<div class="desc">
+<p>There are two instructions in XSLT that support conditional processing:
+<span class="elem-ref"><a href="#if">&lt;xsl:if&gt;</a></span> and <span class="elem-ref"><a href="#choose">&lt;xsl:choose&gt;</a></span>. <span class="elem-ref"><a href="#if">&lt;xsl:if&gt;</a></span> provides simple if-then conditionality.
+It has a mandatory <span class="attr-ref">test</span> attribute which specifies an expression.</p>
+<h4><a href="https://www.w3.org/TR/xslt20#element-if">Reference</a></h4>
+</div>
 <ul class="content"><li class="attr-ref required">test<span class="general"> <a href="#expression">expression</a></span>
 </li></ul>
 <ul class="content">
@@ -426,22 +455,22 @@
 <li class="elem-ref"><a href="#sequence">&lt;xsl:sequence&gt;</a></li>
 <li class="elem-ref"><a href="#text">&lt;xsl:text&gt;</a></li>
 <li class="elem-ref"><a href="#value-of">&lt;xsl:value-of&gt;</a></li>
-</ul>
-<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-if">Reference</a></h4></div></section><section class="element" id="import"><h3><a href="#import">&lt;xsl:import&gt;</a></h3>
+</ul></section><section class="element" id="import"><h3><a href="#import">&lt;xsl:import&gt;</a></h3>
+<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-import">Reference</a></h4></div>
 <ul class="content"><li class="attr-ref required">href<span class="general"> <a href="#xs:anyURI">xs:anyURI</a></span>
-</li></ul>
-<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-import">Reference</a></h4></div></section><section class="element" id="import-schema"><h3><a href="#import-schema">&lt;xsl:import-schema&gt;</a></h3>
+</li></ul></section><section class="element" id="import-schema"><h3><a href="#import-schema">&lt;xsl:import-schema&gt;</a></h3>
+<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-import-schema">Reference</a></h4></div>
 <ul class="content">
 <li class="attr-ref">namespace<span class="general"> <a href="#xs:anyURI">xs:anyURI</a></span>
 </li>
 <li class="attr-ref">schema-location<span class="general"> <a href="#xs:anyURI">xs:anyURI</a></span>
 </li>
 </ul>
-<ul class="content"><li class="elem-ref"><a href="#schema">&lt;xsl:schema&gt;</a></li></ul>
-<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-import-schema">Reference</a></h4></div></section><section class="element" id="include"><h3><a href="#include">&lt;xsl:include&gt;</a></h3>
+<ul class="content"><li class="elem-ref"><a href="#schema">&lt;xsl:schema&gt;</a></li></ul></section><section class="element" id="include"><h3><a href="#include">&lt;xsl:include&gt;</a></h3>
+<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-include">Reference</a></h4></div>
 <ul class="content"><li class="attr-ref required">href<span class="general"> <a href="#xs:anyURI">xs:anyURI</a></span>
-</li></ul>
-<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-include">Reference</a></h4></div></section><section class="element" id="key"><h3><a href="#key">&lt;xsl:key&gt;</a></h3>
+</li></ul></section><section class="element" id="key"><h3><a href="#key">&lt;xsl:key&gt;</a></h3>
+<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-key">Reference</a></h4></div>
 <ul class="content">
 <li class="attr-ref required">name<span class="general"> <a href="#QName">QName</a></span>
 </li>
@@ -478,9 +507,9 @@
 <li class="elem-ref"><a href="#sequence">&lt;xsl:sequence&gt;</a></li>
 <li class="elem-ref"><a href="#text">&lt;xsl:text&gt;</a></li>
 <li class="elem-ref"><a href="#value-of">&lt;xsl:value-of&gt;</a></li>
-</ul>
-<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-key">Reference</a></h4></div></section><section class="element" id="matching-substring"><h3><a href="#matching-substring">&lt;xsl:matching-substring&gt;</a></h3>
+</ul></section><section class="element" id="matching-substring"><h3><a href="#matching-substring">&lt;xsl:matching-substring&gt;</a></h3>
 <div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-matching-substring">Reference</a></h4></div></section><section class="element" id="message"><h3><a href="#message">&lt;xsl:message&gt;</a></h3>
+<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-message">Reference</a></h4></div>
 <ul class="content">
 <li class="attr-ref">select<span class="general"> <a href="#expression">expression</a></span>
 </li>
@@ -513,8 +542,8 @@
 <li class="elem-ref"><a href="#sequence">&lt;xsl:sequence&gt;</a></li>
 <li class="elem-ref"><a href="#text">&lt;xsl:text&gt;</a></li>
 <li class="elem-ref"><a href="#value-of">&lt;xsl:value-of&gt;</a></li>
-</ul>
-<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-message">Reference</a></h4></div></section><section class="element" id="namespace"><h3><a href="#namespace">&lt;xsl:namespace&gt;</a></h3>
+</ul></section><section class="element" id="namespace"><h3><a href="#namespace">&lt;xsl:namespace&gt;</a></h3>
+<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-namespace">Reference</a></h4></div>
 <ul class="content">
 <li class="attr-ref required">name<span class="general"> <a href="#avt">avt</a></span>
 </li>
@@ -547,21 +576,30 @@
 <li class="elem-ref"><a href="#sequence">&lt;xsl:sequence&gt;</a></li>
 <li class="elem-ref"><a href="#text">&lt;xsl:text&gt;</a></li>
 <li class="elem-ref"><a href="#value-of">&lt;xsl:value-of&gt;</a></li>
-</ul>
-<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-namespace">Reference</a></h4></div></section><section class="element" id="namespace-alias"><h3><a href="#namespace-alias">&lt;xsl:namespace-alias&gt;</a></h3>
+</ul></section><section class="element" id="namespace-alias"><h3><a href="#namespace-alias">&lt;xsl:namespace-alias&gt;</a></h3>
+<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-namespace-alias">Reference</a></h4></div>
 <ul class="content">
 <li class="attr-ref required">stylesheet-prefix<span class="general"> <a href="#prefix-or-default">prefix-or-default</a></span>
 </li>
 <li class="attr-ref required">result-prefix<span class="general"> <a href="#prefix-or-default">prefix-or-default</a></span>
 </li>
-</ul>
-<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-namespace-alias">Reference</a></h4></div></section><section class="element" id="next-match"><h3><a href="#next-match">&lt;xsl:next-match&gt;</a></h3>
+</ul></section><section class="element" id="next-match"><h3><a href="#next-match">&lt;xsl:next-match&gt;</a></h3>
+<div class="desc">
+<p>As well as <span class="elem-ref"><a href="#apply-imports">&lt;xsl:apply-imports&gt;</a></span>, <span class="elem-ref"><a href="#next-match">&lt;xsl:next-match&gt;</a></span> can be used to invoke
+an overridden template rule. It considers template rules of lower import
+precedence or priority.</p>
+<p>An <span class="elem-ref"><a href="#fallback">&lt;xsl:fallback&gt;</a></span> instruction appearing as a child of <span class="elem-ref"><a href="#next-match">&lt;xsl:next-match&gt;</a></span>
+is ignored by an XSLT-2.0 processor, but can be used to define fallback
+behavior when the stylesheet is processed by an XSLT-1.0 processor in
+forwards-compatible mode.</p>
+<h4><a href="https://www.w3.org/TR/xslt20#element-next-match">Reference</a></h4>
+</div>
 <ul class="content">
 <li class="elem-ref"><a href="#with-param">&lt;xsl:with-param&gt;</a></li>
 <li class="elem-ref"><a href="#fallback">&lt;xsl:fallback&gt;</a></li>
-</ul>
-<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-next-match">Reference</a></h4></div></section><section class="element" id="non-matching-substring"><h3><a href="#non-matching-substring">&lt;xsl:non-matching-substring&gt;</a></h3>
+</ul></section><section class="element" id="non-matching-substring"><h3><a href="#non-matching-substring">&lt;xsl:non-matching-substring&gt;</a></h3>
 <div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-non-matching-substring">Reference</a></h4></div></section><section class="element" id="number"><h3><a href="#number">&lt;xsl:number&gt;</a></h3>
+<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-number">Reference</a></h4></div>
 <ul class="content">
 <li class="attr-ref">value<span class="general"> <a href="#expression">expression</a></span>
 </li>
@@ -585,9 +623,13 @@
 </li>
 <li class="attr-ref">grouping-size<span class="general"> <a href="#avt">avt</a></span>
 </li>
-</ul>
-<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-number">Reference</a></h4></div></section><section class="element" id="otherwise"><h3><a href="#otherwise">&lt;xsl:otherwise&gt;</a></h3>
-<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-otherwise">Reference</a></h4></div></section><section class="element" id="output"><h3><a href="#output">&lt;xsl:output&gt;</a></h3>
+</ul></section><section class="element" id="otherwise"><h3><a href="#otherwise">&lt;xsl:otherwise&gt;</a></h3>
+<div class="desc">
+<p>In a <span class="elem-ref"><a href="#choose">&lt;xsl:choose&gt;</a></span> instruction, when none of the <span class="elem-ref"><a href="#when">&lt;xsl:when&gt;</a></span> element is satisfied,
+the optional <span class="elem-ref"><a href="#otherwise">&lt;xsl:otherwise&gt;</a></span> is considered, and processed.</p>
+<h4><a href="https://www.w3.org/TR/xslt20#element-otherwise">Reference</a></h4>
+</div></section><section class="element" id="output"><h3><a href="#output">&lt;xsl:output&gt;</a></h3>
+<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-output">Reference</a></h4></div>
 <ul class="content">
 <li class="attr-ref">name<span class="general"> <a href="#QName">QName</a></span>
 </li>
@@ -623,15 +665,38 @@
 </li>
 <li class="attr-ref">version<span class="general"> <a href="#xs:NMTOKEN">xs:NMTOKEN</a></span>
 </li>
-</ul>
-<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-output">Reference</a></h4></div></section><section class="element" id="output-character"><h3><a href="#output-character">&lt;xsl:output-character&gt;</a></h3>
+</ul></section><section class="element" id="output-character"><h3><a href="#output-character">&lt;xsl:output-character&gt;</a></h3>
+<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-output-character">Reference</a></h4></div>
 <ul class="content">
 <li class="attr-ref required">character<span class="general"> <a href="#char">char</a></span>
 </li>
 <li class="attr-ref required">string<span class="general"> <a href="#xs:string">xs:string</a></span>
 </li>
-</ul>
-<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-output-character">Reference</a></h4></div></section><section class="element" id="param"><h3><a href="#param">&lt;xsl:param&gt;</a></h3>
+</ul></section><section class="element" id="param"><h3><a href="#param">&lt;xsl:param&gt;</a></h3>
+<div class="desc">
+<p>The <span class="elem-ref"><a href="#param">&lt;xsl:param&gt;</a></span> element may be used as a child of <span class="elem-ref"><a href="#stylesheet">&lt;xsl:stylesheet&gt;</a></span>,
+<span class="elem-ref"><a href="#template">&lt;xsl:template&gt;</a></span>, or <span class="elem-ref"><a href="#function">&lt;xsl:function&gt;</a></span> to define a parameter to the
+transformation. Such a paramater can be set by the caller: by
+the xslt processor, when the <span class="elem-ref"><a href="#stylesheet">&lt;xsl:stylesheet&gt;</a></span> is invoked, by the
+<span class="elem-ref"><a href="#call-template">&lt;xsl:call-template&gt;</a></span>, <span class="elem-ref"><a href="#apply-templates">&lt;xsl:apply-templates&gt;</a></span>, <span class="elem-ref"><a href="#apply-imports">&lt;xsl:apply-imports&gt;</a></span>,
+<span class="elem-ref"><a href="#next-match">&lt;xsl:next-match&gt;</a></span>, when a <span class="elem-ref"><a href="#template">&lt;xsl:template&gt;</a></span> is invoked, or as a child of
+<span class="elem-ref"><a href="#function">&lt;xsl:function&gt;</a></span> to define a parameter to a stylesheet function, which
+may be supplied when the function is called from an XPath expression.</p>
+<p>The name of the  is defined by the <span class="attr-ref">name</span> attribute,
+and its default value is supplied by the caller. If no value was
+supplied by the caller, then it is define by the expression of
+the <span class="attr-ref">select</span> attribute.  The optional <span class="attr-ref">as</span> attribute
+defines the required type of variable. If specified, the value
+of the variable is converted to the required type using the <a href="">function
+conversion rules</a>. For <span class="elem-ref"><a href="#stylesheet">&lt;xsl:stylesheet&gt;</a></span> and <span class="elem-ref"><a href="#template">&lt;xsl:template&gt;</a></span>
+parameters, the optional <span class="attr-ref">required</span> attribute may be used to
+indicate that the parameter is mandatory. It must not be specified for
+<span class="elem-ref"><a href="#function">&lt;xsl:function&gt;</a></span> parameter which are alwasy mandatory.</p>
+<p>The value of the parameter named "name" can be accessed with the "$name" expression.</p>
+<p><span class="elem-ref"><a href="#variable">&lt;xsl:variable&gt;</a></span> and <span class="elem-ref"><a href="#parameter">&lt;xsl:parameter&gt;</a></span> can be used to create <a href="">temporary
+trees</a> and two-phase transformations.</p>
+<h4><a href="https://www.w3.org/TR/xslt20#element-param">Reference</a></h4>
+</div>
 <ul class="content">
 <li class="attr-ref required">name<span class="general"> <a href="#QName">QName</a></span>
 </li>
@@ -670,8 +735,8 @@
 <li class="elem-ref"><a href="#sequence">&lt;xsl:sequence&gt;</a></li>
 <li class="elem-ref"><a href="#text">&lt;xsl:text&gt;</a></li>
 <li class="elem-ref"><a href="#value-of">&lt;xsl:value-of&gt;</a></li>
-</ul>
-<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-param">Reference</a></h4></div></section><section class="element" id="perform-sort"><h3><a href="#perform-sort">&lt;xsl:perform-sort&gt;</a></h3>
+</ul></section><section class="element" id="perform-sort"><h3><a href="#perform-sort">&lt;xsl:perform-sort&gt;</a></h3>
+<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-perform-sort">Reference</a></h4></div>
 <ul class="content"><li class="attr-ref">select<span class="general"> <a href="#expression">expression</a></span>
 </li></ul>
 <ul class="content">
@@ -701,11 +766,11 @@
 <li class="elem-ref"><a href="#sequence">&lt;xsl:sequence&gt;</a></li>
 <li class="elem-ref"><a href="#text">&lt;xsl:text&gt;</a></li>
 <li class="elem-ref"><a href="#value-of">&lt;xsl:value-of&gt;</a></li>
-</ul>
-<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-perform-sort">Reference</a></h4></div></section><section class="element" id="preserve-space"><h3><a href="#preserve-space">&lt;xsl:preserve-space&gt;</a></h3>
+</ul></section><section class="element" id="preserve-space"><h3><a href="#preserve-space">&lt;xsl:preserve-space&gt;</a></h3>
+<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-preserve-space">Reference</a></h4></div>
 <ul class="content"><li class="attr-ref required">elements<span class="general"> <a href="#nametests">nametests</a></span>
-</li></ul>
-<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-preserve-space">Reference</a></h4></div></section><section class="element" id="processing-instruction"><h3><a href="#processing-instruction">&lt;xsl:processing-instruction&gt;</a></h3>
+</li></ul></section><section class="element" id="processing-instruction"><h3><a href="#processing-instruction">&lt;xsl:processing-instruction&gt;</a></h3>
+<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-processing-instruction">Reference</a></h4></div>
 <ul class="content">
 <li class="attr-ref required">name<span class="general"> <a href="#avt">avt</a></span>
 </li>
@@ -738,8 +803,8 @@
 <li class="elem-ref"><a href="#sequence">&lt;xsl:sequence&gt;</a></li>
 <li class="elem-ref"><a href="#text">&lt;xsl:text&gt;</a></li>
 <li class="elem-ref"><a href="#value-of">&lt;xsl:value-of&gt;</a></li>
-</ul>
-<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-processing-instruction">Reference</a></h4></div></section><section class="element" id="result-document"><h3><a href="#result-document">&lt;xsl:result-document&gt;</a></h3>
+</ul></section><section class="element" id="result-document"><h3><a href="#result-document">&lt;xsl:result-document&gt;</a></h3>
+<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-result-document">Reference</a></h4></div>
 <ul class="content">
 <li class="attr-ref">format<span class="general"> <a href="#avt">avt</a></span>
 </li>
@@ -808,12 +873,12 @@
 <li class="elem-ref"><a href="#sequence">&lt;xsl:sequence&gt;</a></li>
 <li class="elem-ref"><a href="#text">&lt;xsl:text&gt;</a></li>
 <li class="elem-ref"><a href="#value-of">&lt;xsl:value-of&gt;</a></li>
-</ul>
-<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-result-document">Reference</a></h4></div></section><section class="element" id="sequence"><h3><a href="#sequence">&lt;xsl:sequence&gt;</a></h3>
+</ul></section><section class="element" id="sequence"><h3><a href="#sequence">&lt;xsl:sequence&gt;</a></h3>
+<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-sequence">Reference</a></h4></div>
 <ul class="content"><li class="attr-ref">select<span class="general"> <a href="#expression">expression</a></span>
 </li></ul>
-<ul class="content"><li class="elem-ref"><a href="#fallback">&lt;xsl:fallback&gt;</a></li></ul>
-<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-sequence">Reference</a></h4></div></section><section class="element" id="sort"><h3><a href="#sort">&lt;xsl:sort&gt;</a></h3>
+<ul class="content"><li class="elem-ref"><a href="#fallback">&lt;xsl:fallback&gt;</a></li></ul></section><section class="element" id="sort"><h3><a href="#sort">&lt;xsl:sort&gt;</a></h3>
+<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-sort">Reference</a></h4></div>
 <ul class="content">
 <li class="attr-ref">select<span class="general"> <a href="#expression">expression</a></span>
 </li>
@@ -856,12 +921,27 @@
 <li class="elem-ref"><a href="#sequence">&lt;xsl:sequence&gt;</a></li>
 <li class="elem-ref"><a href="#text">&lt;xsl:text&gt;</a></li>
 <li class="elem-ref"><a href="#value-of">&lt;xsl:value-of&gt;</a></li>
-</ul>
-<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-sort">Reference</a></h4></div></section><section class="element" id="strip-space"><h3><a href="#strip-space">&lt;xsl:strip-space&gt;</a></h3>
+</ul></section><section class="element" id="strip-space"><h3><a href="#strip-space">&lt;xsl:strip-space&gt;</a></h3>
+<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-strip-space">Reference</a></h4></div>
 <ul class="content"><li class="attr-ref required">elements<span class="general"> <a href="#nametests">nametests</a></span>
-</li></ul>
-<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-strip-space">Reference</a></h4></div></section><section class="element" id="stylesheet"><h3><a href="#stylesheet">&lt;xsl:stylesheet&gt;</a></h3>
+</li></ul></section><section class="element" id="stylesheet"><h3><a href="#stylesheet">&lt;xsl:stylesheet&gt;</a></h3>
 <div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-stylesheet">Reference</a></h4></div></section><section class="element" id="template"><h3><a href="#template">&lt;xsl:template&gt;</a></h3>
+<div class="desc">
+<p><span class="elem-ref"><a href="#template">&lt;xsl:template&gt;</a></span> defines the processing that can be be applied
+to node that <span class="attr-ref">match</span> a particular <span class="general"><a href="#pattern">pattern</a></span>. It contains a
+sequence constructor for creating nodes and/or atomic values. If it has
+a <span class="attr-ref">match</span> attribute, it is invoked when an <span class="elem-ref"><a href="#apply-templates">&lt;xsl:apply-templates&gt;</a></span>
+selects a node that match the pattern specified in the match attribute. If
+it has a <span class="attr-ref">name</span>attribute, it is invoked explicitely by name.</p>
+<p>A <span class="elem-ref"><a href="#template">&lt;xsl:template&gt;</a></span> must have either a <span class="attr-ref">match</span> attribute
+or a <span class="attr-ref">name</span> attribute. If it has no <span class="attr-ref">match</span> attribute,
+it must have no <span class="attr-ref">mode</span> attribute and no <span class="attr-ref">priority</span>
+attribute. If present, the <span class="attr-ref">as</span> attribute the result of the
+sequence constructor is converted to the specified type (or raise a
+<a href="">type error</a>
+if it is not possible.</p>
+<h4><a href="https://www.w3.org/TR/xslt20#element-template">Reference</a></h4>
+</div>
 <ul class="content">
 <li class="attr-ref">match<span class="general"> <a href="#pattern">pattern</a></span>
 </li>
@@ -901,11 +981,11 @@
 <li class="elem-ref"><a href="#sequence">&lt;xsl:sequence&gt;</a></li>
 <li class="elem-ref"><a href="#text">&lt;xsl:text&gt;</a></li>
 <li class="elem-ref"><a href="#value-of">&lt;xsl:value-of&gt;</a></li>
-</ul>
-<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-template">Reference</a></h4></div></section><section class="element" id="text"><h3><a href="#text">&lt;xsl:text&gt;</a></h3>
+</ul></section><section class="element" id="text"><h3><a href="#text">&lt;xsl:text&gt;</a></h3>
+<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-text">Reference</a></h4></div>
 <ul class="content"><li class="attr-ref">disable-output-escaping<span class="general"> <a href="#yes-or-no">yes-or-no</a></span>
-</li></ul>
-<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-text">Reference</a></h4></div></section><section class="element" id="transform"><h3><a href="#transform">&lt;xsl:transform&gt;</a></h3>
+</li></ul></section><section class="element" id="transform"><h3><a href="#transform">&lt;xsl:transform&gt;</a></h3>
+<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-transform">Reference</a></h4></div>
 <ul class="content">
 <li class="attr-ref">id<span class="general"> <a href="#xs:ID">xs:ID</a></span>
 </li>
@@ -919,8 +999,8 @@
 <li class="elem-ref"><a href="#declaration">&lt;xsl:declaration&gt;</a></li>
 <li class="elem-ref"><a href="#variable">&lt;xsl:variable&gt;</a></li>
 <li class="elem-ref"><a href="#param">&lt;xsl:param&gt;</a></li>
-</ul>
-<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-transform">Reference</a></h4></div></section><section class="element" id="value-of"><h3><a href="#value-of">&lt;xsl:value-of&gt;</a></h3>
+</ul></section><section class="element" id="value-of"><h3><a href="#value-of">&lt;xsl:value-of&gt;</a></h3>
+<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-value-of">Reference</a></h4></div>
 <ul class="content">
 <li class="attr-ref">select<span class="general"> <a href="#expression">expression</a></span>
 </li>
@@ -955,8 +1035,24 @@
 <li class="elem-ref"><a href="#sequence">&lt;xsl:sequence&gt;</a></li>
 <li class="elem-ref"><a href="#text">&lt;xsl:text&gt;</a></li>
 <li class="elem-ref"><a href="#value-of">&lt;xsl:value-of&gt;</a></li>
-</ul>
-<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-value-of">Reference</a></h4></div></section><section class="element" id="variable"><h3><a href="#variable">&lt;xsl:variable&gt;</a></h3>
+</ul></section><section class="element" id="variable"><h3><a href="#variable">&lt;xsl:variable&gt;</a></h3>
+<div class="desc">
+<p>The <span class="elem-ref"><a href="#variable">&lt;xsl:variable&gt;</a></span> element declares a variable which may be global
+or local.  It has a required <span class="attr-ref">name</span> attribute which specifies the
+name of the variable.  The value of the variable is defined either
+by the expression of the <span class="attr-ref">select</span> attribute or the sequence
+constructor. If the <span class="elem-ref"><a href="#variable">&lt;xsl:variable&gt;</a></span> has a <span class="attr-ref">select</span> attribute, the
+sequence constructor must be empty. The optional <span class="attr-ref">as</span> attribute
+defines the required type of variable. If specified, the value of the
+variable is converted to the required type using the
+<a href="">function
+conversion rules</a>.</p>
+<p>The value of the variable named "name" can be accessed with the
+"$name" expression.</p>
+<p><span class="elem-ref"><a href="#variable">&lt;xsl:variable&gt;</a></span> and <span class="elem-ref"><a href="#parameter">&lt;xsl:parameter&gt;</a></span> can be used to create <a href="">temporary
+trees</a> and two-phase transformations.</p>
+<h4><a href="https://www.w3.org/TR/xslt20#element-variable">Reference</a></h4>
+</div>
 <ul class="content">
 <li class="attr-ref required">name<span class="general"> <a href="#QName">QName</a></span>
 </li>
@@ -991,8 +1087,12 @@
 <li class="elem-ref"><a href="#sequence">&lt;xsl:sequence&gt;</a></li>
 <li class="elem-ref"><a href="#text">&lt;xsl:text&gt;</a></li>
 <li class="elem-ref"><a href="#value-of">&lt;xsl:value-of&gt;</a></li>
-</ul>
-<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-variable">Reference</a></h4></div></section><section class="element" id="when"><h3><a href="#when">&lt;xsl:when&gt;</a></h3>
+</ul></section><section class="element" id="when"><h3><a href="#when">&lt;xsl:when&gt;</a></h3>
+<div class="desc">
+<p>Specifies, with the <span class="attr-ref">test</span> attribute, an expression to be tested as part
+of an <span class="elem-ref"><a href="#choose">&lt;xsl:choose&gt;</a></span> instruction.</p>
+<h4><a href="https://www.w3.org/TR/xslt20#element-when">Reference</a></h4>
+</div>
 <ul class="content"><li class="attr-ref required">test<span class="general"> <a href="#expression">expression</a></span>
 </li></ul>
 <ul class="content">
@@ -1021,8 +1121,8 @@
 <li class="elem-ref"><a href="#sequence">&lt;xsl:sequence&gt;</a></li>
 <li class="elem-ref"><a href="#text">&lt;xsl:text&gt;</a></li>
 <li class="elem-ref"><a href="#value-of">&lt;xsl:value-of&gt;</a></li>
-</ul>
-<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-when">Reference</a></h4></div></section><section class="element" id="with-param"><h3><a href="#with-param">&lt;xsl:with-param&gt;</a></h3>
+</ul></section><section class="element" id="with-param"><h3><a href="#with-param">&lt;xsl:with-param&gt;</a></h3>
+<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-with-param">Reference</a></h4></div>
 <ul class="content">
 <li class="attr-ref required">name<span class="general"> <a href="#QName">QName</a></span>
 </li>
@@ -1059,8 +1159,7 @@
 <li class="elem-ref"><a href="#sequence">&lt;xsl:sequence&gt;</a></li>
 <li class="elem-ref"><a href="#text">&lt;xsl:text&gt;</a></li>
 <li class="elem-ref"><a href="#value-of">&lt;xsl:value-of&gt;</a></li>
-</ul>
-<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-with-param">Reference</a></h4></div></section></section><section id="xslt-types"><h2>Types</h2>
+</ul></section></section><section id="xslt-types"><h2>Types</h2>
 <section class="type" id="QName"><h3><a href="#QName">QName</a></h3>
 <div class="content">
 <p>A QName. This schema does not use the built-in type xs:QName, but rather defines its own QName type. Although xs:QName would define the correct validation on these attributes, a schema processor would expand unprefixed QNames incorrectly when constructing the PSVI, because (as defined in XML Schema errata) an unprefixed xs:QName is assumed to be in the default namespace, which is not the correct assumption for XSLT. The data type is defined as a restriction of the built-in type Name, restricted so that it can only contain one colon which must not be the first or last character.</p>

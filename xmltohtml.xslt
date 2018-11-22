@@ -65,6 +65,10 @@ List elements
 			<xsl:value-of select="@name"/>
 			<xsl:value-of select="$suffix"/>
 		</a></h3>
+		<div class="desc">
+			<xsl:apply-templates select="p" mode="desc"/>
+			<h4><a href="{$standart}#element-{@name}">Reference</a></h4>
+		</div>
 		<xsl:if test="attribute">
 			<ul class="content">
 				<xsl:apply-templates select="attribute"/>
@@ -75,9 +79,6 @@ List elements
 				<xsl:apply-templates select="subelem"/>
 			</ul>
 		</xsl:if>
-		<div class="desc">
-			<h4><a href="{$standart}#element-{@name}">Reference</a></h4>
-		</div>
 	</section>
 </xsl:template>
 
@@ -104,6 +105,45 @@ List elements
 			<xsl:value-of select="$suffix"/>
 		</a>
 	</li>
+</xsl:template>
+
+<!--
+format handwritten element description
+-->
+<xsl:template match="p" mode="desc">
+	<p><xsl:apply-templates mode="desc"/></p>
+</xsl:template>
+
+<xsl:template match="e" mode="desc">
+	<span class="elem-ref">
+		<a href="#{.}">
+			<xsl:value-of select="$prefix"/>
+			<xsl:value-of select="."/>
+			<xsl:value-of select="$suffix"/>
+		</a>
+	</span>
+</xsl:template>
+
+<xsl:template match="a" mode="desc">
+	<span class="attr-ref"><xsl:value-of select="."/></span>
+</xsl:template>
+
+<xsl:template match="t" mode="desc">
+	<span class="general">
+		<a href="#{.}"><xsl:value-of select="."/></a>
+	</span>
+</xsl:template>
+
+<xsl:template match="l" mode="desc">
+	<a href="{@href}"><xsl:value-of select="."/></a>
+</xsl:template>
+
+<xsl:template match="xpath" mode="desc">
+	<span class="xpath"><xsl:value-of select="."/></span>
+</xsl:template>
+
+<xsl:template match="*" mode="desc">
+	<xsl:apply-templates mode="desc"/>
 </xsl:template>
 
 <!--
