@@ -30,6 +30,7 @@
 	<body id="toc" class="language-markup">
 		<nav class="toc-link">
 			<h1>XSLT-2.0  Reference</h1>
+			<p>Work in progress</p>
 			<a href="#toc" title="Show a simplified table of contents">Summary</a>
 			<a href="#xslt-elements">Elements</a>
 			<a href="#xslt-types">Types</a>
