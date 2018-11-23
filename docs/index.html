@@ -84,7 +84,20 @@ stylesheet modules.</p>
 <li class="elem-ref"><a href="#text">&lt;xsl:text&gt;</a></li>
 <li class="elem-ref"><a href="#value-of">&lt;xsl:value-of&gt;</a></li>
 </ul></section><section class="element" id="attribute-set"><h3><a href="#attribute-set">&lt;xsl:attribute-set&gt;</a></h3>
-<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-attribute-set">Reference</a></h4></div>
+<div class="desc">
+<p><span class="elem-ref"><a href="#attribute-set">&lt;xsl:attribute-set&gt;</a></span> defines a collection of attribute
+definitions that can be used repeatedly on different
+constructed elements.
+Sets of attributes as defined by <span class="elem-ref"><a href="#attribute-set">&lt;xsl:attribute-set&gt;</a></span> are used by specifying a
+<span class="attr-ref">use-attribute-sets</span> on <span class="elem-ref"><a href="#element">&lt;xsl:element&gt;</a></span>, <span class="elem-ref"><a href="#copy">&lt;xsl:copy&gt;</a></span> or a litteral result element.
+The value of the <span class="attr-ref">use-attribute-sets</span> is in each case a whitespace separated list
+of names of attribute sets.</p>
+<p>The required <span class="attr-ref">name</span> specifies the name of the attribute set. The content
+of the <span class="elem-ref"><a href="#attribute-set">&lt;xsl:attribute-set&gt;</a></span> specifies <span class="elem-ref"><a href="#attribute">&lt;xsl:attribute&gt;</a></span> instructions that are evaluated
+to produce the attribute set. Specifying the  <span class="attr-ref">use-attribute-sets</span> is broadly equivalent
+to adding <span class="elem-ref"><a href="#attribute">&lt;xsl:attribute&gt;</a></span> for each of the attributes in each of the named sets.</p>
+<h4><a href="https://www.w3.org/TR/xslt20#element-attribute-set">Reference</a></h4>
+</div>
 <ul class="content">
 <li class="attr-ref required">name<span class="general"> <a href="#QName">QName</a></span>
 </li>
@@ -92,7 +105,13 @@ stylesheet modules.</p>
 </li>
 </ul>
 <ul class="content"><li class="elem-ref"><a href="#attribute">&lt;xsl:attribute&gt;</a></li></ul></section><section class="element" id="call-template"><h3><a href="#call-template">&lt;xsl:call-template&gt;</a></h3>
-<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-call-template">Reference</a></h4></div>
+<div class="desc">
+<p><span class="elem-ref"><a href="#call-template">&lt;xsl:call-template&gt;</a></span> invokes a template by name. Unlike the <span class="elem-ref"><a href="#apply-templates">&lt;xsl:apply-templates&gt;</a></span>,
+it does not change the <a href="">focus</a>.</p>
+<p>The <span class="attr-ref">match</span> and <span class="attr-ref">priority</span> attributes of <span class="elem-ref"><a href="#template">&lt;xsl:template&gt;</a></span> have no effects
+when the template is invoked by name.</p>
+<h4><a href="https://www.w3.org/TR/xslt20#element-call-template">Reference</a></h4>
+</div>
 <ul class="content"><li class="attr-ref required">name<span class="general"> <a href="#QName">QName</a></span>
 </li></ul>
 <ul class="content"><li class="elem-ref"><a href="#with-param">&lt;xsl:with-param&gt;</a></li></ul></section><section class="element" id="character-map"><h3><a href="#character-map">&lt;xsl:character-map&gt;</a></h3>
@@ -674,20 +693,25 @@ the optional <span class="elem-ref"><a href="#otherwise">&lt;xsl:otherwise&gt;</
 </li>
 </ul></section><section class="element" id="param"><h3><a href="#param">&lt;xsl:param&gt;</a></h3>
 <div class="desc">
-<p>The <span class="elem-ref"><a href="#param">&lt;xsl:param&gt;</a></span> element may be used as a child of <span class="elem-ref"><a href="#stylesheet">&lt;xsl:stylesheet&gt;</a></span>,
-<span class="elem-ref"><a href="#template">&lt;xsl:template&gt;</a></span>, or <span class="elem-ref"><a href="#function">&lt;xsl:function&gt;</a></span> to define a parameter to the
-transformation. Such a paramater can be set by the caller: by
-the xslt processor, when the <span class="elem-ref"><a href="#stylesheet">&lt;xsl:stylesheet&gt;</a></span> is invoked, by the
-<span class="elem-ref"><a href="#call-template">&lt;xsl:call-template&gt;</a></span>, <span class="elem-ref"><a href="#apply-templates">&lt;xsl:apply-templates&gt;</a></span>, <span class="elem-ref"><a href="#apply-imports">&lt;xsl:apply-imports&gt;</a></span>,
-<span class="elem-ref"><a href="#next-match">&lt;xsl:next-match&gt;</a></span>, when a <span class="elem-ref"><a href="#template">&lt;xsl:template&gt;</a></span> is invoked, or as a child of
-<span class="elem-ref"><a href="#function">&lt;xsl:function&gt;</a></span> to define a parameter to a stylesheet function, which
-may be supplied when the function is called from an XPath expression.</p>
-<p>The name of the  is defined by the <span class="attr-ref">name</span> attribute,
-and its default value is supplied by the caller. If no value was
-supplied by the caller, then it is define by the expression of
-the <span class="attr-ref">select</span> attribute.  The optional <span class="attr-ref">as</span> attribute
-defines the required type of variable. If specified, the value
-of the variable is converted to the required type using the <a href="">function
+<p><span class="elem-ref"><a href="#param">&lt;xsl:param&gt;</a></span> declares a parameter which may be global or local. A parameter
+is like a variable, with the additional property that it can be set by the caller.
+As a child of <span class="elem-ref"><a href="#stylesheet">&lt;xsl:stylesheet&gt;</a></span> it defines a global
+parameter which can be set by the XSLT processor. A
+global parameter is visible everywhere, except where it is <a href="">shadowed</a> by another
+binding.
+As a child of <span class="elem-ref"><a href="#template">&lt;xsl:template&gt;</a></span>, it defines a template parameter which
+can be set when the template is called by <span class="elem-ref"><a href="#call-template">&lt;xsl:call-template&gt;</a></span>,
+<span class="elem-ref"><a href="#apply-templates">&lt;xsl:apply-templates&gt;</a></span>, <span class="elem-ref"><a href="#apply-imports">&lt;xsl:apply-imports&gt;</a></span> or <span class="elem-ref"><a href="#next-match">&lt;xsl:next-match&gt;</a></span>.
+As a child of <span class="elem-ref"><a href="#function">&lt;xsl:function&gt;</a></span>, it defines a function parameter, which
+can be set when the function is called, using a function call in a an
+XPath expression.
+</p>
+<p>The name of the parameter is defined by the <span class="attr-ref">name</span>
+attribute, and its default value is supplied by the caller. If
+no value was supplied by the caller, then it is define by the
+expression of the <span class="attr-ref">select</span> attribute. The optional <span class="attr-ref">as</span>
+attribute defines the required type of variable. If specified, the
+value of the variable is converted to the required type using the <a href="">function
 conversion rules</a>. For <span class="elem-ref"><a href="#stylesheet">&lt;xsl:stylesheet&gt;</a></span> and <span class="elem-ref"><a href="#template">&lt;xsl:template&gt;</a></span>
 parameters, the optional <span class="attr-ref">required</span> attribute may be used to
 indicate that the parameter is mandatory. It must not be specified for
@@ -1122,7 +1146,23 @@ of an <span class="elem-ref"><a href="#choose">&lt;xsl:choose&gt;</a></span> ins
 <li class="elem-ref"><a href="#text">&lt;xsl:text&gt;</a></li>
 <li class="elem-ref"><a href="#value-of">&lt;xsl:value-of&gt;</a></li>
 </ul></section><section class="element" id="with-param"><h3><a href="#with-param">&lt;xsl:with-param&gt;</a></h3>
-<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-with-param">Reference</a></h4></div>
+<div class="desc">
+<p>Parameters are passed to <span class="elem-ref"><a href="#template">&lt;xsl:template&gt;</a></span> using <span class="elem-ref"><a href="#with-param">&lt;xsl:with-param&gt;</a></span>. The
+required <span class="attr-ref">name</span> specifies the name of the template
+parameter. <span class="elem-ref"><a href="#with-param">&lt;xsl:with-param&gt;</a></span> is allowed within <span class="elem-ref"><a href="#call-template">&lt;xsl:call-template&gt;</a></span>,
+<span class="elem-ref"><a href="#apply-templates">&lt;xsl:apply-templates&gt;</a></span>, <span class="elem-ref"><a href="#apply-imports">&lt;xsl:apply-imports&gt;</a></span>, <span class="elem-ref"><a href="#next-match">&lt;xsl:next-match&gt;</a></span>.</p>
+<p>A parameter passed to a template may be defined as a
+<a href="">tunnel parameter</a>.
+Tunnel parameters are automatically passed on by the called template to any further
+template that it calls, and so on recursively. Tunnel parameters thus allow values
+to be set that are accessible during an entire phase of stylesheet processing,
+without the need for each template that is used during that phase to be aware
+of the parameter. A tunnel parameter is created by specifying <span class="attr-ref">tunnel</span>="yes".</p>
+<p>If supplied, the <span class="attr-ref">as</span> of <span class="elem-ref"><a href="#with-param">&lt;xsl:with-param&gt;</a></span> is
+evaluated before the one of <span class="elem-ref"><a href="#param">&lt;xsl:param&gt;</a></span>. Tunnel parameters are not passed in call
+to <span class="elem-ref"><a href="#function">&lt;xsl:function&gt;</a></span>.</p>
+<h4><a href="https://www.w3.org/TR/xslt20#element-with-param">Reference</a></h4>
+</div>
 <ul class="content">
 <li class="attr-ref required">name<span class="general"> <a href="#QName">QName</a></span>
 </li>

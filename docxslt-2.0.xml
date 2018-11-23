@@ -125,21 +125,26 @@ trees</l> and two-phase transformations.</p>
 </elem>
 
 <elem name="param">
-<p>The <e>param</e> element may be used as a child of <e>stylesheet</e>,
-<e>template</e>, or <e>function</e> to define a parameter to the
-transformation. Such a paramater can be set by the caller: by
-the xslt processor, when the <e>stylesheet</e> is invoked, by the
-<e>call-template</e>, <e>apply-templates</e>, <e>apply-imports</e>,
-<e>next-match</e>, when a <e>template</e> is invoked, or as a child of
-<e>function</e> to define a parameter to a stylesheet function, which
-may be supplied when the function is called from an XPath expression.</p>
-
-<p>The name of the  is defined by the <a>name</a> attribute,
-and its default value is supplied by the caller. If no value was
-supplied by the caller, then it is define by the expression of
-the <a>select</a> attribute.  The optional <a>as</a> attribute
-defines the required type of variable. If specified, the value
-of the variable is converted to the required type using the <l
+<p><e>param</e> declares a parameter which may be global or local. A parameter
+is like a variable, with the additional property that it can be set by the caller.
+As a child of <e>stylesheet</e> it defines a global
+parameter which can be set by the XSLT processor. A
+global parameter is visible everywhere, except where it is <l
+href="https://www.w3.org/TR/xslt20/#dt-shadows">shadowed</l> by another
+binding.
+As a child of <e>template</e>, it defines a template parameter which
+can be set when the template is called by <e>call-template</e>,
+<e>apply-templates</e>, <e>apply-imports</e> or <e>next-match</e>.
+As a child of <e>function</e>, it defines a function parameter, which
+can be set when the function is called, using a function call in a an
+XPath expression.
+</p>
+<p>The name of the parameter is defined by the <a>name</a>
+attribute, and its default value is supplied by the caller. If
+no value was supplied by the caller, then it is define by the
+expression of the <a>select</a> attribute. The optional <a>as</a>
+attribute defines the required type of variable. If specified, the
+value of the variable is converted to the required type using the <l
 href="https://www.w3.org/TR/xslt20/#dt-function-conversion-rules">function
 conversion rules</l>. For <e>stylesheet</e> and <e>template</e>
 parameters, the optional <a>required</a> attribute may be used to
@@ -151,5 +156,42 @@ href="https://www.w3.org/TR/xslt20/#temporary-trees">temporary
 trees</l> and two-phase transformations.</p>
 </elem>
 
-<!-- todo: https://www.w3.org/TR/xslt20/#global-variables -->
+<elem name="call-template">
+<p><e>call-template</e> invokes a template by name. Unlike the <e>apply-templates</e>,
+it does not change the <l href="https://www.w3.org/TR/xslt20/#dt-focus">focus</l>.</p>
+<p>The <a>match</a> and <a>priority</a> attributes of <e>template</e> have no effects
+when the template is invoked by name.</p>
+</elem>
+
+<elem name="with-param">
+<p>Parameters are passed to <e>template</e> using <e>with-param</e>. The
+required <a>name</a> specifies the name of the <i ref="param">template
+parameter</i>. <e>with-param</e> is allowed within <e>call-template</e>,
+<e>apply-templates</e>, <e>apply-imports</e>, <e>next-match</e>.</p>
+<p>A parameter passed to a template may be defined as a
+<l href="https://www.w3.org/TR/xslt20/#dt-tunnel-parameter">tunnel parameter</l>.
+Tunnel parameters are automatically passed on by the called template to any further
+template that it calls, and so on recursively. Tunnel parameters thus allow values
+to be set that are accessible during an entire phase of stylesheet processing,
+without the need for each template that is used during that phase to be aware
+of the parameter. A tunnel parameter is created by specifying <a>tunnel</a>="yes".</p>
+<p>If supplied, the <a>as</a> of <e>with-param</e> is
+evaluated before the one of <e>param</e>. Tunnel parameters are not passed in call
+to <e>function</e>.</p>
+</elem>
+
+<elem name="attribute-set">
+<p><e>attribute-set</e> defines a collection of attribute
+definitions that can be used repeatedly on different
+constructed elements.
+Sets of attributes as defined by <e>attribute-set</e> are used by specifying a
+<a>use-attribute-sets</a> on <e>element</e>, <e>copy</e> or a litteral result element.
+The value of the <a>use-attribute-sets</a> is in each case a whitespace separated list
+of names of attribute sets.</p>
+<p>The required <a>name</a> specifies the name of the attribute set. The content
+of the <e>attribute-set</e> specifies <e>attribute</e> instructions that are evaluated
+to produce the attribute set. Specifying the  <a>use-attribute-sets</a> is broadly equivalent
+to adding <e>attribute</e> for each of the attributes in each of the named sets.</p>
+</elem>
+<!-- todo: https://www.w3.org/TR/xslt20/#element-function -->
 </doc>
