@@ -8,6 +8,7 @@
 </head>
 <body id="toc" class="language-markup">
 <nav class="toc-link"><h1>XSLT-2.0  Reference</h1>
+<p>Work in progress</p>
 <a href="#toc" title="Show a simplified table of contents">Summary</a><a href="#xslt-elements">Elements</a><a href="#xslt-types">Types</a><a href="https://github.com/pjfichet/XSLT-2.0-Reference">Github</a></nav><section id="xslt-elements"><h2>Elements</h2>
 <section class="element" id="analyze-string"><h3><a href="#analyze-string">&lt;xsl:analyze-string&gt;</a></h3>
 <div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-analyze-string">Reference</a></h4></div>
@@ -42,7 +43,12 @@ stylesheet modules.</p>
 <li class="elem-ref"><a href="#sort">&lt;xsl:sort&gt;</a></li>
 <li class="elem-ref"><a href="#with-param">&lt;xsl:with-param&gt;</a></li>
 </ul></section><section class="element" id="attribute"><h3><a href="#attribute">&lt;xsl:attribute&gt;</a></h3>
-<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-attribute">Reference</a></h4></div>
+<div class="desc">
+<p>There are three ways to define the attributes of a literal result
+elements (in that order of precedence): <span class="elem-ref"><a href="#attribute">&lt;xsl:attribute&gt;</a></span>, literal
+attribution, and <span class="attr-ref">use-attribute-sets</span>.</p>
+<h4><a href="https://www.w3.org/TR/xslt20#element-attribute">Reference</a></h4>
+</div>
 <ul class="content">
 <li class="attr-ref required">name<span class="general"> <a href="#avt">avt</a></span>
 </li>
@@ -403,7 +409,29 @@ is sorted.</p>
 <li class="elem-ref"><a href="#text">&lt;xsl:text&gt;</a></li>
 <li class="elem-ref"><a href="#value-of">&lt;xsl:value-of&gt;</a></li>
 </ul></section><section class="element" id="function"><h3><a href="#function">&lt;xsl:function&gt;</a></h3>
-<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-function">Reference</a></h4></div>
+<div class="desc">
+<p><span class="elem-ref"><a href="#function">&lt;xsl:function&gt;</a></span> declares a stylesheet function that can be called
+from an XPath expression within the stylesheet. It can only appear as
+a top-level element in a stylesheet module. Its content consists of
+zero or more <span class="elem-ref"><a href="#param">&lt;xsl:param&gt;</a></span> elements that specify the arguments of the
+function, followed by a sequence constructor that defines the value to
+be returned by the function. The <span class="elem-ref"><a href="#param">&lt;xsl:param&gt;</a></span> elements are interpreted
+positionaly: the first argument of the function call is assigned to the
+first <span class="elem-ref"><a href="#param">&lt;xsl:param&gt;</a></span> element. Because all arguments in a function call must
+be specified, the <span class="elem-ref"><a href="#param">&lt;xsl:param&gt;</a></span> elements must not specify a default value:
+they must be empty, and must not have a <span class="attr-ref">select</span> attribute.</p>
+<p><span class="attr-ref">name</span> defines the name of the function, it must have a
+prefixed name to remove any risk of clash with the default functions
+(use <span class="attr-ref">exclude-result-prefixes</span> on the <span class="elem-ref"><a href="#stylesheet">&lt;xsl:stylesheet&gt;</a></span> element to
+prevent the namespace to appear on the result document). The optional
+<span class="attr-ref">override</span> defines what happens if this function have the same name
+and number of arguments of another function: if its value is "yes"
+it is used in preference. Specifying <span class="attr-ref">override</span>="no" is usefull
+when writing a fallback implementation of a function only available on
+some processors. When <span class="attr-ref">as</span> is specified, the result of the function is
+converted to the required type.</p>
+<h4><a href="https://www.w3.org/TR/xslt20#element-function">Reference</a></h4>
+</div>
 <ul class="content">
 <li class="attr-ref required">name<span class="general"> <a href="#QName">QName</a></span>
 </li>

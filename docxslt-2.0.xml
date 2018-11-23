@@ -1,6 +1,5 @@
 <doc>
 <!--
-todo: https://www.w3.org/TR/xslt20/#apply-imports
 <elem name="xsl element">
 	<p>
 		<e>xsl element</e>
@@ -11,6 +10,9 @@ todo: https://www.w3.org/TR/xslt20/#apply-imports
 		<xpath>xpath expression</xpath>
 	</p>
 </item>
+
+litteral result element:
+https://www.w3.org/TR/xslt20/#literal-result-element
 -->
 
 <elem name="template">
@@ -193,5 +195,55 @@ of the <e>attribute-set</e> specifies <e>attribute</e> instructions that are eva
 to produce the attribute set. Specifying the  <a>use-attribute-sets</a> is broadly equivalent
 to adding <e>attribute</e> for each of the attributes in each of the named sets.</p>
 </elem>
-<!-- todo: https://www.w3.org/TR/xslt20/#element-function -->
+
+<elem name="function">
+<p><e>function</e> declares a stylesheet function that can be called
+from an XPath expression within the stylesheet. It can only appear as
+a top-level element in a stylesheet module. Its content consists of
+zero or more <e>param</e> elements that specify the arguments of the
+function, followed by a sequence constructor that defines the value to
+be returned by the function. The <e>param</e> elements are interpreted
+positionaly: the first argument of the function call is assigned to the
+first <e>param</e> element. Because all arguments in a function call must
+be specified, the <e>param</e> elements must not specify a default value:
+they must be empty, and must not have a <a>select</a> attribute.</p>
+
+<p><a>name</a> defines the name of the function, it must have a
+prefixed name to remove any risk of clash with the default functions
+(use <a>exclude-result-prefixes</a> on the <e>stylesheet</e> element to
+prevent the namespace to appear on the result document). The optional
+<a>override</a> defines what happens if this function have the same name
+and number of arguments of another function: if its value is "yes"
+it is used in preference. Specifying <a>override</a>="no" is usefull
+when writing a fallback implementation of a function only available on
+some processors. When <a>as</a> is specified, the result of the function is
+converted to the required type.</p>
+
+<!--
+<xsl:function name="str:reverse" as="xs:string">
+ <xsl:param name="sentence" as="xs:string"/>
+  <xsl:sequence 
+    select="if (contains($sentence, ' '))
+    then concat(str:reverse(substring-after($sentence, ' ')),
+      ' ',
+      substring-before($sentence, ' '))
+    else $sentence"/>
+</xsl:function>
+
+<xsl:template match="/">
+  <output>
+    <xsl:value-of select="str:reverse('DOG BITES MAN')"/>
+  </output>
+</xsl:template>
+-->
+</elem>
+
+<elem name="attribute">
+<p>There are three ways to define the attributes of a literal result
+elements (in that order of precedence): <e>attribute</e>, literal
+attribution, and <a>use-attribute-sets</a>.</p>
+</elem>
+
+
+<!-- todo: https://www.w3.org/TR/xslt20/#lre-namespaces -->
 </doc>
