@@ -26,9 +26,7 @@ a parameter, to define it from the command line.
 <xsl:variable name="doc" select="document($docfile)"/>
 
 <!--
-Here, we are selecting each elements, and we walk through
-their hierarchy to search for the <xs:element> and
-<xs:attribute> we want to display.
+The root element, which selects elements and types.
 -->
 
 <xsl:template match="/">
@@ -37,6 +35,12 @@ their hierarchy to search for the <xs:element> and
 		<xsl:apply-templates select="/xs:schema/xs:simpleType" mode="type"/>
 	</docset>
 </xsl:template>
+
+<!--
+Here, we are selecting each elements, and we walk through
+their hierarchy to search for the <xs:element> and
+<xs:attribute> we want to display.
+-->
 
 <xsl:template match="xs:element[@name]" mode="element">
 	<xsl:variable name="name" select="@name"/>
@@ -49,16 +53,26 @@ their hierarchy to search for the <xs:element> and
 <xsl:template match="xs:extension" mode="element">
 	<xsl:apply-templates mode="element"/>
 	<xsl:variable name="base" select="substring-after(@base, ':')"/>
-		<xsl:apply-templates select="/xs:schema/xs:complexType[@name=$base]" mode="referenced"/>
+	<xsl:apply-templates select="/xs:schema/xs:complexType[@name=$base]" mode="element"/>
+</xsl:template>
+
+<xsl:template match="xs:restriction" mode="element">
+	<!--
+		TODO: xs:restriction > xs:element should override base ones.
+		Check xsl:tranform @version for example.
+	-->
+	<xsl:apply-templates mode="element"/>
+	<xsl:variable name="base" select="substring-after(@base, ':')"/>
+	<xsl:apply-templates select="/xs:schema/xs:complexType[@name=$base]" mode="element"/>
 </xsl:template>
 
 <xsl:template match="xs:group[@ref]" mode="element">
 	<xsl:variable name="ref" select="substring-after(@ref, ':')"/>
-	<xsl:apply-templates select="/xs:schema/xs:group[@name=$ref]" mode="referenced"/>
+	<xsl:apply-templates select="/xs:schema/xs:group[@name=$ref]" mode="element"/>
 </xsl:template>
 
-<xsl:template match="xs:element[@ref]" mode="element">
-	<subelem ref="{substring-after(@ref, ':')}"/>
+<xsl:template match="xs:group[@name]" mode="element">
+	<xsl:apply-templates mode="element"/>
 </xsl:template>
 
 <xsl:template match="xs:attribute" mode="element">
@@ -71,19 +85,33 @@ their hierarchy to search for the <xs:element> and
 	</attribute>
 </xsl:template>
 
-<xsl:template match="xs:restriction" mode="element">
-	<restriction>
-		<xsl:apply-templates mode="element"/>
-	</restriction>
-</xsl:template>
-
 <xsl:template match="*" mode="element">
 	<xsl:apply-templates mode="element"/>
 </xsl:template>
 
 <!--
+Finally, we transform the referenced sub-elements. Those with
+abstract=true are themselves references to a list of elements.
+-->
+
+<xsl:template match="xs:element[@ref]" mode="element">
+	<xsl:variable name="ref" select="substring-after(@ref, ':')"/>
+	<xsl:apply-templates select="/xs:schema/xs:element[@name=$ref]" mode="referenced"/>
+</xsl:template>
+
+<xsl:template match="xs:element[@abstract='true']" mode="referenced">
+	<xsl:variable name="name" select="concat('xsl:', @name)"/>
+	<xsl:apply-templates select="/xs:schema/xs:element[@substitutionGroup=$name]" mode="referenced"/>
+</xsl:template>
+
+<xsl:template match="xs:element" mode="referenced">
+	<subelem ref="{@name}"/>
+</xsl:template>
+
+<!--
 Here we copy the handwritten documentation
 -->
+
 <xsl:template match="p" mode="doc">
 	<xsl:copy>
 		<xsl:apply-templates mode="doc"/>
@@ -94,35 +122,6 @@ Here we copy the handwritten documentation
 	<xsl:copy>
 		<xsl:apply-templates mode="doc"/>
 	</xsl:copy>
-</xsl:template>
-
-
-<!--
-From here, we are looking for elements only referenced as part
-of xs:extension. We walk through their hierarchy in search of
-the <xs:element> and <xs:attribute> (TODO) we want to display.
--->
-
-<xsl:template match="xs:complexType" mode="referenced">
-	<xsl:apply-templates mode="referenced"/>
-</xsl:template>
-
-<xsl:template match="xs:group[@ref]" mode="referenced">
-	<xsl:variable name="ref" select="substring-after(@ref, ':')"/>
-	<xsl:apply-templates select="/xs:schema/xs:group[@name=$ref]" mode="referenced"/>
-</xsl:template>
-
-<xsl:template match="xs:element[@ref]" mode="referenced">
-	<xsl:variable name="ref" select="@ref"/>
-	<xsl:apply-templates select="/xs:schema/xs:element[@substitutionGroup=$ref]" mode="referenced"/>
-</xsl:template>
-
-<xsl:template match="xs:element[@name]" mode="referenced">
-	<subelem ref="{@name}"/>
-</xsl:template>
-
-<xsl:template match="*" mode="referenced">
-	<xsl:apply-templates mode="referenced"/>
 </xsl:template>
 
 <!--
