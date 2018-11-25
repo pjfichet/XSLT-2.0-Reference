@@ -63,7 +63,9 @@ their hierarchy to search for the <xs:element> and
 	-->
 	<xsl:apply-templates mode="element"/>
 	<xsl:variable name="base" select="substring-after(@base, ':')"/>
-	<xsl:apply-templates select="/xs:schema/xs:complexType[@name=$base]" mode="element"/>
+	<restricted name="{$base}">
+		<xsl:apply-templates select="/xs:schema/xs:complexType[@name=$base]" mode="element"/>
+	</restricted>
 </xsl:template>
 
 <xsl:template match="xs:group[@ref]" mode="element">

@@ -8,8 +8,8 @@ docs/index.html: xslt-2.0.xml xmltohtml.xslt
 	xsltproc -o $@ xmltohtml.xslt $<
 
 xslt-2.0.xml: xslt-2.0.xsd docxslt-2.0.xml xsdtoxml.xslt
-	xsltproc -o $@ xsdtoxml.xslt $<
-
+	xsltproc xsdtoxml.xslt $<  | xsltproc -o $@ xsdtoxml-2.xslt -
+	
 xslt-2.0.xsd:
 	wget -q -O $@ https://www.w3.org/2007/schema-for-xslt20.xsd
 
@@ -17,4 +17,5 @@ xslt-2.0.html:
 	wget -q -O $@ https://www.w3.org/TR/xslt20
 
 clean:
-	rm -f xslt-2.0.xsd
+	rm -f xslt-2.0.xml xslt-2.0.xsd xslt-2.0.html
+
