@@ -244,6 +244,9 @@ elements (in that order of precedence): <e>attribute</e>, literal
 attribution, and <a>use-attribute-sets</a>.</p>
 </elem>
 
+<elem name="stylesheet">
+	<p>An alias of <e>transform</e>.</p>
+</elem>
 
 <!-- todo: https://www.w3.org/TR/xslt20/#lre-namespaces -->
 </doc>
