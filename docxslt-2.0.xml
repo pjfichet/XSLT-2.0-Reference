@@ -15,13 +15,18 @@ litteral result element:
 https://www.w3.org/TR/xslt20/#literal-result-element
 -->
 
+<elem name="literal-result-element">
+<p><a>inherit-namespace-attribute</a>, if set to yes (default) copies
+the namespace nodes to any descendants of the newly constructed element.</p>
+</elem>
+
 <elem name="template">
 <p><e>template</e> defines the processing that can be be applied
 to node that <a>match</a> a particular <t>pattern</t>. It contains a
 sequence constructor for creating nodes and/or atomic values. If it has
 a <a>match</a> attribute, it is invoked when an <e>apply-templates</e>
 selects a node that match the pattern specified in the match attribute. If
-it has a <a>name</a>attribute, it is invoked explicitely by name.</p>
+it has a <a>name</a> attribute, it is invoked explicitely by name.</p>
 <p>A <e>template</e> must have either a <a>match</a> attribute
 or a <a>name</a> attribute. If it has no <a>match</a> attribute,
 it must have no <a>mode</a> attribute and no <a>priority</a>
@@ -54,6 +59,8 @@ in the <l href="https://www.w3.org/TR/xslt20/#dt-source-tree">source
 tree</l> to be processed multiple times, each time producing a different
 result. They also allows different set of <e>template</e> rules to be
 active when processing different trees.</p>
+<p><a>select</a> also accepts a variable (as defined by <e>variable</e>)
+as to apply <e>template</e> on the content of the variable.</p>
 </elem>
 
 <elem name="apply-imports">
@@ -244,11 +251,54 @@ converted to the required type.</p>
 <p>There are three ways to define the attributes of a literal result
 elements (in that order of precedence): <e>attribute</e>, literal
 attribution, and <a>use-attribute-sets</a>.</p>
+<p><e>attribute</e> adds attributes to a result element, wether
+they are created literaly by instruction such as <e>element</e>
+or <e>copy</e>. They must appear before any element text, comment,
+or processing instruction nodes. <a>name</a> define the name of the
+attribute.  Its value is defined either by using <a>select</a> or by
+the sequence constructor that forms the content of <e>attribute</e> -
+these are mutually exclusive.</p>
+<p>The value of <a>separator</a> is used to separate adjacent items in
+the result sequence. The optional <a>type</a> and <a>validation</a>
+may be used to validate the containt of the attribute against a type
+definition or an attribute declaration in a schema.</p>
 </elem>
 
 <elem name="stylesheet">
 	<p>An alias of <e>transform</e>.</p>
 </elem>
 
-<!-- todo: https://www.w3.org/TR/xslt20/#lre-namespaces -->
+<elem name="transform">
+<p>By default, the created tree will have a copy of the namespace nodes
+that were present in the stylesheet tree. <a>exclude-result-prefixes</a>
+whitespace separated list of namespace prefixes to exclude from the
+result tree, or the value "#all" to exclude them all.</p>
+</elem>
+
+<elem name="namespace-alias">
+<p>When a stylesheet is used to define a transformation whose output
+is itself a stylesheet module, or in such other case where the result
+document uses namespaces that it would be convenient to use in the
+stylesheet itself, namespace aliasing can be used to declare a mapping
+between a namespace URI in the stylesheet and and corresponding one in the
+result document. During the transformation the <a>stylesheet-prefix</a>
+will be substituted by the <a>result-prefix</a>.</p>
+<p>Namespace aliasing is only necessary when litteral result elements
+are used.  The problem of reserved namespace does not arise when elements
+constructed with <e>element</e> and <e>attribute</e>.</p>
+</elem>
+
+<elem name="element">
+<p><e>element</e> allows an element to be created with a computed name, defined
+by <a>name</a>. The content of <e>element</e> is a sequence constructor for the
+children, namespace and attributes (thanks to <e>attribute</e> or
+<a>use-attribute-sets</a>) of the construced element.</p>
+<p>The namespace nodes created for the newly constructed element are
+copied to its descendant, unless <a>inherit-namespace</a>="no". The optional
+<a>type</a> and <a>validation</a> may be used to validate the containt of the
+element against a type definition or an element declaration in a schema.</p>
+</elem>
+
+
+<!-- todo https://www.w3.org/TR/xslt20/#creating-text-nodes -->
 </doc>
