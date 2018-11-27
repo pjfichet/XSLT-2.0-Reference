@@ -31,7 +31,7 @@ sequence constructor is converted to the specified type (or raise a
 if it is not possible.</p>
 </elem>
 
-<elem name="apply-template">
+<elem name="apply-templates">
 <p><e>apply-template</e> takes as input a sequence of nodes, and
 produces as output a sequence of items (often nodes added to a <l
 href="https://www.w3.org/TR/xslt20/#dt-result-tree">result tree</l>).
@@ -41,12 +41,12 @@ the <l href="https://www.w3.org/TR/xslt20/#conflict">best
 among them is choosen</l>, if there is none, a <l
 href="https://www.w3.org/TR/xslt20/#built-in-rule">built-in template
 rule</l> is used. Each template rule evaluated produce a sequence
-of item, and the resulting sequences are concatenated.</p> <p>The
-default value of <a>match</a> is <xpath>child::node()</xpath>, and as
-a result, <e>apply-templates</e> is commonly used to process nodes
-descendant of the context node. But the <a>select</a> attribute
-can select node by an expression, and so, <e>apply-templates</e>
-can be used as a replacement of <e>if</e> or <e>choose</e>.</p>
+of item, and the resulting sequences are concatenated.</p>
+<p>The default value of <a>select</a> is <xpath>child::node()</xpath>,
+and as a result, <e>apply-templates</e> is commonly used to process
+nodes descendant of the context node. But the <a>select</a> attribute
+can select node by an expression, and so, <e>apply-templates</e> can be
+used as a replacement of <e>if</e> or <e>choose</e>.</p>
 <p>Furthermore, if the <a>mode</a> attribute is defined, only the
 template rules that are applicable to the selected mode are considered.
 <l href="https://www.w3.org/TR/xslt20/#modes">modes</l> allow a node
@@ -121,9 +121,11 @@ variable is converted to the required type using the
 conversion rules</l>.</p>
 <p>The value of the variable named "name" can be accessed with the
 "$name" expression.</p>
-<p><e>variable</e> and <e>parameter</e> can be used to create <l
-href="https://www.w3.org/TR/xslt20/#temporary-trees">temporary
-trees</l> and two-phase transformations.</p>
+<p>In XSLT-2.0, <e>variable</e> and <e>parameter</e> can be used to
+create <l href="https://www.w3.org/TR/xslt20/#temporary-trees">temporary
+trees</l> and two-phase transformations. For example, a template can
+be applied to the content of the variable, since the <a>select</a>
+attribute of <e>apply-templates</e> accepts a variable as parameter.</p>
 </elem>
 
 <elem name="param">

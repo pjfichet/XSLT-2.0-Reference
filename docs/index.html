@@ -58,7 +58,29 @@ stylesheet modules.</p>
 </li>
 </ul>
 <ul class="content"><li class="elem-ref"><a href="#with-param">&lt;xsl:with-param&gt;</a></li></ul></section><section class="element" id="apply-templates"><h3><a href="#apply-templates">&lt;xsl:apply-templates&gt;</a></h3>
-<div class="desc"><h4><a href="https://www.w3.org/TR/xslt20#element-apply-templates">Reference</a></h4></div>
+<div class="desc">
+<p><span class="elem-ref"><a href="#apply-template">&lt;xsl:apply-template&gt;</a></span> takes as input a sequence of nodes, and
+produces as output a sequence of items (often nodes added to a <a href="">result tree</a>).
+Each node in the input sequence is processed by finding a template
+rule whose pattern match that node. If there is more than one,
+the <a href="">best
+among them is choosen</a>, if there is none, a <a href="">built-in template
+rule</a> is used. Each template rule evaluated produce a sequence
+of item, and the resulting sequences are concatenated.</p>
+<p>The default value of <span class="attr-ref">select</span> is <span class="xpath">child::node()</span>,
+and as a result, <span class="elem-ref"><a href="#apply-templates">&lt;xsl:apply-templates&gt;</a></span> is commonly used to process
+nodes descendant of the context node. But the <span class="attr-ref">select</span> attribute
+can select node by an expression, and so, <span class="elem-ref"><a href="#apply-templates">&lt;xsl:apply-templates&gt;</a></span> can be
+used as a replacement of <span class="elem-ref"><a href="#if">&lt;xsl:if&gt;</a></span> or <span class="elem-ref"><a href="#choose">&lt;xsl:choose&gt;</a></span>.</p>
+<p>Furthermore, if the <span class="attr-ref">mode</span> attribute is defined, only the
+template rules that are applicable to the selected mode are considered.
+<a href="">modes</a> allow a node
+in the <a href="">source
+tree</a> to be processed multiple times, each time producing a different
+result. They also allows different set of <span class="elem-ref"><a href="#template">&lt;xsl:template&gt;</a></span> rules to be
+active when processing different trees.</p>
+<h4><a href="https://www.w3.org/TR/xslt20#element-apply-templates">Reference</a></h4>
+</div>
 <ul class="content">
 <li class="attr-ref">select<span class="general"> <a href="#expression">expression</a></span>
 </li>
@@ -1651,8 +1673,11 @@ variable is converted to the required type using the
 conversion rules</a>.</p>
 <p>The value of the variable named "name" can be accessed with the
 "$name" expression.</p>
-<p><span class="elem-ref"><a href="#variable">&lt;xsl:variable&gt;</a></span> and <span class="elem-ref"><a href="#parameter">&lt;xsl:parameter&gt;</a></span> can be used to create <a href="">temporary
-trees</a> and two-phase transformations.</p>
+<p>In XSLT-2.0, <span class="elem-ref"><a href="#variable">&lt;xsl:variable&gt;</a></span> and <span class="elem-ref"><a href="#parameter">&lt;xsl:parameter&gt;</a></span> can be used to
+create <a href="">temporary
+trees</a> and two-phase transformations. For example, a template can
+be applied to the content of the variable, since the <span class="attr-ref">select</span>
+attribute of <span class="elem-ref"><a href="#apply-templates">&lt;xsl:apply-templates&gt;</a></span> accepts a variable as parameter.</p>
 <h4><a href="https://www.w3.org/TR/xslt20#element-variable">Reference</a></h4>
 </div>
 <ul class="content">
